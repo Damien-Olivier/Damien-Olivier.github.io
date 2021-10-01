@@ -2,8 +2,8 @@
   "name": "Damien Olivier",
   "short_name": "Damien Olivier",
   "lang": "fr-FR",
-  "theme_color": "#707070",
-  "background_color": "#707070",
+  "theme_color": "#3f51b5",
+  "background_color": "#3f51b5",
   "icons": [{
     "src": "/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_192x192_fill_lanczos_center_3.png",
     "sizes": "192x192",
