@@ -104,16 +104,6 @@
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/tag/academic/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/tag/academic/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/tag/academic/"
-                />
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/authors/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
@@ -156,16 +146,6 @@
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/category/demo/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/category/demo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/category/demo/"
-                />
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/post/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
@@ -195,16 +175,6 @@
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/post/getting-started/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/post/getting-started/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/post/getting-started/"
-                />
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
@@ -221,29 +191,9 @@
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/tag/%E5%BC%80%E6%BA%90/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/tag/%E5%BC%80%E6%BA%90/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/tag/%E5%BC%80%E6%BA%90/"
-                />
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/category/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/category/%E6%95%99%E7%A8%8B/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/category/%E6%95%99%E7%A8%8B/"
-                />
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/post/2020-12-01-r-rmarkdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
@@ -262,16 +212,6 @@
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/post/writing-technical-content/</loc>
     <lastmod>2019-07-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/post/writing-technical-content/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/post/writing-technical-content/"
-                />
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/publication-type/3/</loc>
     <lastmod>2019-04-07T00:00:00+00:00</lastmod>
@@ -340,16 +280,6 @@
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/post/jupyter/</loc>
     <lastmod>2019-09-05T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/post/jupyter/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/post/jupyter/"
-                />
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
@@ -392,16 +322,6 @@
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/tag/demo/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/tag/demo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/tag/demo/"
-                />
   </url><url>
     <loc>https://Damien-Olivier.github.io/en/project/external-project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
