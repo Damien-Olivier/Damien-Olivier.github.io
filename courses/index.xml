@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Courses | Damien Olivier</title>
+    <title>Enseignements | Damien Olivier</title>
     <link>https://Damien-Olivier.github.io/courses/</link>
       <atom:link href="https://Damien-Olivier.github.io/courses/index.xml" rel="self" type="application/rss+xml" />
-    <description>Courses</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Sun, 24 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <description>Enseignements</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Thu, 07 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
-      <title>Courses</title>
+      <title>Enseignements</title>
       <link>https://Damien-Olivier.github.io/courses/</link>
     </image>
     
