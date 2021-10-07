@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ecotoxicologie | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/tag/ecotoxicologie/</link>
+      <atom:link href="https://Damien-Olivier.github.io/tag/ecotoxicologie/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ecotoxicologie</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Mon, 27 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>Ecotoxicologie</title>
+      <link>https://Damien-Olivier.github.io/tag/ecotoxicologie/</link>
+    </image>
+    
+    <item>
+      <title>I-caging</title>
+      <link>https://Damien-Olivier.github.io/project/internal-project/</link>
+      <pubDate>Mon, 27 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/project/internal-project/</guid>
+      <description>&lt;p&gt;I-Caging® est une action intégrée au programme TIGA Smart Port City (SPC) qui est  porté par la communauté d&amp;rsquo;agglomération Le Havre Seine Métropole. Il fédère 83 partenaires publics et privés pour 10 ans dans un plan d&amp;rsquo;investissement établi à 222 millions d&amp;rsquo;euros dans lequel l’État apportera 5,5 millions d&amp;rsquo;euros de subvention et prendra des participations. L’université Le Havre Normandie par l’intermédiaire de l&amp;rsquo;UMR-I 02 SEBIO et l’EA LITIS ont été des éléments moteurs dans ce projet qui vise à définir les nouveaux modèles de développement des territoires fortement anthropisés, à l&amp;rsquo;image du complexe industrialo-portuaire de l&amp;rsquo;axe Seine, en devenant une référence nationale et internationale en matière de transition environnementale. SEBIO et le Laboratoire d&amp;rsquo;Informatique, du Traitement de l&amp;rsquo;Information et des Systèmes (LITIS, EA4108) développent et déploient des cages instrumentées pour la biosurveillance active des milieux aquatiques. Il s&amp;rsquo;agit de systèmes biofondés de surveillance autonome et continue, c&amp;rsquo;est-à-dire autoalimentés énergétiquement, communicants (4G, 5G, LoRa) et sécurisés, qui transmettent les paramètres physico-chimiques ainsi le niveau de toxicité de l&amp;rsquo;eau à partir de capteurs et d&amp;rsquo;algorithmes d&amp;rsquo;analyse du comportement d&amp;rsquo;espèces sentinelles. Ces différents éléments constituent une plateforme de biosurveillance baptisée I-Caging® qui est une marque déposée.
+La vision scientifique sous la forme d’un programme de recherche partagé par les deux laboratoires est jointe à une vision économique. En effet, le projet intègre une dimension de transfert technologique et scientifique devant aboutir à la création d&amp;rsquo;une société I-Caging System &amp;amp; Service sur le modèle startup. I-Caging® s’inscrit dans une stratégie locale et régionale mais également dans la stratégie de l’UE concernant la protection des milieux continentaux et marins et a l’ambition de s’adresser aux acteurs publics et industriels.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
