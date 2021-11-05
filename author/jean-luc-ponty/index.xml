@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jean-Luc Ponty | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/author/jean-luc-ponty/</link>
+      <atom:link href="https://Damien-Olivier.github.io/author/jean-luc-ponty/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jean-Luc Ponty</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Sun, 01 Jul 2001 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>Jean-Luc Ponty</title>
+      <link>https://Damien-Olivier.github.io/author/jean-luc-ponty/</link>
+    </image>
+    
+    <item>
+      <title>Automata with multiplicities as behaviour model in multi-agent simulations</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317669/</link>
+      <pubDate>Sun, 01 Jul 2001 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317669/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Genetic algorithms on automata with multiplicities for adaptive agent behaviour in emergent organizations</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317668/</link>
+      <pubDate>Sun, 01 Jul 2001 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317668/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

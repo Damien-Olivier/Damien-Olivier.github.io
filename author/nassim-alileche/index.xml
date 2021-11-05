@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nassim Alileche | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/author/nassim-alileche/</link>
+      <atom:link href="https://Damien-Olivier.github.io/author/nassim-alileche/index.xml" rel="self" type="application/rss+xml" />
+    <description>Nassim Alileche</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Tue, 01 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>Nassim Alileche</title>
+      <link>https://Damien-Olivier.github.io/author/nassim-alileche/</link>
+    </image>
+    
+    <item>
+      <title>Analysis of domino effect in the process industry using the event tree method</title>
+      <link>https://Damien-Olivier.github.io/publication/alileche-hal-02314369/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/alileche-hal-02314369/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Identification and assessment of domino sequences initiated by loss of containment</title>
+      <link>https://Damien-Olivier.github.io/publication/alileche-hal-02375427/</link>
+      <pubDate>Thu, 01 May 2014 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/alileche-hal-02375427/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analysis of domino effect scenarios caused by loss of containment</title>
+      <link>https://Damien-Olivier.github.io/publication/alileche-hal-02375438/</link>
+      <pubDate>Tue, 01 Apr 2014 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/alileche-hal-02375438/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

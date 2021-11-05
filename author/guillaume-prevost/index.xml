@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guillaume Prévost | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/author/guillaume-prevost/</link>
+      <atom:link href="https://Damien-Olivier.github.io/author/guillaume-prevost/index.xml" rel="self" type="application/rss+xml" />
+    <description>Guillaume Prévost</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Sat, 01 Jan 2005 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>Guillaume Prévost</title>
+      <link>https://Damien-Olivier.github.io/author/guillaume-prevost/</link>
+    </image>
+    
+    <item>
+      <title>Simulation of a compartmental multiscale model of predator-prey interactions</title>
+      <link>https://Damien-Olivier.github.io/publication/tranouez-hal-03317610/</link>
+      <pubDate>Sat, 01 Jan 2005 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/tranouez-hal-03317610/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Methodology for Holarchic Ecosystem Model based on Ontological tool</title>
+      <link>https://Damien-Olivier.github.io/publication/prevost-hal-03317820/</link>
+      <pubDate>Fri, 01 Oct 2004 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/prevost-hal-03317820/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Handling the Complexity of an Estuarial Ecosystem, a Methodology</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317819/</link>
+      <pubDate>Wed, 01 Sep 2004 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317819/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hybrid and Hierarchical Compartmental Approach for Ecosystem Applied to Estuaries Modelization</title>
+      <link>https://Damien-Olivier.github.io/publication/prevost-hal-03317823/</link>
+      <pubDate>Wed, 01 Oct 2003 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/prevost-hal-03317823/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ACTIVE OBJECTS TO DEVELOP COMPUTER GAMES FOR BLIND CHILDREN</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317656/</link>
+      <pubDate>Fri, 01 Nov 2002 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317656/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>0 | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/publication-type/0/</link>
+      <atom:link href="https://Damien-Olivier.github.io/publication-type/0/index.xml" rel="self" type="application/rss+xml" />
+    <description>0</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Sun, 01 Jun 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>0</title>
+      <link>https://Damien-Olivier.github.io/publication-type/0/</link>
+    </image>
+    
+    <item>
+      <title>4th International Conference on Complex Systems and Applications - ICCSA2014</title>
+      <link>https://Damien-Olivier.github.io/publication/azizalaoui-hal-02117119/</link>
+      <pubDate>Sun, 01 Jun 2014 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/azizalaoui-hal-02117119/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Proceedings of EPNADS&#39;05, Emergent Properties in Natural and Artificial Dynamical Systems, a satellite workshop within ECCS&#39;05</title>
+      <link>https://Damien-Olivier.github.io/publication/azizalaoui-hal-03317613/</link>
+      <pubDate>Tue, 01 Nov 2005 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/azizalaoui-hal-03317613/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

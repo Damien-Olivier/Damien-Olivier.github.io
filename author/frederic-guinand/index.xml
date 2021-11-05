@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frédéric Guinand | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/author/frederic-guinand/</link>
+      <atom:link href="https://Damien-Olivier.github.io/author/frederic-guinand/index.xml" rel="self" type="application/rss+xml" />
+    <description>Frédéric Guinand</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Wed, 01 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>Frédéric Guinand</title>
+      <link>https://Damien-Olivier.github.io/author/frederic-guinand/</link>
+    </image>
+    
+    <item>
+      <title>Load Balancing at the Edge of Chaos: How Self-Organized Criticality Can Lead to Energy-Efficient Computing</title>
+      <link>https://Damien-Olivier.github.io/publication/laredo-hal-01960412/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/laredo-hal-01960412/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Trading Off Resource Utilization and Task Migrations in Dynamic Load-balancing</title>
+      <link>https://Damien-Olivier.github.io/publication/jimenezlaredo-hal-01960582/</link>
+      <pubDate>Wed, 01 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/jimenezlaredo-hal-01960582/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dynamical handling of straddle carriers activities on a container terminal in uncertain environment - a swarm intelligence approach</title>
+      <link>https://Damien-Olivier.github.io/publication/balev-hal-00446020/</link>
+      <pubDate>Mon, 01 Jun 2009 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/balev-hal-00446020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Principes généraux de résolution de problèmes combinatoires</title>
+      <link>https://Damien-Olivier.github.io/publication/dutot-hal-00457722/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/dutot-hal-00457722/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GraphStream: A Tool for bridging the gap between Complex Systems and Dynamic Graphs</title>
+      <link>https://Damien-Olivier.github.io/publication/dutot-hal-00264043/</link>
+      <pubDate>Mon, 01 Oct 2007 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/dutot-hal-00264043/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Organization Detection for Dynamic Load Balancing in Individual-Based Simulations</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-00430523/</link>
+      <pubDate>Mon, 01 Jan 2007 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-00430523/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Organization Detection Using Emergent Computing</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-00430530/</link>
+      <pubDate>Fri, 01 Sep 2006 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-00430530/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Organization Detection Using Emergent Computing</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-00431258/</link>
+      <pubDate>Fri, 01 Sep 2006 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-00431258/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Proceedings of EPNADS&#39;05, Emergent Properties in Natural and Artificial Dynamical Systems, a satellite workshop within ECCS&#39;05</title>
+      <link>https://Damien-Olivier.github.io/publication/azizalaoui-hal-03317613/</link>
+      <pubDate>Tue, 01 Nov 2005 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/azizalaoui-hal-03317613/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Color ant populations algorithm for dynamic distribution in simulations</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317639/</link>
+      <pubDate>Wed, 01 Oct 2003 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317639/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simulations distribuées par un algorithme fourmi</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317641/</link>
+      <pubDate>Wed, 01 Oct 2003 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317641/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DIMANTS: a distributed multi-castes ant system for DNA sequencing by hybridization</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317666/</link>
+      <pubDate>Mon, 01 Jul 2002 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317666/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DNA Sequencing Hybridization Based on Multi-Castes Ant System</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317653/</link>
+      <pubDate>Mon, 01 Jul 2002 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317653/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

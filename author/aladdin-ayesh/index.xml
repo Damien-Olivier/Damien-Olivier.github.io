@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aladdin Ayesh | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/author/aladdin-ayesh/</link>
+      <atom:link href="https://Damien-Olivier.github.io/author/aladdin-ayesh/index.xml" rel="self" type="application/rss+xml" />
+    <description>Aladdin Ayesh</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Fri, 01 Jun 2012 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>Aladdin Ayesh</title>
+      <link>https://Damien-Olivier.github.io/author/aladdin-ayesh/</link>
+    </image>
+    
+    <item>
+      <title>Cognitive Emotional Based Architecture for Crowd Simulation</title>
+      <link>https://Damien-Olivier.github.io/publication/abdelhak-hal-02375489/</link>
+      <pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/abdelhak-hal-02375489/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

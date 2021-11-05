@@ -5,7 +5,7 @@
     <link>https://Damien-Olivier.github.io/author/antoine-dutot/</link>
       <atom:link href="https://Damien-Olivier.github.io/author/antoine-dutot/index.xml" rel="self" type="application/rss+xml" />
     <description>Antoine Dutot</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
       <title>Antoine Dutot</title>
@@ -13,10 +13,242 @@
     </image>
     
     <item>
+      <title>A reaction-diffusion system drives the morphogenesis of spatial complex networks</title>
+      <link>https://Damien-Olivier.github.io/publication/tirico-hal-03357563/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/tirico-hal-03357563/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Morphogenesis of Complex Networks: A Reaction Diffusion Framework for Spatial Graphs</title>
+      <link>https://Damien-Olivier.github.io/publication/tirico-hal-01959369/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/tirico-hal-01959369/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Morphogenesis of Complex Networks - A Reaction Diffusion Framework for Spatial Graphs</title>
       <link>https://Damien-Olivier.github.io/publication/conference-paper/</link>
       <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
       <guid>https://Damien-Olivier.github.io/publication/conference-paper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networking, Networks and Dynamic Graphs</title>
+      <link>https://Damien-Olivier.github.io/publication/balev-hal-02414959/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/balev-hal-02414959/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Swarm Problem-Solving</title>
+      <link>https://Damien-Olivier.github.io/publication/dutot-hal-02414958/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/dutot-hal-02414958/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Systèmes et réseaux complexes pour l&#39;intelligence territoriale et les modèles urbains</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317953/</link>
+      <pubDate>Sat, 01 Sep 2012 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317953/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analyse multi-échelle de la vulnérabilité des réseaux des systèmes territoriaux</title>
+      <link>https://Damien-Olivier.github.io/publication/nabaa-hal-01352901/</link>
+      <pubDate>Tue, 01 Nov 2011 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/nabaa-hal-01352901/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multi-scale Analysis of the Vulnerability of Road Networks</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317936/</link>
+      <pubDate>Tue, 01 Nov 2011 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317936/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Centroids : a decentralized approach</title>
+      <link>https://Damien-Olivier.github.io/publication/dutot-hal-00742845/</link>
+      <pubDate>Thu, 01 Sep 2011 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/dutot-hal-00742845/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dagda, a load-balanced middleware to distribute Complex Systems simulations</title>
+      <link>https://Damien-Olivier.github.io/publication/dutot-hal-00448387/</link>
+      <pubDate>Mon, 01 Jun 2009 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/dutot-hal-00448387/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exploitation of a displacement survey to detect road network use vulnerability</title>
+      <link>https://Damien-Olivier.github.io/publication/nabaa-hal-00430561/</link>
+      <pubDate>Mon, 01 Jun 2009 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/nabaa-hal-00430561/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exploitation of a displacement survey to detect road network use vulnerability</title>
+      <link>https://Damien-Olivier.github.io/publication/nabaa-hal-00430690/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/nabaa-hal-00430690/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Principes généraux de résolution de problèmes combinatoires</title>
+      <link>https://Damien-Olivier.github.io/publication/dutot-hal-00457722/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/dutot-hal-00457722/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A DYNAMIC VULNERABILITY MAP TO ASSESS THE RISK OF ROAD</title>
+      <link>https://Damien-Olivier.github.io/publication/nabaa-hal-00430696/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/nabaa-hal-00430696/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MODELING OF THE VULNERABILITY RELATED TO THE DYNAMIC ROAD TRAFFIC</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-00430682/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-00430682/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spatial detection of organization under evacuation situation</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-00430666/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-00430666/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Une approche d&#39;intelligence collective pour l&#39;élaboration d&#39;une carte de vulnérabilité dynamique</title>
+      <link>https://Damien-Olivier.github.io/publication/nabaa-hal-00430724/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/nabaa-hal-00430724/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GraphStream: A Tool for bridging the gap between Complex Systems and Dynamic Graphs</title>
+      <link>https://Damien-Olivier.github.io/publication/dutot-hal-00264043/</link>
+      <pubDate>Mon, 01 Oct 2007 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/dutot-hal-00264043/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Organization Detection for Dynamic Load Balancing in Individual-Based Simulations</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-00430523/</link>
+      <pubDate>Mon, 01 Jan 2007 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-00430523/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Organization Detection Using Emergent Computing</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-00430530/</link>
+      <pubDate>Fri, 01 Sep 2006 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-00430530/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Organization Detection Using Emergent Computing</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-00431258/</link>
+      <pubDate>Fri, 01 Sep 2006 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-00431258/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Détection d&#39;organisations par les colonies de fourmis en compétition</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317826/</link>
+      <pubDate>Tue, 01 Feb 2005 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317826/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Management of the road traffic by an ant algorithm</title>
+      <link>https://Damien-Olivier.github.io/publication/lerebourg-hal-03317617/</link>
+      <pubDate>Thu, 01 Jul 2004 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/lerebourg-hal-03317617/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Color ant populations algorithm for dynamic distribution in simulations</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317639/</link>
+      <pubDate>Wed, 01 Oct 2003 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317639/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DECISION SUPPORT SYSTEM AND REGULATION SYSTEM FOR ROAD TRAFFIC MANAGEMENT</title>
+      <link>https://Damien-Olivier.github.io/publication/lerebourg-hal-03317822/</link>
+      <pubDate>Wed, 01 Oct 2003 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/lerebourg-hal-03317822/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Road traffic management based on ant system and regulation model</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317642/</link>
+      <pubDate>Wed, 01 Oct 2003 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317642/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simulations distribuées par un algorithme fourmi</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317641/</link>
+      <pubDate>Wed, 01 Oct 2003 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317641/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ACTIVE OBJECTS TO DEVELOP COMPUTER GAMES FOR BLIND CHILDREN</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317656/</link>
+      <pubDate>Fri, 01 Nov 2002 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317656/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DIMANTS: a distributed multi-castes ant system for DNA sequencing by hybridization</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317666/</link>
+      <pubDate>Mon, 01 Jul 2002 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317666/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DNA Sequencing Hybridization Based on Multi-Castes Ant System</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317653/</link>
+      <pubDate>Mon, 01 Jul 2002 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317653/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sylvain Lerebourg | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/author/sylvain-lerebourg/</link>
+      <atom:link href="https://Damien-Olivier.github.io/author/sylvain-lerebourg/index.xml" rel="self" type="application/rss+xml" />
+    <description>Sylvain Lerebourg</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Fri, 01 Oct 2004 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>Sylvain Lerebourg</title>
+      <link>https://Damien-Olivier.github.io/author/sylvain-lerebourg/</link>
+    </image>
+    
+    <item>
+      <title>Methodology for Holarchic Ecosystem Model based on Ontological tool</title>
+      <link>https://Damien-Olivier.github.io/publication/prevost-hal-03317820/</link>
+      <pubDate>Fri, 01 Oct 2004 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/prevost-hal-03317820/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Handling the Complexity of an Estuarial Ecosystem, a Methodology</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317819/</link>
+      <pubDate>Wed, 01 Sep 2004 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317819/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Management of the road traffic by an ant algorithm</title>
+      <link>https://Damien-Olivier.github.io/publication/lerebourg-hal-03317617/</link>
+      <pubDate>Thu, 01 Jul 2004 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/lerebourg-hal-03317617/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Changing the Level of Description in Aquatic Ecosystem Models: an Overview</title>
+      <link>https://Damien-Olivier.github.io/publication/tranouez-hal-03317824/</link>
+      <pubDate>Wed, 01 Oct 2003 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/tranouez-hal-03317824/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DECISION SUPPORT SYSTEM AND REGULATION SYSTEM FOR ROAD TRAFFIC MANAGEMENT</title>
+      <link>https://Damien-Olivier.github.io/publication/lerebourg-hal-03317822/</link>
+      <pubDate>Wed, 01 Oct 2003 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/lerebourg-hal-03317822/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Road traffic management based on ant system and regulation model</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317642/</link>
+      <pubDate>Wed, 01 Oct 2003 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317642/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contribution à la représentation multi-échelle des écosystèmes aquatiques</title>
+      <link>https://Damien-Olivier.github.io/publication/tranouez-hal-00436699/</link>
+      <pubDate>Wed, 01 Jan 2003 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/tranouez-hal-00436699/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,12 +5,28 @@
     <link>https://Damien-Olivier.github.io/author/michele-tirico/</link>
       <atom:link href="https://Damien-Olivier.github.io/author/michele-tirico/index.xml" rel="self" type="application/rss+xml" />
     <description>Michele Tirico</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Sat, 01 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
       <title>Michele Tirico</title>
       <link>https://Damien-Olivier.github.io/author/michele-tirico/</link>
     </image>
+    
+    <item>
+      <title>A reaction-diffusion system drives the morphogenesis of spatial complex networks</title>
+      <link>https://Damien-Olivier.github.io/publication/tirico-hal-03357563/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/tirico-hal-03357563/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Morphogenesis of Complex Networks: A Reaction Diffusion Framework for Spatial Graphs</title>
+      <link>https://Damien-Olivier.github.io/publication/tirico-hal-01959369/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/tirico-hal-01959369/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Morphogenesis of Complex Networks - A Reaction Diffusion Framework for Spatial Graphs</title>

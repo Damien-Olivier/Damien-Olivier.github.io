@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Véronique Jay | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/author/veronique-jay/</link>
+      <atom:link href="https://Damien-Olivier.github.io/author/veronique-jay/index.xml" rel="self" type="application/rss+xml" />
+    <description>Véronique Jay</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Sun, 01 Jul 2001 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>Véronique Jay</title>
+      <link>https://Damien-Olivier.github.io/author/veronique-jay/</link>
+    </image>
+    
+    <item>
+      <title>Automata with multiplicities as behaviour model in multi-agent simulations</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317669/</link>
+      <pubDate>Sun, 01 Jul 2001 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317669/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Genetic algorithms on automata with multiplicities for adaptive agent behaviour in emergent organizations</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317668/</link>
+      <pubDate>Sun, 01 Jul 2001 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317668/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Distributed multi-agents systems used for dynamic aquatic simulations</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317671/</link>
+      <pubDate>Fri, 01 Sep 2000 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317671/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A multi-agent system integrating vortex methods for fluid flow computation</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317672/</link>
+      <pubDate>Tue, 01 Aug 2000 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317672/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Agent-based simulation of water flow for environment modelling in estuaries</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317677/</link>
+      <pubDate>Mon, 01 May 2000 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317677/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Une approche multi-agent pour la simulation d&#39;environnement estuarien</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-03317683/</link>
+      <pubDate>Mon, 01 Nov 1999 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-03317683/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

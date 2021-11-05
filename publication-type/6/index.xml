@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>6 | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/publication-type/6/</link>
+      <atom:link href="https://Damien-Olivier.github.io/publication-type/6/index.xml" rel="self" type="application/rss+xml" />
+    <description>6</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Sun, 01 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>6</title>
+      <link>https://Damien-Olivier.github.io/publication-type/6/</link>
+    </image>
+    
+    <item>
+      <title>Morphogenesis of Complex Networks: A Reaction Diffusion Framework for Spatial Graphs</title>
+      <link>https://Damien-Olivier.github.io/publication/tirico-hal-01959369/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/tirico-hal-01959369/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Traces du corps et intelligence collective : les fourmis sont-elles plus intelligentes que les informaticiens ?</title>
+      <link>https://Damien-Olivier.github.io/publication/olivier-hal-02375470/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/olivier-hal-02375470/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Networking, Networks and Dynamic Graphs</title>
+      <link>https://Damien-Olivier.github.io/publication/balev-hal-02414959/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/balev-hal-02414959/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Swarm Problem-Solving</title>
+      <link>https://Damien-Olivier.github.io/publication/dutot-hal-02414958/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/dutot-hal-02414958/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Decentralised Approach for the Transportation On Demand Problem</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-00422354/</link>
+      <pubDate>Sat, 01 Aug 2009 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-00422354/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Principes généraux de résolution de problèmes combinatoires</title>
+      <link>https://Damien-Olivier.github.io/publication/dutot-hal-00457722/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/dutot-hal-00457722/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Changing Levels of Description in a Fluid Flow Simulation</title>
+      <link>https://Damien-Olivier.github.io/publication/tranouez-hal-00198098/</link>
+      <pubDate>Sun, 01 Jan 2006 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/tranouez-hal-00198098/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

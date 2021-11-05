@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pascal Mallet | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/author/pascal-mallet/</link>
+      <atom:link href="https://Damien-Olivier.github.io/author/pascal-mallet/index.xml" rel="self" type="application/rss+xml" />
+    <description>Pascal Mallet</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Tue, 01 Nov 2011 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>Pascal Mallet</title>
+      <link>https://Damien-Olivier.github.io/author/pascal-mallet/</link>
+    </image>
+    
+    <item>
+      <title>Analyse multi-échelle de la vulnérabilité des réseaux des systèmes territoriaux</title>
+      <link>https://Damien-Olivier.github.io/publication/nabaa-hal-01352901/</link>
+      <pubDate>Tue, 01 Nov 2011 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/nabaa-hal-01352901/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exploitation of a displacement survey to detect road network use vulnerability</title>
+      <link>https://Damien-Olivier.github.io/publication/nabaa-hal-00430690/</link>
+      <pubDate>Thu, 01 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/nabaa-hal-00430690/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A DYNAMIC VULNERABILITY MAP TO ASSESS THE RISK OF ROAD</title>
+      <link>https://Damien-Olivier.github.io/publication/nabaa-hal-00430696/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/nabaa-hal-00430696/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MODELING OF THE VULNERABILITY RELATED TO THE DYNAMIC ROAD TRAFFIC</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-00430682/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-00430682/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spatial detection of organization under evacuation situation</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-00430666/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-00430666/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Une approche d&#39;intelligence collective pour l&#39;élaboration d&#39;une carte de vulnérabilité dynamique</title>
+      <link>https://Damien-Olivier.github.io/publication/nabaa-hal-00430724/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/nabaa-hal-00430724/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

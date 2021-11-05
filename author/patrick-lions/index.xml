@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Patrick Lions | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/author/patrick-lions/</link>
+      <atom:link href="https://Damien-Olivier.github.io/author/patrick-lions/index.xml" rel="self" type="application/rss+xml" />
+    <description>Patrick Lions</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Tue, 01 Nov 2011 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>Patrick Lions</title>
+      <link>https://Damien-Olivier.github.io/author/patrick-lions/</link>
+    </image>
+    
+    <item>
+      <title>Analyse multi-échelle de la vulnérabilité des réseaux des systèmes territoriaux</title>
+      <link>https://Damien-Olivier.github.io/publication/nabaa-hal-01352901/</link>
+      <pubDate>Tue, 01 Nov 2011 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/nabaa-hal-01352901/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Exploitation of a displacement survey to detect road network use vulnerability</title>
+      <link>https://Damien-Olivier.github.io/publication/nabaa-hal-00430561/</link>
+      <pubDate>Mon, 01 Jun 2009 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/nabaa-hal-00430561/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

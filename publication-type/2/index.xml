@@ -5,12 +5,36 @@
     <link>https://Damien-Olivier.github.io/publication-type/2/</link>
       <atom:link href="https://Damien-Olivier.github.io/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Tue, 01 Sep 2015 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Mon, 01 Jan 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
       <title>2</title>
       <link>https://Damien-Olivier.github.io/publication-type/2/</link>
     </image>
+    
+    <item>
+      <title>Functional-biogeography of the reef fishes of the islands of the Gulf of California: Integrating functional divergence into marine conservation</title>
+      <link>https://Damien-Olivier.github.io/publication/olivier-hal-01993771/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/olivier-hal-01993771/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analysis of domino effect in the process industry using the event tree method</title>
+      <link>https://Damien-Olivier.github.io/publication/alileche-hal-02314369/</link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/alileche-hal-02314369/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Load Balancing at the Edge of Chaos: How Self-Organized Criticality Can Lead to Energy-Efficient Computing</title>
+      <link>https://Damien-Olivier.github.io/publication/laredo-hal-01960412/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/laredo-hal-01960412/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>An example journal article</title>
@@ -29,6 +53,54 @@
 &lt;/div&gt;
 &lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>A morphological novelty for feeding and sound production in the yellowtail clownfish</title>
+      <link>https://Damien-Olivier.github.io/publication/olivier-hal-02145299/</link>
+      <pubDate>Wed, 01 Apr 2015 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/olivier-hal-02145299/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cognitive Emotional Based Architecture for Crowd Simulation</title>
+      <link>https://Damien-Olivier.github.io/publication/abdelhak-hal-02375489/</link>
+      <pubDate>Fri, 01 Jun 2012 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/abdelhak-hal-02375489/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Organization Detection for Dynamic Load Balancing in Individual-Based Simulations</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-00430523/</link>
+      <pubDate>Mon, 01 Jan 2007 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-00430523/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Organization Detection Using Emergent Computing</title>
+      <link>https://Damien-Olivier.github.io/publication/bertelle-hal-00430530/</link>
+      <pubDate>Fri, 01 Sep 2006 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/bertelle-hal-00430530/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simulation of a compartmental multiscale model of predator-prey interactions</title>
+      <link>https://Damien-Olivier.github.io/publication/tranouez-hal-03317610/</link>
+      <pubDate>Sat, 01 Jan 2005 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/tranouez-hal-03317610/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contribution à la représentation multi-échelle des écosystèmes aquatiques</title>
+      <link>https://Damien-Olivier.github.io/publication/tranouez-hal-00436699/</link>
+      <pubDate>Wed, 01 Jan 2003 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/tranouez-hal-00436699/</guid>
+      <description></description>
     </item>
     
   </channel>
