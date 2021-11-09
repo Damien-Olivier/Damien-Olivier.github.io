@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dominique Archambault | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/author/dominique-archambault/</link>
+      <atom:link href="https://Damien-Olivier.github.io/author/dominique-archambault/index.xml" rel="self" type="application/rss+xml" />
+    <description>Dominique Archambault</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Wed, 01 Jun 2005 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>Dominique Archambault</title>
+      <link>https://Damien-Olivier.github.io/author/dominique-archambault/</link>
+    </image>
+    
+    <item>
+      <title>How to make games for visually impaired children</title>
+      <link>https://Damien-Olivier.github.io/publication/archambault-hal-03410743/</link>
+      <pubDate>Wed, 01 Jun 2005 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/archambault-hal-03410743/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TL a Language to Create Games for Visually Impaired Children</title>
+      <link>https://Damien-Olivier.github.io/publication/olivier-hal-03410748/</link>
+      <pubDate>Mon, 01 Jul 2002 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/olivier-hal-03410748/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

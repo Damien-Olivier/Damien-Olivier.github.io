@@ -79,6 +79,41 @@
     <loc>https://Damien-Olivier.github.io/talk/ethique-et-intelligence-artificielle/</loc>
     <lastmod>2021-12-13T18:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://Damien-Olivier.github.io/authors/</loc>
+    <lastmod>2021-11-08T18:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://Damien-Olivier.github.io/en/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://Damien-Olivier.github.io/authors/"
+                />
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/author/helene-marquie-et-al/</loc>
+    <lastmod>2021-11-08T18:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/talk/quest-ce-que-le-genre/</loc>
+    <lastmod>2021-11-08T18:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/tags/</loc>
+    <lastmod>2021-11-08T18:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://Damien-Olivier.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://Damien-Olivier.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/tag/up/</loc>
+    <lastmod>2021-11-08T18:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://Damien-Olivier.github.io/courses/</loc>
     <lastmod>2021-10-07T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -97,19 +132,6 @@
   </url><url>
     <loc>https://Damien-Olivier.github.io/talk/presentation-de-la-15e-edition-de-luniversite-populaire/</loc>
     <lastmod>2021-10-04T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Damien-Olivier.github.io/authors/</loc>
-    <lastmod>2021-10-18T17:51:35+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/authors/"
-                />
   </url><url>
     <loc>https://Damien-Olivier.github.io/categories/</loc>
     <lastmod>2021-10-01T00:00:00+00:00</lastmod>
@@ -159,19 +181,6 @@
                 href="https://Damien-Olivier.github.io/post/"
                 />
   </url><url>
-    <loc>https://Damien-Olivier.github.io/tags/</loc>
-    <lastmod>2021-10-18T17:51:34+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/tags/"
-                />
-  </url><url>
     <loc>https://Damien-Olivier.github.io/category/up/</loc>
     <lastmod>2021-10-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -179,7 +188,7 @@
     <lastmod>2021-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/publication-type/1/</loc>
-    <lastmod>2021-10-18T17:51:34+02:00</lastmod>
+    <lastmod>2021-11-04T19:44:54+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -195,16 +204,16 @@
     <lastmod>2021-10-18T17:51:34+02:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/author/antoine-dutot/</loc>
-    <lastmod>2021-10-18T17:51:34+02:00</lastmod>
+    <lastmod>2021-11-04T19:44:55+01:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/author/damien-olivier/</loc>
-    <lastmod>2021-10-18T17:51:35+02:00</lastmod>
+    <lastmod>2021-11-04T19:44:55+01:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/author/michele-tirico/</loc>
     <lastmod>2021-10-18T17:51:34+02:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/publication_types/</loc>
-    <lastmod>2021-10-18T17:51:35+02:00</lastmod>
+    <lastmod>2021-11-04T19:44:55+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -217,7 +226,7 @@
                 />
   </url><url>
     <loc>https://Damien-Olivier.github.io/publication/</loc>
-    <lastmod>2021-10-18T17:51:35+02:00</lastmod>
+    <lastmod>2021-11-04T19:44:55+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -230,7 +239,7 @@
                 />
   </url><url>
     <loc>https://Damien-Olivier.github.io/author/stefan-balev/</loc>
-    <lastmod>2021-10-18T17:51:34+02:00</lastmod>
+    <lastmod>2021-11-04T19:44:55+01:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/courses/example/</loc>
     <lastmod>2021-01-24T00:00:00+00:00</lastmod>
@@ -303,49 +312,10 @@
     <lastmod>2021-10-18T17:51:34+02:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/publication-type/6/</loc>
-    <lastmod>2021-10-18T17:51:34+02:00</lastmod>
+    <lastmod>2021-11-04T19:44:55+01:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/publication/tirico-hal-01959369/</loc>
     <lastmod>2021-10-18T17:51:34+02:00</lastmod>
-  </url><url>
-    <loc>https://Damien-Olivier.github.io/publication-type/3/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/publication-type/3/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/publication-type/3/"
-                />
-  </url><url>
-    <loc>https://Damien-Olivier.github.io/publication/preprint/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/publication/preprint/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/publication/preprint/"
-                />
-  </url><url>
-    <loc>https://Damien-Olivier.github.io/tag/source-themes/</loc>
-    <lastmod>2019-04-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/tag/source-themes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/tag/source-themes/"
-                />
   </url><url>
     <loc>https://Damien-Olivier.github.io/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
@@ -411,7 +381,7 @@
     <lastmod>2021-10-18T17:51:33+02:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/publication-type/2/</loc>
-    <lastmod>2021-10-18T17:51:34+02:00</lastmod>
+    <lastmod>2021-11-04T19:44:54+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -493,7 +463,7 @@
     <lastmod>2021-10-18T17:51:31+02:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/author/frederic-guinand/</loc>
-    <lastmod>2021-10-18T17:51:35+02:00</lastmod>
+    <lastmod>2021-11-04T19:44:53+01:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/author/juan-luis-jimenez-laredo/</loc>
     <lastmod>2021-10-18T17:51:33+02:00</lastmod>
@@ -510,6 +480,12 @@
     <loc>https://Damien-Olivier.github.io/tag/stigmergy-shortest-path-self-organization-local-interactions-interactions-collective-sorting-collective-intelligence-ant-behavior-swarm-problem-solving-swarm-intelligence/</loc>
     <lastmod>2021-10-18T17:51:32+02:00</lastmod>
   </url><url>
+    <loc>https://Damien-Olivier.github.io/publication/corson-hal-03410773/</loc>
+    <lastmod>2021-11-04T19:44:55+01:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/author/nathalie-corson/</loc>
+    <lastmod>2021-11-04T19:44:55+01:00</lastmod>
+  </url><url>
     <loc>https://Damien-Olivier.github.io/publication/balev-hal-02414959/</loc>
     <lastmod>2021-10-18T17:51:32+02:00</lastmod>
   </url><url>
@@ -523,7 +499,7 @@
     <lastmod>2021-10-18T17:51:32+02:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/author/yoann-pigne/</loc>
-    <lastmod>2021-10-18T17:51:32+02:00</lastmod>
+    <lastmod>2021-11-04T19:44:52+01:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/project/external-project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
@@ -564,6 +540,19 @@
                 href="https://Damien-Olivier.github.io/author/robert-ford/"
                 />
   </url><url>
+    <loc>https://Damien-Olivier.github.io/tag/source-themes/</loc>
+    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://Damien-Olivier.github.io/en/tag/source-themes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://Damien-Olivier.github.io/tag/source-themes/"
+                />
+  </url><url>
     <loc>https://Damien-Olivier.github.io/publication/jimenezlaredo-hal-01960582/</loc>
     <lastmod>2021-10-18T17:51:33+02:00</lastmod>
   </url><url>
@@ -578,6 +567,15 @@
   </url><url>
     <loc>https://Damien-Olivier.github.io/author/eric-parmentier/</loc>
     <lastmod>2021-10-18T17:51:23+02:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/publication/dutot-hal-03415299/</loc>
+    <lastmod>2021-11-04T19:44:55+01:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/publication/balev-hal-03415292/</loc>
+    <lastmod>2021-11-04T19:44:55+01:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/publication/corson-hal-03415313/</loc>
+    <lastmod>2021-11-04T19:44:55+01:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/publication-type/0/</loc>
     <lastmod>2021-10-18T17:51:35+02:00</lastmod>
@@ -655,7 +653,13 @@
     <lastmod>2021-10-18T17:51:22+02:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/author/guilhelm-savin/</loc>
-    <lastmod>2021-10-18T17:51:25+02:00</lastmod>
+    <lastmod>2021-11-04T19:44:54+01:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/author/julien-franzolini/</loc>
+    <lastmod>2021-11-04T19:44:53+01:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/publication/olivier-hal-03410724/</loc>
+    <lastmod>2021-11-04T19:44:53+01:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/tag/transportation-on-demand-vehicle-routing-problem-collective-intelligence-self-organization/</loc>
     <lastmod>2021-10-18T17:51:24+02:00</lastmod>
@@ -684,6 +688,21 @@
     <loc>https://Damien-Olivier.github.io/publication/dutot-hal-00457722/</loc>
     <lastmod>2021-10-18T17:51:23+02:00</lastmod>
   </url><url>
+    <loc>https://Damien-Olivier.github.io/author/erika-dagata/</loc>
+    <lastmod>2021-11-04T19:44:54+01:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/author/myrielle-dupont-rouzeyrol/</loc>
+    <lastmod>2021-11-04T19:44:54+01:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/author/pierre-magal/</loc>
+    <lastmod>2021-11-04T19:44:54+01:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/author/shigui-ruan/</loc>
+    <lastmod>2021-11-04T19:44:54+01:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/publication/olivier-hal-03410715/</loc>
+    <lastmod>2021-11-04T19:44:54+01:00</lastmod>
+  </url><url>
     <loc>https://Damien-Olivier.github.io/tag/complex-systems-risk-management-organization-detection-vulnerability-codah/</loc>
     <lastmod>2021-10-18T17:51:31+02:00</lastmod>
   </url><url>
@@ -708,6 +727,9 @@
     <loc>https://Damien-Olivier.github.io/publication/haifa-halshs-01082673/</loc>
     <lastmod>2021-10-18T17:51:25+02:00</lastmod>
   </url><url>
+    <loc>https://Damien-Olivier.github.io/publication/franzolini-hal-03410728/</loc>
+    <lastmod>2021-11-04T19:44:52+01:00</lastmod>
+  </url><url>
     <loc>https://Damien-Olivier.github.io/publication/bertelle-hal-00430682/</loc>
     <lastmod>2021-10-18T17:51:31+02:00</lastmod>
   </url><url>
@@ -716,6 +738,15 @@
   </url><url>
     <loc>https://Damien-Olivier.github.io/publication/nabaa-hal-00430724/</loc>
     <lastmod>2021-10-18T17:51:23+02:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/author/erika-m.c.-dagata/</loc>
+    <lastmod>2021-11-04T19:44:54+01:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/author/glenn-webb/</loc>
+    <lastmod>2021-11-04T19:44:54+01:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/publication/olivier-hal-03410714/</loc>
+    <lastmod>2021-11-04T19:44:54+01:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/publication/bertelle-hal-03317791/</loc>
     <lastmod>2021-10-18T17:51:26+02:00</lastmod>
@@ -738,8 +769,14 @@
     <loc>https://Damien-Olivier.github.io/tag/complex-system-simulation-multi-scale-cooperative-problem-solving-heterogeneous-multiagent-system/</loc>
     <lastmod>2021-10-18T17:51:25+02:00</lastmod>
   </url><url>
+    <loc>https://Damien-Olivier.github.io/tag/pyocyanic-bacillus-antibiotic-nosocomial-ibm-aco-ant-algorithm/</loc>
+    <lastmod>2021-11-04T19:44:54+01:00</lastmod>
+  </url><url>
     <loc>https://Damien-Olivier.github.io/publication/tranouez-hal-00198098/</loc>
     <lastmod>2021-10-18T17:51:25+02:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/publication/dutot-hal-03410723/</loc>
+    <lastmod>2021-11-04T19:44:54+01:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/publication/tranouez-hal-03317614/</loc>
     <lastmod>2021-10-18T17:51:30+02:00</lastmod>
@@ -755,6 +792,12 @@
   </url><url>
     <loc>https://Damien-Olivier.github.io/publication/azizalaoui-hal-03317613/</loc>
     <lastmod>2021-10-18T17:51:35+02:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/author/dominique-archambault/</loc>
+    <lastmod>2021-11-04T19:44:53+01:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/publication/archambault-hal-03410743/</loc>
+    <lastmod>2021-11-04T19:44:53+01:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/publication/bertelle-hal-03317826/</loc>
     <lastmod>2021-10-18T17:51:27+02:00</lastmod>
@@ -824,6 +867,9 @@
   </url><url>
     <loc>https://Damien-Olivier.github.io/publication/bertelle-hal-03317653/</loc>
     <lastmod>2021-10-18T17:51:27+02:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/publication/olivier-hal-03410748/</loc>
+    <lastmod>2021-11-04T19:44:53+01:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/publication/bertelle-hal-03317688/</loc>
     <lastmod>2021-10-18T17:51:28+02:00</lastmod>

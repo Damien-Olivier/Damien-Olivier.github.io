@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Julien Franzolini | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/author/julien-franzolini/</link>
+      <atom:link href="https://Damien-Olivier.github.io/author/julien-franzolini/index.xml" rel="self" type="application/rss+xml" />
+    <description>Julien Franzolini</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Sat, 01 Jan 2011 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>Julien Franzolini</title>
+      <link>https://Damien-Olivier.github.io/author/julien-franzolini/</link>
+    </image>
+    
+    <item>
+      <title>Neighborhood Evolution in MANET Experiments</title>
+      <link>https://Damien-Olivier.github.io/publication/olivier-hal-03410724/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/olivier-hal-03410724/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Information Gathering and Sharing in DT-MANETs</title>
+      <link>https://Damien-Olivier.github.io/publication/franzolini-hal-03410728/</link>
+      <pubDate>Tue, 01 Jan 2008 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/franzolini-hal-03410728/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
