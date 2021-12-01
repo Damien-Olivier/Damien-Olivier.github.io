@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="_assets/theme/myblack.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">## Les fichiers en Java
+### Université du Havre - LITIS
+#### L2 Math-Info - Spécialisation informatique
+[D. Olivier](http://litis.univ-lehavre.fr/~olivier/PagePerso)</script></section><section  data-markdown><script type="text/template">
+## Plan de la présentation
+* [Généralités](#/2)
+* [`java.io`](#/3)
+* [`java.nio`](#/4)
+* [Les paths](#/5)
+* [La classe `Files`](#/6)
+* [`java.io` et `java.nio`](#/7)
+* [Exemple](#/8)</script></section><section ><section data-markdown><script type="text/template"># Généralités</script></section><section data-markdown><script type="text/template">## Échanger de l'information
+* Recevoir des données d'une source ;
+* Envoyer des données vers un destinataire.</script></section><section data-markdown><script type="text/template">## Source et destination
+* La source et la destination peuvent être :
+	* un fichier ;<!-- .element: style="color:blue" -->
+	* la mémoire ;
+	* une socket réseau ;
+	* un pipe ;
+	* ....</script></section><section data-markdown><script type="text/template">## Nature des données
+* du texte ;<!-- .element: style="color:blue" -->
+* des images ;
+* des sons ;
+* de la vidéo ;
+* des octets ;<!-- .element: style="color:blue" -->
+* .........</script></section><section data-markdown><script type="text/template">## Un peu d'histoire
+* Java 1.0 fichiers et flux d'octets avec `java.io` ;
+* Java 1.1 prise en charge des flux de caractères (`InputStreamReader`, `OutputStreamWriter`) et l'encodage des caractères - traitement bloquant ;
+* Java 4 API non bloquante ; utilisation de canaux, tampons et sélecteurs `java.nio`;
+* Java 7 amélioration de `java.nio` on parle de `nio2` ;
+* Java 8 prise en charge de la nouvelle API `java.util.stream`.
+
+<aside class="notes"><p>La possibilité de travailler avec des fichiers et des flux d&#39;octets est disponible depuis JDK 1.0. Cette première version du package java.io , cependant, ne prenait pas entièrement en charge les flux de caractères. Cela a été ajouté à JDK 1.1 avec les classes de lecteur et d&#39;écriture, et l&#39;introduction des encodages de caractères. Cette API de flux était cependant bloquante et n’a pas bien évolué. Un serveur Web gérant des milliers de requêtes simultanées, par exemple, avait besoin d&#39;un thread séparé pour chaque connexion.</p>
+<p>La prochaine étape dans le traitement du streaming a été introduite dans Java 4 avec la nouvelle API Java NIO ( JSR 51 ). Cette API promettait de fournir des opérations d&#39;E / S rapides et évolutives en tirant parti des avancées d&#39;E / S non bloquantes sur les systèmes d&#39;exploitation. Les tampons , les canaux et les sélecteurs du package java.nio constituent le cœur de cette API. En outre, il fournit également des expressions régulières pour une analyse efficace, un formatage de type printf et des encodeurs et décodeurs Charset.</p>
+<p>Java 7 a encore amélioré les API Java NIO ( JSR-203 ) en ajoutant une gestion efficace des fichiers, une nouvelle interface de système de fichiers, des E / S asynchrones, une prise en charge de la liaison de socket et de la multidiffusion. La transformation de cette API était si importante qu&#39;elle a été rebaptisée Java NIO.2.</p>
+<p>Java 8 a amélioré l&#39;API NIO.2 en ajoutant la prise en charge de la nouvelle API java.util.stream .</p>
+</aside></script></section></section><section ><section data-markdown><script type="text/template"># Le package [`java.io`](https://docs.oracle.com/javase/8/docs/api/java/io/package-summary.html)</script></section><section data-markdown><script type="text/template">## Les flux (stream)
+* C'est un niveau d'abstraction ;
+* Flux = *permet d'encapsuler l'envoi et la réception de données*;
+	* Flux d'entrée (lecture) ;
+	* Flux de sortie (écriture).
+* Un flux est soit une suite de caractère ou d'octets qui peuvent ếtre ensuite interprétés.
+* On peut écrire et lire dans un flux ;
+* Le traitement est séquentiel.</script></section><section data-markdown><script type="text/template">## Les flux
+![](images/flux.png)<!-- .element: style="width:500px;background-color:white;"--></script></section><section data-markdown><script type="text/template">## Les filtres ou flux de traitement
+* Ils permettent de faire un traitement sur les données.
+* Ce sont des flux ;
+* Exemple :
+  - Bufferisation ;
+  - Compression ;
+  - Encodage, cryptage ;
+  - .....</script></section><section data-markdown><script type="text/template">## Chainage des flux
+  * L'intérêt des flux c'est qu'ils peuvent être chaînés.
+    - Un flux de lecture peut être enchaîné avec un flux de traitement permettant de mettre en œuvre un désarchivage par exemple.
+    - L'enchaînement se fait par la création d'objet de type flux (`stream`) prenant un autre `stream` comme paramètre.
+
+![](images/IO_LayeredInput.png)<!-- .element: style="width:500px;background-color:white;"--></script></section><section data-markdown><script type="text/template">## La hiérarchie des classes
+![](images/fileio_class_diag.svg)</script></section><section data-markdown><script type="text/template">## Nature des flux
+* Flux d'octets
+* Flux de caractères
+* Structuration par des classes abstraites
+  - `InputStream`, `OutputStream` octets ;
+  - `Writer`, `Reader` caractères.</script></section><section data-markdown><script type="text/template">## Écriture dans un flux d'octets
+![](images/OutputStream.svg)<!-- .element: style="width:500px;background-color:white;" --></script></section><section data-markdown><script type="text/template">## Mise en œuvre
+* Flux de sortie vers des fichiers, instances de la classe [`FileOutputStream`](https://docs.oracle.com/javase/8/docs/api/?java/io/FileOutputStream.html).
+* Écriture octet par octet.
+* Pour écrire d'autres types de données, il faut connecter ce flux à un autre flux de sortie d'une classe adaptée,
+  - [`DataOutputStream`](https://docs.oracle.com/javase/8/docs/api/java/io/DataOutputStream.html) types primitifs ;
+  - [`ObjectOutputStream`](https://docs.oracle.com/javase/8/docs/api/java/io/ObjectOutputStream.html) pour sérialiser des objets (implementation de
+[_`Serializable`_](https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html) ou [_`Externalizable`_]() ).
+
+```java
+FileOutputStream fout = null;
+try {
+		fout = new FileOutputStream("exemple.txt");
+		fout.write("Une chaine convertie en octets".getBytes());
+} catch IOException ex) {
+   	ex.printStackTrace();
+  }
+	finally {
+		if (fout != null) {
+			fout.flush();
+			fout.close();
+		}
+	}
+
+```</script></section><section data-markdown><script type="text/template">## Simplification de l'écriture
+### Java 1.7 et suivant
+```Java
+try (FileOutputStream fout = new FileOutputStream("exemple.txt")) {
+  			fout.write("Une chaine convertie en octets".getBytes());
+  			fout.flush(); // Pas indispensable cf. try
+  			fout.close(); // Idem
+} catch (IOException ex) {
+   ex.printStackTrace();
+  }  // Fermeture automatique des ressources ouvertes dans le try (...).
+```
+* Si le `new` est réalisé, le flux sera automatiquement fermé à la fin du du bloc `try`, même en cas d'exception.
+* Il peut y avoir plusieurs ressources ouvertes dans le bloc.</script></section></section><section ><section data-markdown><script type="text/template">
+## Lecture dans un flux d'octets
+![](images/Inpustream.svg)<!-- .element: style="width:500px;background-color:white;" --></script></section><section data-markdown><script type="text/template">## Mise en œuvre
+* Flux d'entrée provenant de fichiers, instances de la classe [`FileInputStream`](https://docs.oracle.com/javase/8/docs/api/?java/io/FileInputStream.html).
+* Lecture octet par octet.
+* Pour lire d'autres types de données, il faut connecter ce flux à un autre flux d'entrée d'une classe adaptée,
+  - [`DataInputStream`](https://docs.oracle.com/javase/8/docs/api/java/io/DataInputStream.html) types primitifs ;
+  - [`ObjectInputStream`](https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html) pour les objets sérialisés.
+```Java
+  try (FileInputStream fis = new FileInputStream(file)) {
+  			System.out.println("Taille totale " (octets) : "+ fis.available());
+  			int lu;
+  			while ((lu = fis.read()) != -1) {
+  				System.out.print((char) lu);
+  			}
+  		} catch (IOException e) {
+  			e.printStackTrace();
+  		}
+```</script></section><section data-markdown><script type="text/template">## Écriture dans un flux de caractères
+![Writer](images/Writer.png)</script></section><section data-markdown><script type="text/template">## Mise en œuvre
+* Flux de sortie vers des fichiers, instances de la classe [`FileOutputStream`](https://docs.oracle.com/javase/8/docs/api/?java/io/FileOutputStream.html).
+* On encapsule ensuite ce flux avec [`OutputStreamWriter`](https://docs.oracle.com/javase/8/docs/api/?java/io/OutputStreamWriter.html) et l'on précise éventuellement l'encodage (UTF-8, ASCII ...).
+
+```Java
+try(OutputStreamWriter output = new OutputStreamWriter(
+        new FileOutputStream("exemple.txt", "UTF-8");
+    BufferedWriter buffered =
+        new BufferedWriter(output))
+{
+    buffered.write("hello world!");
+}
+catch (IOException ex) {
+    ex.printStackTrace();
+}
+```</script></section><section data-markdown><script type="text/template">## Lecture dans un flux de caractères
+![Reader](images/reader.png)</script></section><section data-markdown><script type="text/template">## Mise en œuvre
+* Flux d'entrée du fichier, instances de la classe [`FileInputStream`](https://docs.oracle.com/javase/8/docs/api/?java/io/FileInputStream.html).
+* On encapsule ensuite ce flux avec [`InputStreamWriter`](https://docs.oracle.com/javase/8/docs/api/?java/io/InputStreamWriter.html) et l'on précise éventuellement l'encodage (UTF-8, ASCII ...).
+* Il peut être bufferisé ensuite.
+```Java
+try (FileInputStream byteStream = new FileInputStream("/proc/meminfo");
+      BufferedReader reader = new BufferedReader(new InputStreamReader(byteStream, "UTF-8"));) {
+
+    String line;
+    while ((line = reader.readLine()) != null) {
+      System.out.println(line);
+    }
+  } catch (FileNotFoundException e) {
+    e.printStackTrace();
+  } catch (IOException e) {
+    e.printStackTrace();
+  }
+```</script></section></section><section ><section data-markdown><script type="text/template"># Concepts généraux de `java.nio`
+![nioConcept](images/nioConcept.png)<!-- .element: style="width:500px;background-color:white;" --></script></section><section data-markdown><script type="text/template">## La structure du package
+![](images/ClassesNIO.png)<!-- .element: style="width:500px;background-color:white;"-->
+
+[source](http://www.deepakgaikwad.net/index.php/2013/08/26/java-nio-tutorial.html)</script></section><section data-markdown><script type="text/template">## Canaux et tampons
+* Au niveau de `nio` toutes le E/S utilisent un `Channel` ;
+* Les données sont écrites d'un `Buffer` vers un `Channel`,
+* et lue d'un `Channel` vers un `Buffer`.
+<div class="column5" style="font-size:70%;text-align:center;">
+<img src="./images/LectureNio.png" style="background-color:white"/><br>
+Lecture
+</div>
+<div class="column5" style="font-size:70%;text-align:center;">
+<img src="./images/EcritureNio.png" style="background-color:white"/><br>
+Écriture
+</div></script></section><section data-markdown><script type="text/template">## Notion de canal
+  > Un canal peut être vu comme un tuyau qui transporte des données (sous forme d'octets) entre un tampon et une autre entité à l'autre extrémité.</script></section><section data-markdown><script type="text/template">## Les différents canaux
+* `FileChannel`<!-- .element: style="color:blue" --> : canal pour lire et écrire dans les fichiers.
+* `DatagramChannel`
+* `SocketChannel`
+* `ServerSocketChannel`
+<aside class="notes"><p>non exhaustif
+Comme vous pouvez le voir, ces canaux portent sur les échanges réseaux et le fichiers.
+Il y a aussi des interfaces qui accompagnent ces classes, mais nous ne les évoquerons pas pour simplifier.
+Elles seront expliquées, le cas échéant.</p>
+</aside></script></section><section data-markdown><script type="text/template">## Notion de tampon
+* Il "bufferise" les E/S en globalisant les opérations ;
+* Les traitements au niveau de l'API `nio` consistent à déplacer des données dans et hors des tampons ;
+* Il existe des tampons directs et indirects :
+  - indirect : un tampon intermédiaire est géré ;
+  - direct : il n'y a pas de tampon intermédiaire. Le tampon java n'est plus dans la machine virtuelle.
+
+<aside class="notes"><ul>
+<li>Indirect Par exemple, imaginez une application qui doit lire des données à partir d&#39;un fichier sur le disque local. Il demandera de lire ces données à partir du système d&#39;exploitation, qui à son tour demandera au contrôleur de disque de copier les octets du stockage vers le tampon intermédiaire. Les données de cette mémoire tampon seront ensuite copiées dans la mémoire tampon du tas Java</li>
+<li>Un tampon direct est un tampon qui supprime ce tampon intermédiaire en déplaçant la mémoire tampon sous-jacente en dehors du segment de mémoire Java. Comme l&#39;adresse mémoire est fixée pour la durée de vie du tampon et hors de la portée du récupérateur de place, le système d&#39;exploitation peut y accéder en toute sécurité. Bien que ces tampons soient plus efficaces en lecture et en écriture, ils sont également plus coûteux à créer et à détruire.</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template">## Les différents tampons
+* `ByteBuffer`
+* `CharBuffer`
+* `DoubleBuffer`
+* `FloatBuffer`
+* `IntBuffer`
+* `LongBuffer`
+* `ShortBuffer`
+
+<aside class="notes"><p>Ces buffers couvrent les types primitifs qui peuvent être utilisés dans le cadre des E/S</p>
+</aside></script></section><section data-markdown><script type="text/template">## Les sélecteurs
+Un sélecteur permet à un seul thread de gérer plusieurs canaux.
+![Selecteur](images/Selecteur.svg)<!-- .element: style="width:500px;background-color:white;" -->
+
+<aside class="notes"><p>C&#39;est pratique si votre application a de nombreuses connexions (canaux) ouvertes,
+mais que le trafic est faible sur chaque connexion. Par exemple, dans un chat.</p>
+</aside></script></section></section><section ><section data-markdown><script type="text/template"># Promenons nous dans les paths</script></section><section data-markdown><script type="text/template">## Arborescence
+![arbo](images/arbo.gif)
+
+[Source](http://www.linuxplanet.com/linuxplanet/tutorials/6666/1/screenshot3894/)</script></section><section data-markdown><script type="text/template">## L'interface [_`Path`_](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html)
+
+> Définit un objet qui représente un chemin vers un fichier ou un répertoire
+
+* Le chemin peut être absolu ou relatif ;
+* . le répertoire courant ;
+* .. le répertoire père.</script></section><section data-markdown><script type="text/template">## La méthode  [`get()`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html)
+* Permet de créer un chemin ;
+```java
+Path p1 = Paths.get("/home/damien/demo/exemple.txt"); // Chemin absolu
+Path p2 = Paths.get("exemple.txt"); // Chemin relatif par rapport au répertoire courant
+/* Plus tordu */
+Path p1 = Paths.get("/home/damien/demo/./exemple.txt"); // /home/damien/demo/exemple.txt
+Path p2 = Paths.get("/home/damien/demo/../exemple.txt"); // /home/damien/exemple.txt
+```
+
+La méthode `normalize()` permet de normaliser un chemin (suppression des . et ..).</script></section><section data-markdown><script type="text/template">## Conversion
+### Chemin relatif en absolu
+
+```java
+Path p1 = Paths.get("exemple.txt");
+Path p2 = p1.toAbsolutePath(); // Si le répertoire courant est /home/damien
+                               // /home/damien/exemple.txt
+```</script></section><section data-markdown><script type="text/template">## Conversion
+### Chemin en une référence sur un fichier
+### ou référence sur un fichier en chemin
+```java
+File f = Paths.get("file.txt").toFile();
+Path p = new File("file.txt").toPath();
+```</script></section><section data-markdown><script type="text/template">## Découper un chemin
+```java
+Path path = Paths.get("/home/damien/exemple.txt");
+Path path = path.getFileName(); // exemple.txt
+Path path = path.getName(0); // home
+int count = path.getNameCount(); // 3
+Path path = path.subpath(0, 2); // home/damien
+Path path = path.getParent(); // /home/damien
+Path path = path.getRoot(); // /
+```</script></section><section data-markdown><script type="text/template">## Un petit exemple
+```java
+package com.l2.video;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class GestionFichier01Path {
+	public static void main(String[] args) {
+		Path chemin = Paths.get("exemple.txt");
+		Path cheminAbsolu = chemin.toAbsolutePath();
+		for (Path p : cheminAbsolu) {
+			System.out.println(p);
+		}
+		System.out.println();
+	}
+}
+```</script></section></section><section ><section data-markdown><script type="text/template"># La classe [`Files`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html)
+## Vérifier l'existence, supprimer, copier, déplacer, gérer les droits ....
+* La classe `Files` contient des méthodes statiques qui permettent de gérer les fichiers et les répertoires.</script></section><section data-markdown><script type="text/template">## Existence d'un fichier
+
+```java
+Path path = Paths.get("data/logging.properties");
+boolean exists = Files.exists(path, new LinkOption[]{ LinkOption.NOFOLLOW_LINKS});
+```
+
+* Le paramètre `LinkOption` indique comment les liens symboliques sont gérés. Par défaut ils sont suivis.
+
+```java
+static boolean    notExists(Path path, LinkOption... options)
+```</script></section><section data-markdown><script type="text/template">## Supprimer un fichier ou un répertoire
+
+* Utilisation de la méthode [`Files.delete()`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#delete-java.nio.file.Path-) ;
+* Un répertoire est supprimé uniquement s'il est vide.
+
+```java
+Path path = Paths.get("exemple.txt");
+try {
+    Files.delete(path);
+} catch (NoSuchFileException x) {
+    System.err.format("%s: le fichier ou répertoire n'existe pas", path);
+} catch (DirectoryNotEmptyException x) {
+    System.err.format("%s n'est pas vide", path);
+} catch (IOException x) {
+    // Sans doute un pb de permission
+    System.err.println(x);
+}
+```</script></section><section data-markdown><script type="text/template">## Copier un fichier
+
+* Utilisation de la méthode [`Files.copy()`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#copy-java.io.InputStream-java.nio.file.Path-java.nio.file.CopyOption...-), si le fichier existe une exception `java.nio.file.FileAlreadyExistsException` est levée :
+
+```java
+Path source  = Paths.get("Exemple.txt");
+Path target = Paths.get("CopieDeExemple.txt");
+
+try {
+    Files.copy(source, destination);
+} catch(FileAlreadyExistsException fae) {
+    fae.printStackTrace();
+} catch (IOException e) {
+    e.printStackTrace();
+}
+```
+* Il est possible de copier sur un fichier existant
+`Files.copy(source, destination, StandardCopyOption.REPLACE_EXISTING)`</script></section><section data-markdown><script type="text/template">## Déplacer, renommer un fichier, un répertoire
+
+Utilisation de la méthode [`Files.move()`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#move-java.nio.file.Path-java.nio.file.Path-java.nio.file.CopyOption...-), si le fichier existe une exception `java.nio.file.FileAlreadyExistsException` est levée :
+
+```java
+Path source = Paths.get("Exemple.txt");
+Path target = Paths.get("ExempleDeplace.txt");
+
+try {
+    Files.move(source, destination);
+} catch(FileAlreadyExistsException fae) {
+    fae.printStackTrace();
+} catch (IOException e) {
+    e.printStackTrace();
+}
+```
+
+* `Files.move(source, destination, StandardCopyOption.REPLACE_EXISTING);`</script></section><section data-markdown><script type="text/template">## Lecture des attributs d'un fichier
+
+* Utilisation de la méthode [`Files.getFileAttributeView()`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#getFileAttributeView-java.nio.file.Path-java.lang.Class-java.nio.file.LinkOption...-)
+* On précise le chemin et la nature du système d'exploitation
+	* [`BasicFileAttributeView.class`](https://docs.oracle.com/javase/8/docs/api/index.html?java/nio/file/attribute/BasicFileAttributeView.html) correspond aux principaux attributs de tous les OS.
+
+```java
+package com.l2.video;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.attribute.BasicFileAttributeView;
+import java.nio.file.attribute.BasicFileAttributes;
+
+public class LectureAttributs {
+
+	public static void main(String[] args) {
+		Path p1 = Paths.get("src/com/l2/video/LectureAttributs.java");
+		Path cheminAbsolu = p1.toAbsolutePath();
+		System.out.println(cheminAbsolu);
+		BasicFileAttributeView basicView = Files.getFileAttributeView(p1, BasicFileAttributeView.class);
+		if (basicView != null) {
+			BasicFileAttributes basic;
+			try {
+				basic = basicView.readAttributes();
+				System.out.println("Fichier standard : " + basic.isRegularFile());
+				System.out.println("Répertoire       : " + basic.isDirectory());
+				System.out.println("Lien symbolique  : " + basic.isSymbolicLink());
+				System.out.println("Autre            : " + basic.isOther());
+				System.out.println("Taille           : " + basic.size());
+				System.out.println("Date de création : " + basic.creationTime());
+				System.out.println("Dernier accès    : " + basic.lastAccessTime());
+				System.out.println("Dernier accès    : " + basic.lastModifiedTime());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+		}
+	}
+}
+
+```</script></section><section data-markdown><script type="text/template">## Lecture du contenu d'un répertoire
+* Utilisation de [File.newDirectoryStream()](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newDirectoryStream-java.nio.file.Path-java.nio.file.DirectoryStream.Filter-)
+	* On peut ajouter un filtre pour récupérer par exemple que les fichiers `*.java`.
+
+```java
+// Path chemin = à compléter
+try (DirectoryStream<Path> stream = Files.newDirectoryStream(chemin, "*.{java,class,jar}"))
+{
+ for (Path dansFlux: stream) {
+   System.out.println(dansFlux.getFileName());
+ } catch (IOException x) {System.err.println(x);
+}
+```</script></section><section data-markdown><script type="text/template">## Lecture d'un répertoire et des sous-répertoires
+* [`File.walk()`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#walk-java.nio.file.Path-java.nio.file.FileVisitOption...-) descente en profondeur dans l'arborescence ;
+* [`FileVisitOption.FOLLOW_LINKS`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/FileVisitOption.html) on suit les liens symboliques.
+
+```java
+package com.l2.video;
+
+import java.io.IOException;
+import java.nio.file.FileVisitOption;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class LectureRepertoire {
+
+	public static void main(String[] args) {
+		Path path = Paths.get("/home/damien");
+		try {
+			Files.walk(path, FileVisitOption.FOLLOW_LINKS).map(Path::toAbsolutePath)
+					.filter(nom -> !Files.isDirectory(nom) && nom.toString().endsWith(".java"))
+					.forEach(System.out::println);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
+```</script></section></section><section ><section data-markdown><script type="text/template"># `java.io` et `java.nio`</script></section><section data-markdown><script type="text/template">## Lecture écriture dans un fichier
+![](images/nio2001.png)<!-- .element: style="width:500px;background-color:white;text-align:center;"" -->
+
+[Source](https://jmdoudoux.developpez.com/cours/developpons/java/chap-nio2.php#nio2-1)</script></section><section data-markdown><script type="text/template">## Lecture écriture dans un fichier
+* Réservé à des petits fichiers
+  - [`readAllBytes()`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readAllBytes-java.nio.file.Path-) lecture de tous les octets ;
+  - [`readAllLines()`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readAllLines-java.nio.file.Path-) lecture intégrale d'un fichier texte ;
+  - Deux surcharges de la méthode [`write()`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#write-java.nio.file.Path-byte:A-java.nio.file.OpenOption...-) permettent d'écrire l'intégralité d'un fichier.
+* Helpers pour faire le lien avec le package java.io
+  - [`newInputStream()`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newInputStream-java.nio.file.Path-java.nio.file.OpenOption...-) et [`newOutputStream()`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newOutputStream-java.nio.file.Path-java.nio.file.OpenOption...-) fichiers d'octets
+  - [`BufferedReader()`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newBufferedReader-java.nio.file.Path-) et [`BufferedWriter()`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newBufferedWriter-java.nio.file.Path-java.nio.charset.Charset-java.nio.file.OpenOption...-) lecture écriture de fichiers de type texte en utilisant un tampon.</script></section></section><section  data-markdown><script type="text/template"># Par l'exemple
+## Travail personnel
+http://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoFichiers
+</script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

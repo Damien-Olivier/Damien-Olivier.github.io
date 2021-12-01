@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="_assets/theme/myblack.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">## Lambda
+## Références de méthodes
+## Stream
+### Université du Havre - LITIS
+#### L2 Math-Info - Spécialisation informatique
+[D. Olivier](http://litis.univ-lehavre.fr/~olivier/PagePerso)</script></section><section  data-markdown><script type="text/template">
+## Plan du cours
+* [Lambda expressions](#/2)
+* [Interfaces fonctionnelles](#/4)
+* [Références de méthodes](#/6)
+* [Accès aux variables locales](#/8)
+* [Intérêt](#/10)
+* [Les streams](#/12)</script></section><section  data-markdown><script type="text/template">
+# Lambda expressions</script></section><section ><section data-markdown><script type="text/template">## Lambda expressions
+* Fonction anonyme = fonction sans nom ;
+* En java une lambda expression a accès au contexte (variable) du code qui l'englobe ;
+* Correspond à un bloc de code avec des paramètres destinés à être exécutés ultérieurement ;
+* Une lambda expression peut être utilisée pour implémenter une interface fonctionnelle (ex: inter face `Runnable`).
+
+<aside class="notes"><p>Lambda en quelques mots :</p>
+<ul>
+<li>Pas de nom ;</li>
+<li>Une lambda n’est pas associée à une classe particulière comme l’est une méthode. Une lambda a une liste de paramètres, un corps, un type de retour, et une liste possible d’exceptions qui peuvent être levées ;</li>
+<li>Une lambda peut être passée en argument à une méthode ou stockée dans une variable ;</li>
+</ul>
+<p>Le but d’une interface fonctionnelle est de définir la signature d’une méthode qui pourra être utilisée pour passer en paramètre :</p>
+<ul>
+<li>une référence vers une méthode statique ;</li>
+<li>une référence vers une méthode d’instance ;</li>
+<li>une référence vers un constructeur ;</li>
+<li>une expression lambda.</li>
+</ul>
+<p>L&#39;interface <code>Runnable</code> est une interface que nous verrons dans le cadre des threads.</p>
+</aside></script></section><section data-markdown><script type="text/template">## Syntaxe d'une lambda expression
+```
+     (parametres) -> expressions
+     (parametres) -> { instructions; }
+```
+* S'il y a plusieurs paramètres, ils seront séparés par des virgules.
+* Le type des paramètres peut être explicite ou implicite s'il est possible de l'inférer.
+* Le type de retour est toujours inféré ;
+* Exemples :
+
+```java
+(int x, int y) -> { return x + y; }     // Types explicites, valeur de retour
+(x, y) -> x + y                         // Types inférés, valeur de retour
+x -> x * x                              // Type inféré, valeur de retour
+() -> 123                               // Pas de paramètre, valeur de retour
+s -> System.out.println(s)              // Type inféré, pas de valeur de retour, un unique paramètre on peut omettre les parenthèses
+() -> { for (int i=0; i<10; i++) boseUnPeu(); } // Pas de valeur de retour
+```</script></section></section><section  data-markdown><script type="text/template"># Interfaces fonctionnelles</script></section><section ><section data-markdown><script type="text/template">## Rôles
+* Les interfaces fonctionnelles jouent un rôle important en lien avec les lambda expressions. Plusieurs de ces interfaces sont prédéfinies dans `java.util.function`.
+* Interface qui possède une seule méthode ;
+* Annotée par `@FunctionalInterface`.
+
+```java
+// Supplier : Fournit un résultat
+//---------------------------------------------------------------
+@FunctionalInterface
+public interface Supplier<T> {
+   T get(); // Gets a T type result
+}
+
+// Function : Represente une fonction a un argument
+// de type T et retourne un résultat de type R
+//---------------------------------------------------------------
+@FunctionalInterface
+public interface Function<T, R> {
+R apply(T t);
+```
+
+<aside class="notes"><p><code>@FunctionalInterface</code> est une annotation. Les annotations qui sont des métadonnées incluses dans le code source, vous connaissez cela déjà avec la javadoc.
+Ces métadonnées associés aux entités Java pourront être utilisées à la compilation ou à l&#39;exécution.
+Les annotations sont donc soit des :</p>
+<ul>
+<li>Instructions au compilateur</li>
+<li>Instructions de construction type javadoc</li>
+<li>Instructions d&#39;exécution</li>
+</ul>
+<p>Pourquoi utiliser <code>@FunctionalInterface</code>. Au début, cette annotation semble être inutile. Même sans cela, votre interface sera considérée comme fonctionnelle à condition qu’elle ne comporte qu’une méthode abstraite.
+Imaginez un grand projet avec plusieurs interfaces - il est difficile de tout contrôler manuellement. Une interface conçue pour être fonctionnelle pourrait être modifiée par inadvertance en ajoutant une ou plusieurs méthodes abstraites, la rendant inutilisable en tant qu’interface fonctionnelle. Mais en utilisant l’annotation <code>@FunctionalInterface</code> , le compilateur déclenchera une erreur en réponse à toute tentative visant à rompre la structure prédéfinie d’une interface fonctionnelle.</p>
+</aside></script></section><section data-markdown><script type="text/template">## Interfaces fonct. prédéfinies
+
+ | Interface fonctionnelle | Type param. | Type retour | Méthode abstraite | Description | Autres méthodes |
+ | :--- | :--- | :---- | :--- | :--- | :--- |
+ | [`IntFunction`](https://docs.oracle.com/javase/8/docs/api/java/util/function/IntFunction.html) | `int` | `T` | `apply()` | Fonction avec paramètre `int` | |
+ | `LongPredicate` | `long` | `boolean` | `test()` | Fonction booléenne avec paramètre `long` | `and`, `or`, `negate` |
+ | `Runnable` | | `void` | `run()` |  Exécute une action | |
+ | `Supplier<T>` | | `T` | `get()` | Fournit une valeur de type `T` | |
+ | `Consumer<T>` | `T` | `void` | `accept()` | Consomme une valeur de type `T` |  |
+
+<aside class="notes"><p>Définie dans <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html">https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html</a></p>
+<p>Ce sont des interfaces ;</p>
+<ul>
+<li>elles n’ont qu’une seule méthode abstraite ;</li>
+<li>elles peuvent définir des méthodes par défaut ;</li>
+</ul>
+<p>Ex : <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/IntFunction.html"><code>IntFunction</code></a>
+Que nous dit l&#39;interface, on utilise la méthode <code>T apply(int value)</code> le paramètre est donc de type <code>int</code> et le résultat de type <code>T</code>.</p>
+<pre><code class="language-java">import java.util.function.IntFunction;
+
+public class Main {
+    public static void main(String args[])
+    {
+        IntFunction&lt;Double&gt; ob = a -&gt; a / 2.0;
+        System.out.println(ob.apply(3));
+    }
+}
+</code></pre>
+<p>Sortie : 1.5</p>
+</aside></script></section><section data-markdown><script type="text/template">## Interfaces fonct. prédéfinies
+| Interface fonctionnelle | Type param. | Type retour | Méthode abstraite | Description | Autres méthodes |
+| :--- | :--- | :---- | :--- | :--- | :--- |
+| `BiConsumer<T,U>` | `T`, `U` | `void` | `accept()` | Consomme des valeurs de type `T` et `U` | |
+| `Function<T,R>` | `T` | `R`  |`apply()` | Fonction avec un seul paramètre | `compose`, `andThen`, `identity` |
+| `BiFunction<T,U,R>` | `T`, `U` | `R` |`apply()` | Fonction avec deux paramètres | `andThen` |
+| `UnaryOperator<T>` | `T` | `T`  |`apply()` | Opérateur unaire sur le type `T` | `compose`, `andThen`, `identity` |
+| `BinaryOperator<T>` | `T`, `T` | `R` |`apply()` | Opérateur binaire sur le type `T` | `andThen` |</script></section></section><section  data-markdown><script type="text/template"># Références de méthodes</script></section><section ><section data-markdown><script type="text/template">## Références de méthodes
+* Les références de méthodes permettent d'offrir une syntaxe simplifiée pour invoquer une méthode comme une expression lambda.
+* Elles offrent un raccourci syntaxique pour créer une expression lambda dont le but est d'invoquer une méthode ou un constructeur.
+* Une expression lambda correspond à une méthode anonyme dont le type est défini par une interface fonctionnelle. Les références de méthodes ont un rôle similaire mais au lieu de fournir une implémentation, une référence de méthode permet d'invoquer une méthode statique ou non ou un constructeur.</script></section><section data-markdown><script type="text/template">## Références de méthodes
+* Une méthode existante peut être utilisée en tant qu'implémentation
+de la méthode abstraite d'une interface fonctionnelle.
+* On définit une **_référence de méthode_** avec l'opérateur ::
+
+```java
+Class :: staticMethodName
+instance :: instanceMethodName
+Class :: instanceMethodName
+```</script></section><section data-markdown><script type="text/template">## Exemples
+| Cas | Exemple | Lambda |
+| :--- | :--- | :--- |
+| `Class::staticMethodName` | `String::valueOf` | `(s) -> String.valueOf(s)` |
+| `instance::instanceMethodName` | `obj::toString` | `() -> obj.toString()` |
+| `Class::instanceMethodName` |  `String::toString` |  `(s) -> s.toString()` |
+| `Class::instanceMethodName` | `String::charAt` | `(s, i) -> s.charAt(i)` |</script></section><section data-markdown><script type="text/template">## `Class::staticMethodName` et `instance::instanceMethodName`
+* la référence de méthode est équivalente à
+une expression lambda qui fournit les paramètres de la méthode.
+* Ex d'utilisation de l'interface fonctionnelle prédéfinie [`Supplier<T>`](https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html)
+
+```java
+Supplier<Double> aleatoire = Math::random;
+double result = aleatoire.get(); // Math.random();
+```
+
+```
+Random r = new Random();
+Supplier<Double> aleatoire = r::nextDouble;
+double result2 = aleatoire.get(); // r.nextDouble();
+```</script></section><section data-markdown><script type="text/template">## `Class::instanceMethodName`
+* C'est une méthode d'instance qui sera invoquée.
+* Le premier paramètre de l'expression lambda représente l'objet sur lequel la méthode sera invoquée.
+
+```java
+Function<String, Integer> fLen = String::length;
+String s1 = "Hello";
+String s2 = "World !";
+int s1Len = fLen.apply(s1);  // s1.length()
+int s2Len = fLen.apply(s2);  // s2.length()
+```</script></section><section data-markdown><script type="text/template">## Références de constructeurs
+* Les références de constructeurs sont semblables aux références de méthodes à la différence que le nom de la "méthode" est `new`.
+* Les références de constructeurs servent à instancier une interface fonctionnelle avec un constructeur compatible avec le contexte
+d'utilisation.
+
+```java
+Class::new
+```
+
+| Syntaxe | Exemple | Lambda |
+| --- | --- | --- |
+| `Class::new` |  `String::new` | `() -> new String()` |
+| `Class::new` |  `PointHolder::new` | `() -> new PointHolder()` |</script></section></section><section  data-markdown><script type="text/template">
+# Accès aux variables locales</script></section><section  data-markdown><script type="text/template">## Accès aux variables locales
+* En plus des éventuels paramètres définis, des variables déclarées
+dans son corps et des champs statiques, une expression lambda à
+accès à toutes les variables locales qui sont déclarée avec le modificateur `final` ou non modifiée après sa première affectation.
+
+```java
+public static void repeatMessage(String text, int count) {
+  Runnable r = () -> { for (int i=0; i<count; i++) { // count capturé par l'expression lambda
+                           System.out.println(text); // text capturé par l'expression lambda
+                           Thread.yield(); // On donne une chance aux autres threads
+                       }
+                    };
+  new Thread(r).start();
+}
+
+public static void main(String[] args) {
+   repeatMessage("Hello", 500);
+   repeatMessage("Jane", 1000);
+}
+```
+
+* `text` et `count` variables locales effectivement finales.</script></section><section  data-markdown><script type="text/template"># Intérêt</script></section><section ><section data-markdown><script type="text/template">## Calcul du minimum et du maximum
+```java
+public class Exemple1SansLambda {
+
+	public static int min(int[] valeurs)
+	{
+		if (valeurs.length == 0)
+			throw new IllegalArgumentException();
+		int x = valeurs[0];
+		for(int i = 0; i < valeurs.length; i++)
+			x = Math.min(x, valeurs[i]);
+		return x;
+	}
+
+	public static int max(int[] valeurs)
+	{
+		if (valeurs.length == 0)
+			throw new IllegalArgumentException();
+		int x = valeurs[0];
+		for(int i = 0; i < valeurs.length; i++)
+			x = Math.max(x, valeurs[i]);
+		return x;
+	}
+
+	public static void main(String[] args) {
+		int[] tab = new int[10];
+		for(int i = 0; i < tab.length; i++) {
+			tab[i] = (int)(Math.random() * 100);
+			System.out.print(tab[i] + " ");
+		}
+		System.out.println();
+		System.out.println("Min : " + min(tab));
+		System.out.println("Min : " + max(tab));
+	}
+}
+```
+
+* Comment partager le code commun ?</script></section><section data-markdown><script type="text/template">## Calcul du minimum et du maximum
+
+* Une interface et 2 classes
+* Un objet pour `Math.max`
+* Un objet pour `Math.min`
+
+```java
+@FunctionalInterface
+interface OperateurBinaireEntier {
+	public abstract int appliqueOperateur(int o1, int o2);
+} // On pourrait utiliser IntBinaryOperator
+
+class MaxBinaireEntier implements OperateurBinaireEntier {
+	public int appliqueOperateur(int o1, int o2)
+	{
+		return Math.max(o1, o2);
+	}
+}
+
+class MinBinaireEntier implements OperateurBinaireEntier {
+	public int appliqueOperateur(int o1, int o2)
+	{
+		return Math.min(o1, o2);
+	}
+}
+
+public class Exemple2SansLambda {
+
+	public static int minOuMax(int[] valeurs, OperateurBinaireEntier op)
+	{
+		if (valeurs.length == 0)
+			throw new IllegalArgumentException();
+		int x = valeurs[0];
+		for(int i = 0; i < valeurs.length; i++)
+			x = op.appliqueOperateur(x, valeurs[i]);
+		return x;
+	}
+
+	public static void main(String[] args) {
+		int[] tab = new int[10];
+		for(int i = 0; i < tab.length; i++) {
+			tab[i] = (int)(Math.random() * 100);
+			System.out.print(tab[i] + " ");
+		}
+		System.out.println();
+		System.out.println("Min : " + minOuMax(tab, new MinBinaireEntier()));
+		System.out.println("Max : " + minOuMax(tab, new MaxBinaireEntier()));
+	}
+}
+```</script></section><section data-markdown><script type="text/template"> ## Avec une référence de méthode ou une lambda
+
+```
+@FunctionalInterface
+interface OperateurBinaireEntier1 {
+	public abstract int appliqueOperateur(int o1, int o2);
+}
+
+public class Exemple1AvecLambda {
+	public static int minOuMax(int[] valeurs, OperateurBinaireEntier1 op)
+	{
+		if (valeurs.length == 0)
+			throw new IllegalArgumentException();
+		int x = valeurs[0];
+		for(int i = 0; i < valeurs.length; i++)
+			x = op.appliqueOperateur(x, valeurs[i]);
+		return x;
+	}
+
+	public static int min(int[] values) {
+		return minOuMax(values, Math::min); // Référence de méthode
+	}
+
+	public static int max(int[] values) {
+		return minOuMax(values, (a, b) -> (a > b ? a : b)); // Lambda
+	}
+
+	public static void main(String[] args) {
+		int[] tab = new int[10];
+		for(int i = 0; i < tab.length; i++) {
+			tab[i] = (int)(Math.random() * 100);
+			System.out.print(tab[i] + " ");
+		}
+		System.out.println();
+		System.out.println("Min : " + min(tab));
+		System.out.println("Max : " + max(tab));
+	}
+}
+```</script></section><section data-markdown><script type="text/template">## Une version plus concise
+```
+import java.util.function.IntBinaryOperator;
+
+public class Exemple2AvecLambda {
+	public static int minOuMax(int[] valeurs, IntBinaryOperator op)
+	{
+		if (valeurs.length == 0)
+			throw new IllegalArgumentException();
+		int x = valeurs[0];
+		for(int i = 0; i < valeurs.length; i++)
+			x = op.applyAsInt(x, valeurs[i]);
+		return x;
+	}
+
+	public static void main(String[] args) {
+		int[] tab = new int[10];
+		for(int i = 0; i < tab.length; i++) {
+			tab[i] = (int)(Math.random() * 100);
+			System.out.print(tab[i] + " ");
+		}
+		System.out.println();
+		System.out.println("Min : " + minOuMax(tab, Math::min));
+		System.out.println("Max : " + minOuMax(tab, (a, b) -> (a > b ? a : b) ));
+	}
+}
+```</script></section><section data-markdown><script type="text/template">## Et si on faisait la somme !
+```
+import java.util.function.IntBinaryOperator;
+
+public class Exemple3AvecLambda {
+	public static int somme(int[] valeurs, IntBinaryOperator op)
+	{
+		if (valeurs.length == 0)
+			throw new IllegalArgumentException();
+		int sum = 0;
+		for(int i = 0; i < valeurs.length; i++)
+			sum = op.applyAsInt(sum, valeurs[i]);
+		return sum;
+	}
+
+	public static void main(String[] args) {
+		int[] tab = new int[10];
+		for(int i = 0; i < tab.length; i++) {
+			tab[i] = (int)(Math.random() * 100);
+			System.out.print(tab[i] + " ");
+		}
+		System.out.println();
+		System.out.println("Moyenne : " + somme (tab, (a, b) -> a + b) / (float) tab.length);
+	}
+}
+```
+* On verra par la suite une méthode utilisant un stream.</script></section><section data-markdown><script type="text/template">## Et si on intégrait
+```
+@FunctionalInterface
+public interface Integrable {
+	public abstract double valeur(double x);
+}
+
+public class Integration {
+
+	public static double integre(Integrable fonction, double a, double b, int nbSubdivisions) {
+		if (nbSubdivisions < 1) {
+			nbSubdivisions = 1;
+		}
+		double pas = (b - a) / nbSubdivisions;
+		double depart = a + pas / 2;
+		double somme = 0;
+		for (int i = 0; i < nbSubdivisions; i++)
+			somme += pas * fonction.valeur(depart + pas * i);
+		return somme;
+	}
+
+	public static void main(String[] s) {
+		System.out.println(integre(x -> x * x, 10, 100, 1000));
+		System.out.println(integre(x -> Math.sin(x), 0, Math.PI / 2, 10000));
+	}
+}
+```</script></section><section data-markdown><script type="text/template">## Et si on intégrait
+```
+import java.util.function.DoubleFunction;
+
+public class Integration2 {
+
+	public static double integre(DoubleFunction<Double> fonction, double a, double b, int nbSubdivisions)
+	{
+		if (nbSubdivisions < 1) {
+			nbSubdivisions = 1;
+			}
+			double pas = (b - a)/ nbSubdivisions;
+			double depart = a + pas / 2;
+			double somme = 0;
+			for(int i=0; i<nbSubdivisions; i++)
+			somme += pas * fonction.apply(depart + pas * i);
+			return somme;
+	}
+
+	public static void main(String[] s)
+	{
+		System.out.println(integre(x -> x*x, 10, 100, 1000));
+		System.out.println(integre(x -> Math.sin(x), 0, Math.PI/2, 10000));
+	}
+}
+```</script></section><section data-markdown><script type="text/template">## Mettons de l'ordre
+```
+import java.util.Arrays;
+
+public class ExempleDeTris {
+
+	public static void main(String[] args) {
+		String[] salutations = { "hi", "hello", "hola", "bonjour", "tchao", "bye", "goodbye", "adios", "au revoir" };
+		System.out.println("Tableau de départ " + Arrays.asList(salutations));
+
+		Arrays.sort(salutations, (s1, s2) -> s1.length() - s2.length());
+		System.out.println("Triés par longueur croissante : " + Arrays.asList(salutations));
+
+		Arrays.sort(salutations, (s1, s2) -> s2.length() - s1.length());
+		System.out.println("Triés par longueur décroissante " + Arrays.asList(salutations));
+
+		Arrays.sort(salutations, (s1, s2) -> s1.charAt(0) - s2.charAt(0));
+		System.out.println("Triés sur la première lettre : " + Arrays.asList(salutations));
+
+		Arrays.sort(salutations, (s1, s2) -> {
+			int compareFlag = 0;
+			if (s1.contains("e") && !s2.contains("e")) {
+				compareFlag = -1;
+			} else if (s2.contains("e") && !s1.contains("e")) {
+				compareFlag = 1;
+			}
+			return (compareFlag);
+		});
+		System.out.println("Chaine contenant d'abord un 'e' : " + Arrays.asList(salutations));
+	}
+}
+```</script></section></section><section  data-markdown><script type="text/template"># Les streams</script></section><section ><section data-markdown><script type="text/template">## L'API Stream
+* Un stream représente une séquence d'éléments.
+* Cette structure supporte différents types d'opérations sur ces éléments.
+* Les streams constituent un concept important en lien avec les lambdas qui sont souvent utilisées pour les manipuler.
+* L'essentiel des librairies (API) liées aux streams se trouve dans le package [`java.util.stream`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html) avec notamment l'interface [`Stream<T>`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html).</script></section><section data-markdown><script type="text/template">## L'API Stream
+* Création à partir d'un tableau, d'une
+collection, d'un générateur (`Stream.generate()`), d'un itérateur
+(`Stream.iterate()`), d'un flux d'entrée/sortie, ....
+* Exemples :
+
+| | |
+| --- | --- |
+| tableau | `Arrays.stream(array)` |
+| collection | `collection.stream()` |
+| séquence de valeurs | `Stream.of(v1, v2, ...)` |
+| stream | `stream.filter(predicate)` |</script></section><section data-markdown><script type="text/template">## Utilisation
+* Les opérations appliquées à un stream peuvent être :
+  * Intermédiaires : elles retournent un stream ce qui permet un enchaînement d'opérations ;
+  * Terminales : elles ne retournent rien (effectuent une opération) ou retournent autre chose qu'un stream.
+* Les opérations intermédiaires ne sont exécutées que s'il y a une opération terminale (laziness).
+* L'ordre dans lequel les opérations sont enchaînées joue un rôle important sur le résultat et sur le nombre d'opérations (un filtrage est à effectuer le
+plus tôt possible).
+* Après avoir exécuté une opération terminale, un stream est fermé
+et ne peut plus être réutilisé (si on veut le faire, il faut en créer un
+nouveau).</script></section><section data-markdown><script type="text/template">## Exemple
+```
+import java.util.Arrays;
+import java.util.List;
+
+public class Exemple1 {
+	public static void main(String[] args) {
+		List<String> maListe = Arrays.asList("a1", "a2", "b1", "c2", "d1", "c1", "e2", "C3");
+		maListe.stream()
+		.filter(s -> s.startsWith("c"))
+		.map(String::toUpperCase)
+		.sorted()
+		.forEach(System.out::println);
+		}
+}
+```
+* Affiche `C1 C2`.
+* Une expression lambda et deux références de méthode sont utilisées.</script></section><section data-markdown><script type="text/template">## Que fait ?
+```
+List<String> myList =
+    Arrays.asList("a1", "a2", "b1", "c2", "c1");
+
+myList
+    .stream()
+    .filter(s -> s.startsWith("c"))
+    .map(String::toUpperCase)
+    .sorted()
+    .forEach(System.out::println);
+```
+
+`C1 C2` <!-- .element: class="fragment" -->
+<aside class="notes"><p>C1 C2</p>
+</aside></script></section><section data-markdown><script type="text/template">## Que fait ?
+```
+Arrays.asList("a1", "a2", "a3")
+    .stream()
+    .findFirst()
+    .ifPresent(System.out::println);
+```
+`a1` <!-- .element: class="fragment" -->
+<aside class="notes"><p>a1</p>
+</aside></script></section><section data-markdown><script type="text/template">## Que fait ?
+```
+Stream.of("a1", "a2", "a3")
+    .findFirst()
+    .ifPresent(System.out::println);
+```
+`a1` <!-- .element: class="fragment" -->
+<aside class="notes"><p>a1</p>
+</aside></script></section><section data-markdown><script type="text/template">## Que fait ?
+```
+IntStream.range(1, 4)
+    .forEach(System.out::println);
+```
+`1 2 3` <!-- .element: class="fragment" -->
+<aside class="notes"><p>1 2 3</p>
+</aside></script></section><section data-markdown><script type="text/template">## Que fait ?
+```
+Arrays.stream(new int[] {1, 2, 3})
+    .map(n -> 2 * n + 1)
+    .average()
+    .ifPresent(System.out::println);
+```
+`5.0` <!-- .element: class="fragment" -->
+<aside class="notes"><p>5.0</p>
+</aside></script></section><section data-markdown><script type="text/template">## Que fait ?
+```
+Stream.of("a1", "a2", "a3")
+    .map(s -> s.substring(1))
+    .mapToInt(Integer::parseInt)
+    .max()
+    .ifPresent(System.out::println);
+```
+`3` <!-- .element: class="fragment" -->
+<aside class="notes"><p>3</p>
+</aside></script></section><section data-markdown><script type="text/template">## Que fait ?
+```
+IntStream.range(1, 4)
+    .mapToObj(i -> "a" + i)
+    .forEach(System.out::println);
+```
+`a1 a2 a3` <!-- .element: class="fragment" -->
+<aside class="notes"><p>a1 a2 a3</p>
+</aside></script></section><section data-markdown><script type="text/template">## Que fait ?
+```
+Stream.of("d2", "a2", "b1", "b3", "c")
+    .filter(s -> {
+        System.out.println("filter: " + s);
+        return true;
+    });
+```
+* Il ne se passe rien ! <!-- .element: class="fragment" -->
+* Évalution paresseuse <!-- .element: class="fragment" --></script></section><section data-markdown><script type="text/template">## Que fait ?
+```
+Stream.of("d2", "a2", "b1", "b3", "c")
+    .filter(s -> {
+        System.out.println("filter: " + s);
+        return true;
+    })
+    .forEach(s -> System.out.println("forEach: " + s));
+```
+`filter d2 forEach d2 ..... filter c forEach c` <!-- .element: class="fragment" --></script></section><section data-markdown><script type="text/template">## Ordonner c'est mieux !
+<div style="float:left;width:450px;font-size:70%;">
+<pre><code data-trim data-noescape>
+Stream.of("d2", "a2", "b1", "b3", "c")
+    .map(s -> {
+        System.out.println("map: " + s);
+        return s.toUpperCase();
+    })
+    .filter(s -> {
+        System.out.println("filter: " + s);
+        return s.startsWith("A");
+    })
+    .forEach(s -> System.out.println("forEach: " + s));
+</code>
+</div>
+<div style="float:left;width:450px;font-size:70%;">
+<pre>
+ map:     d2
+ filter:  D2
+ map:     a2
+ filter:  A2
+ forEach: A2
+ map:     b1
+ filter:  B1
+ map:     b3
+ filter:  B3
+ map:     c
+ filter:  C
+</pre>
+</div></script></section><section data-markdown><script type="text/template">## Ordonner c'est mieux !
+<div style="float:left;width:450px;font-size:70%;">
+<pre><code data-trim data-noescape>
+Stream.of("d2", "a2", "b1", "b3", "c")
+<mark>    .filter(s -> {
+        System.out.println("filter: " + s);
+        return s.startsWith("a");
+    })</mark>
+    .map(s -> {
+        System.out.println("map: " + s);
+        return s.toUpperCase();
+    })
+    .forEach(s -> System.out.println("forEach: " + s));
+</code>
+</div>
+<div style="float:left;width:450px;font-size:70%;">
+<pre>
+ filter:  d2
+ filter:  a2
+ map:     a2
+ forEach: A2
+ filter:  b1
+ filter:  b3
+ filter:  c
+</pre>
+</div>
+</script></section></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

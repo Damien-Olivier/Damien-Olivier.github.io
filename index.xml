@@ -13,6 +13,24 @@
     </image>
     
     <item>
+      <title>Les supports de cours</title>
+      <link>https://Damien-Olivier.github.io/courses/java/coursjjava/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/courses/java/coursjjava/</guid>
+      <description>&lt;p&gt;Vous trouverez ici, les différents liens vous permettant de relire/lire les diapositives présentées en cours durant le semestre.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 2 heures par semaine, durant 10 semaines.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Les transparents de cours sont &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/1troduction.pdf&#34; target=&#34;_blank&#34;&gt;ici&lt;/a&gt;. Les exemples ne sont pas toujours accessibles via le fichier pdf, voici une &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/exemples.tar.bz2&#34; target=&#34;_blank&#34;&gt;archive&lt;/a&gt; dans laquelle vous trouverez les fichiers sources. Attention, c&amp;rsquo;est éventuellement le bazar, ils ont été commentés en cours, ainsi certains sont mal écrits et/ou ne tiennent pas compte des nouvelles possibilités de Java. Des compléments ont donc été ajoutés et l&amp;rsquo;on se référa à ces derniers.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursJava/collection.html&#34; target=&#34;_blank&#34;&gt;La généricité de type, les collections&lt;/a&gt;, &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursJava/Lambda.html&#34; target=&#34;_blank&#34;&gt;les expressions lambdas, les références de méthodes et les streams&lt;/a&gt; sont maintenant largement utilisés. Un premier survol vous est proposé.&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;api &lt;code&gt;NIO 2&lt;/code&gt; remplace la classe &lt;code&gt;File&lt;/code&gt; de la très ancienne api &lt;code&gt;IO&lt;/code&gt;. Une série de &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursJava/fichier.html&#34; target=&#34;_blank&#34;&gt;diapositives&lt;/a&gt; présente cela.&lt;/p&gt;
+&lt;p&gt;La notion de &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursJava/Threads.html&#34; target=&#34;_blank&#34;&gt;threads&lt;/a&gt; est également développée.&lt;/p&gt;
+&lt;p&gt;La bibliothèque JavaFX remplace désormais officiellement Swing. Plutôt que mettre à jour mes transparents j&amp;rsquo;en ai fait une &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursJava/javaFX.html&#34; target=&#34;_blank&#34;&gt;présentation séparée&lt;/a&gt;.
+Pour ceux qui voudrait utiliser &lt;code&gt;Swing&lt;/code&gt; et les threads vous avez un &lt;a href=&#34;http://litis.univ-lehavre.fr/~dolivier/PagePerso/pub/cours/java/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;complément&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Python basics</title>
       <link>https://Damien-Olivier.github.io/courses/example/python/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
@@ -50,40 +68,26 @@
     </item>
     
     <item>
-      <title>Python basics</title>
-      <link>https://Damien-Olivier.github.io/courses/java/python/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/courses/java/python/</guid>
-      <description>&lt;p&gt;Build a foundation in Python.&lt;/p&gt;
+      <title>Les exercices</title>
+      <link>https://Damien-Olivier.github.io/courses/java/tdjava/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/courses/java/tdjava/</guid>
+      <description>&lt;p&gt;Vous trouverez ici, les sujets des TD/TP.&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;
-  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
-&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/rfscVS0vtbw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
-  &lt;summary&gt;What is the difference between lists and tuples?&lt;/summary&gt;
-  &lt;p&gt;&lt;p&gt;Lists&lt;/p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 4 heures par semaine, durant 12 semaines.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Un outil pratique pour écrire vos programmes Java est l&amp;rsquo;environnement de développement intégré (IDE Integrated Development Environment en anglais) &lt;a href=&#34;https://www.eclipse.org/downloads/packages/installer&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Eclipse&lt;/a&gt;. Il simplifie l&amp;rsquo;écriture de code en proposant un certain nombre de raccourcis et d&amp;rsquo;aide. Il est gratuit et disponible pour la plupart des systèmes d&amp;rsquo;exploitation. Un rapide aperçu vous est proposé &lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.Eclipse&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;. Il y a également &lt;a href=&#34;https://code.visualstudio.com/Download&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Visual Studio Code&lt;/a&gt;, pour lequel vous avez les informations pour l&amp;rsquo;installer &lt;a href=&#34;https://eureka.univ-lehavre.fr/course/view.php?id=4420&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Un &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/TF_TP.pdf&#34; target=&#34;_blank&#34;&gt;cahier&lt;/a&gt; d&amp;rsquo;exercice est à votre disposition, nous piocherons dedans des exercices que vous ferez en TD/TP. Certains exercices seront laissés de coté, mais cela ne vous empêche pas de les faire !&lt;/p&gt;
+&lt;p&gt;D&amp;rsquo;autres exercices complémentaires vous sont proposés également :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Lists are mutable - they can be changed&lt;/li&gt;
-&lt;li&gt;Slower than tuples&lt;/li&gt;
-&lt;li&gt;Syntax: &lt;code&gt;a_list = [1, 2.0, &#39;Hello world&#39;]&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Tuples&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Tuples are immutable - they can&amp;rsquo;t be changed&lt;/li&gt;
-&lt;li&gt;Tuples are faster than lists&lt;/li&gt;
-&lt;li&gt;Syntax: &lt;code&gt;a_tuple = (1, 2.0, &#39;Hello world&#39;)&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/p&gt;
-&lt;/details&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
-  &lt;summary&gt;Is Python case-sensitive?&lt;/summary&gt;
-  &lt;p&gt;Yes&lt;/p&gt;
-&lt;/details&gt;</description>
+&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.Polymorphisme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Polymorphisme&lt;/a&gt; ;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoCollections&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Généricité, collections et exceptions&lt;/a&gt; ;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoFichiers&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gestion de fichiers&lt;/a&gt; ;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.CorrecteurOrthographique&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fichiers et collections&lt;/a&gt; ;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoThreads&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Threads&lt;/a&gt; ;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/Taquin.pdf&#34; target=&#34;_blank&#34;&gt;Swing&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
@@ -117,68 +121,10 @@ fig.show()
     </item>
     
     <item>
-      <title>Visualization</title>
-      <link>https://Damien-Olivier.github.io/courses/java/visualization/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/courses/java/visualization/</guid>
-      <description>&lt;p&gt;Learn how to visualize data with Plotly.&lt;/p&gt;
-&lt;p&gt;
-  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
-&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/hSPmj7mK6ng&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
-  &lt;summary&gt;When is a heatmap useful?&lt;/summary&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
-&lt;/details&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
-  &lt;summary&gt;Write Plotly code to render a bar chart&lt;/summary&gt;
-  &lt;p&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import plotly.express as px
-data_canada = px.data.gapminder().query(&amp;quot;country == &#39;Canada&#39;&amp;quot;)
-fig = px.bar(data_canada, x=&#39;year&#39;, y=&#39;pop&#39;)
-fig.show()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/p&gt;
-&lt;/details&gt;</description>
-    </item>
-    
-    <item>
       <title>Statistics</title>
       <link>https://Damien-Olivier.github.io/courses/example/stats/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://Damien-Olivier.github.io/courses/example/stats/</guid>
-      <description>&lt;p&gt;Introduction to statistics for data science.&lt;/p&gt;
-&lt;p&gt;
-  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
-&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
-&lt;p&gt;The general form of the &lt;strong&gt;normal&lt;/strong&gt; probability density function is:&lt;/p&gt;
-&lt;p&gt;$$
-f(x) = \frac{1}{\sigma \sqrt{2\pi} } e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
-$$&lt;/p&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    The parameter $\mu$ is the mean or expectation of the distribution.
-$\sigma$ is its standard deviation.
-The variance of the distribution is $\sigma^{2}$.
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
-&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
-  &lt;summary&gt;What is the parameter $\mu$?&lt;/summary&gt;
-  &lt;p&gt;The parameter $\mu$ is the mean or expectation of the distribution.&lt;/p&gt;
-&lt;/details&gt;</description>
-    </item>
-    
-    <item>
-      <title>Statistics</title>
-      <link>https://Damien-Olivier.github.io/courses/java/stats/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/courses/java/stats/</guid>
       <description>&lt;p&gt;Introduction to statistics for data science.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;

@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://Damien-Olivier.github.io/courses/java/coursjjava/</loc>
+    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://Damien-Olivier.github.io/courses/example/python/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -15,8 +18,8 @@
                 href="https://Damien-Olivier.github.io/courses/example/python/"
                 />
   </url><url>
-    <loc>https://Damien-Olivier.github.io/courses/java/python/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+    <loc>https://Damien-Olivier.github.io/courses/java/tdjava/</loc>
+    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/courses/example/visualization/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
@@ -31,9 +34,6 @@
                 href="https://Damien-Olivier.github.io/courses/example/visualization/"
                 />
   </url><url>
-    <loc>https://Damien-Olivier.github.io/courses/java/visualization/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://Damien-Olivier.github.io/courses/example/stats/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -46,9 +46,6 @@
                 hreflang="fr"
                 href="https://Damien-Olivier.github.io/courses/example/stats/"
                 />
-  </url><url>
-    <loc>https://Damien-Olivier.github.io/courses/java/stats/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/</loc>
     <lastmod>2021-12-13T18:00:00+00:00</lastmod>
@@ -79,6 +76,41 @@
     <loc>https://Damien-Olivier.github.io/talk/ethique-et-intelligence-artificielle/</loc>
     <lastmod>2021-12-13T18:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://Damien-Olivier.github.io/tag/cours/</loc>
+    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/courses/</loc>
+    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://Damien-Olivier.github.io/en/courses/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://Damien-Olivier.github.io/courses/"
+                />
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/tag/java/</loc>
+    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/courses/java/</loc>
+    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/tags/</loc>
+    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://Damien-Olivier.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://Damien-Olivier.github.io/tags/"
+                />
+  </url><url>
     <loc>https://Damien-Olivier.github.io/authors/</loc>
     <lastmod>2021-11-08T18:00:00+00:00</lastmod>
     <xhtml:link
@@ -98,34 +130,8 @@
     <loc>https://Damien-Olivier.github.io/talk/quest-ce-que-le-genre/</loc>
     <lastmod>2021-11-08T18:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Damien-Olivier.github.io/tags/</loc>
-    <lastmod>2021-11-08T18:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/tags/"
-                />
-  </url><url>
     <loc>https://Damien-Olivier.github.io/tag/up/</loc>
     <lastmod>2021-11-08T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Damien-Olivier.github.io/courses/</loc>
-    <lastmod>2021-10-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/courses/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/courses/"
-                />
   </url><url>
     <loc>https://Damien-Olivier.github.io/courses/pix/</loc>
     <lastmod>2021-10-07T00:00:00+00:00</lastmod>
@@ -253,9 +259,6 @@
                 hreflang="fr"
                 href="https://Damien-Olivier.github.io/courses/example/"
                 />
-  </url><url>
-    <loc>https://Damien-Olivier.github.io/courses/java/</loc>
-    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/tag/biosurveillance/</loc>
     <lastmod>2020-04-27T00:00:00+00:00</lastmod>

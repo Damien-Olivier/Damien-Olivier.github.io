@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal-md</title>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="_assets/theme/myblack.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section ><section data-markdown><script type="text/template">## Les Threads en Java
+### Université du Havre - LITIS
+#### L2 Math-Info - Spécialisation informatique
+[D. Olivier](http://litis.univ-lehavre.fr/~olivier/PagePerso)</script></section><section data-markdown><script type="text/template"># Introduction</script></section><section data-markdown><script type="text/template">## Les threads
+
+<div class="column5" style="font-size:80%;  background:grey; padding-right=5px;">
+<ul>
+  <li>Un programme est caractérisé par</li>
+<ul>
+  <li> son code </li>
+  <li> son espace mémoire (données)</li>
+</ul>
+  <li>Sur un OS évolué, exécution concurrente possible des processus avec "temps partagé" géré par un scheduler.</li>
+</ul>
+</div>
+<div class="column5" style="font-size:80%; background:grey; ">
+  Si processus indépendants :
+  <ul>
+    <li>contexte différent à chaque changement de processus ;</li>
+    <li>possibilité de partager une mémoire (lourd à gérer) ;</li>
+    <li>communications parfois nécessaires.</li>
+  </ul>
+</div>
+
+<img src="./images/scheduler.png" alt="Scheduler"  style="width:450px;background: grey;center"><br>
+
+----
+Une solution plus simple : les threads ou processus légers qui s'exécutent en parallèle mais partagent les données.
+
+----
+Exemple :  concurrence de traitement lors de chargements
+d'images avec les navigateurs Web ou environnement graphique Java.</script></section></section><section ><section data-markdown><script type="text/template"># Gestion des threads</script></section><section data-markdown><script type="text/template">## Création de threads avec Java
+
+* Threads gérés dans différents langages.
+* Gestion lourde avec C et simplifiée avec Java qui propose deux solutions :
+  - Objet héritant de la classe `java.lang.Thread`. Deux objets de cette classe peuvent s'exécuter directement en concurrence.
+  - Objet implémentant l'interface `java.lang.Runnable`
+    * On doit définir une méthode `run()` ;
+    * On range ces objets dans des objets Threads (enveloppes) qui s'exécutent de façon concurrente.</script></section><section data-markdown><script type="text/template">## Hériter de la classe `Thread`
+
+```Java
+public class Proc1 extends java.lang.Thread {
+ public Proc1() {...} // Le constructeur
+ ...
+
+ public void run() {
+ ... // Ici ce que fait le processus (boucle infinie)
+ }
+}
+ ...
+ Proc1 p1 = new Proc1(); // Création du processus
+ p1.start(); // Démarre le processus
+             // et exécute p1.run()
+```</script></section><section data-markdown><script type="text/template">## Hériter de la classe `Thread`
+
+```Java
+class TPrint1 extends Thread {
+
+    String txt;
+    int attente;
+
+    public TPrint1(String t, int p) {
+	   txt = t;
+	   attente = p;
+    }
+
+    public void run() {
+	    for (int i=0; i<8; i++) {
+	      System.out.print(txt+i+" ");
+	      try {
+		     sleep(attente);
+	      } catch(InterruptedException e) {};
+	     }
+    }
+}
+
+public class TestThread1 {
+ static public void main(String args[]) {
+	TPrint1 a = new TPrint1("A", 0);
+	TPrint1 b = new TPrint1("B", 20);
+	a.start();
+	b.start();
+ }
+}
+
+// résultat de l'exécution :
+// A0 B0 A1 B1 A2 A3 B2 A4 A5 B3 A6 A7 B4 B5 B6 B7
+```
+[Source](sources/TestThread1.java)</script></section><section data-markdown><script type="text/template">## Implémenter l'interface _`Runnable`_
+
+```Java
+public class Proc2 implements java.lang.Runnable {
+ public Proc2() {...} // Constructeur
+ ...
+ public void run() {
+  ... // Ici ce que fait le processus (boucle infinie)
+ }
+}
+...
+ Proc2 p = new Proc2();
+ Thread p2 = new Thread(p);
+ p2.start(); // Démarre un processus qui exécute p.run()
+```</script></section><section data-markdown><script type="text/template">## Implémenter l'interface _`Runnable`_
+
+```Java
+class TPrint2 implements Runnable {
+
+    String txt;
+    int attente;
+
+    public TPrint2(String t, int p) {
+	    txt = t;
+	    attente = p;
+    }
+
+    public void run() {
+	    for (int i=0; i<8; i++) {
+	      System.out.print(txt+i+" ");
+	    try {
+		    Thread.currentThread().sleep(attente);
+	    } catch(InterruptedException e) {};
+     	}
+    }
+}
+
+public class TestThread2 {
+  static public void main(String args[]) {
+	  TPrint2 a = new TPrint2("A", 10);
+	  TPrint2 b = new TPrint2("B", 20);
+	  new Thread(a).start();
+	  new Thread(b).start();
+  }
+}
+
+// résultat de l'exécution :
+// A0 B0 A1 B1 A2 A3 B2 A4 A5 B3 A6 A7 B4 B5 B6 B7
+```
+[Source](sources/TestThread2.java)</script></section><section data-markdown><script type="text/template">## L'interface Runnable et l'anonymat
+* Lorsque l'objet thread est unique, on crée souvent une classe anonyme :
+```Java
+public class TestThread {
+   public static void main(String[] args) {
+    Thread t = new Thread() {
+      public void run() {
+          System.out.println("Mon traitement");
+      }
+    };
+    t.start();
+   }
+}
+```
+* Depuis Java 1.8 _`Runnable`_ est une interface fonctionnelle, on peut utiliser une lambda expression plutot qu'une classe anonyme.
+
+```Java
+Thread t = new Thread(() -> {System.out.println("Mon traitement");});
+t.start();
+```</script></section><section data-markdown><script type="text/template">## Que choisir ?
+* Hériter de `Thread`
+	* Pour paralléliser une classe qui n'hérite pas déjà d'une autre classe (héritage simple) ;
+	* cas des applications autonomes.
+* Implémenter  _`Runnable`_
+  * Lorsqu'une super-classe est imposée ;</script></section><section data-markdown><script type="text/template">## Méthodes de la classe `Thread`
+<!-- .slide: style="font-size:90%;" -->
+Méthode  | Rôle
+--|--
+`void start()`	| démarre le thread et exécute la méthode `run()`
+`static void sleep(long) throws InterruptedException`  | 	Met le thread en attente durant le temps exprimé en millisecondes. Lève une exception de type `InterruptedException` si le thread est réactivé avant la fin du temps.
+`void join() throws InterruptedException`  |  Permet d'attendre la fin d'exécution du thread
+`void interrupt()`  |  Un thread peut se mettre en attente par la méthode `sleep`, ou par l'attente d'une entrée-sortie, ou par `wait` ou `join`.Un autre thread peut interrompre cette attente par cette méthode.
+`int getPriority()` | Renvoie la priorité du thread
+`void setPriority(int)` | Fixe la priorité du thread
+`static Thread currentThread()`  |  Placée dans une méthode de n'importe quelle classe, elle retourne l'objet Thread qui contrôle le thread qui exécute cette méthode.
+`static void yield()` | Passe la main à un autre thread de priorité$\geq$
+</div></script></section><section data-markdown><script type="text/template">## La méthode _`sleep`_  - points importants -
+
+* Elle met en pause l'exécution du thread courant ;
+* Le temps réel d'endormissement dépend des minuteurs et du scheduleur. Pour un système peu occupé la durée est proche de celle spécifiée, mais pour un système occupé, ce sera un peu plus long.
+* Tout autre thread peut interrompre le thread en cours, dans ce cas, une exception `InterruptedException` est levée.
+
+```Java
+public class ThreadSleep {
+
+    public static void main(String[] args) throws InterruptedException {
+        long depart = System.currentTimeMillis();
+        Thread.sleep(2000);
+        System.out.println("Tempŝ d'endormissement ms = "+(System.currentTimeMillis() - depart));
+    }
+}
+```</script></section><section data-markdown><script type="text/template">## La méthode _`join`_
+
+* La méthode de jointure Java Thread peut être utilisée pour mettre en pause l'exécution du thread en cours jusqu'à ce que le thread spécifié soit mort.
+* Il existe [trois fonctions](https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html#join--) de jointure surchargées.
+
+```Java
+public class UtilisationJoin {
+	private class MonRunnable implements Runnable {
+		public void run() {
+			System.out.println("Thread démaré : " + Thread.currentThread().getName());
+			try {
+				Thread.sleep(4000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			System.out.println("Thread terminé :" + Thread.currentThread().getName());
+		}
+	}
+
+	public static void main(String[] args) {
+		UtilisationJoin obj = new UtilisationJoin();
+		Thread t1 = new Thread(obj.new MonRunnable(), "t1");
+		Thread t2 = new Thread(obj.new MonRunnable(), "t2");
+		Thread t3 = new Thread(obj.new MonRunnable(), "t3");
+
+		t1.start();
+
+		// On lance le 2ème thread s'il est mort ou après avoir attendu 2
+		// secondes
+		try {
+			t1.join(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		t2.start();
+
+		// On lance le 3ème thread après la fin du 1 er
+		try {
+			t1.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		t3.start();
+
+		// on laisse les 3 threads se terminer avant de terminer le thread
+		// principal.
+		try {
+			t1.join();
+			t2.join();
+			t3.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("Les threads t1, t2, t3 sont finis, le thread principal quitte ce monde cruel");
+	}
+}
+```</script></section></section><section ><section data-markdown><script type="text/template"># Les techniques de gestion des Threads</script></section><section data-markdown><script type="text/template">## La vie d'un thread
+![](images/threads001.png)<!-- .element style="width:700px" -->
+
+Source : <!-- .element style="font-size:70%;" --> https://www.jmdoudoux.fr/java/dej/chap-threads.htm</script></section><section data-markdown><script type="text/template">## Synchronisation et Exclusion
+<!-- .slide: style="font-size:78%;" -->
+* Lorsque plusieurs threads travaillent sur des mêmes ressources, il est
+parfois utile ou nécessaire de limiter le parallélisme en assurant que
+certains objets ne subissent pas en même temps plusieurs séquences d'actions.
+
+```Java
+class TPrint3 extends Thread {
+
+	String txt;
+
+	public TPrint3(String t) {
+		txt = t;
+	}
+
+	public void run() {
+		for (int j = 0; j < 3; j++) {
+			for (int i = 0; i < txt.length(); i++) {
+				System.out.print(txt.charAt(i));
+				try {
+					sleep(100);
+				} catch (InterruptedException e) {
+				}
+				;
+			}
+		}
+	}
+}
+
+public class TestThread3 {
+	static public void main(String args[]) {
+		TPrint3 a = new TPrint3("bonjour ");
+		TPrint3 b = new TPrint3("au revoir ");
+		a.start();
+		b.start();
+	}
+}
+
+/* baoun jroeuvroi rb oanuj ourre vobiorn jaouu r revoir */
+```
+
+* Dans notre exemple chaque thread affiche des mots caractère par caractère. Les mots sont mélangés. On souhaite conserver le parallélisme du traitement en garantissant que chaque mot entier ne soit pas coupé.</script></section><section data-markdown><script type="text/template">## Synchronisation et Exclusion
+### Construction d'une classe moniteur
+<!-- .slide: style="font-size:80%;" -->
+
+* On définit une classe `Moniteur` qui contient une méthode `synchronized`.
+  - Quand cette méthode est appelée dans un thread, elle bloque les autres threads ;
+  - Les threads doivent partager le même moniteur $\Rightarrow$ attribut statique ;
+
+```Java
+class MoniteurImpression {
+	synchronized public void imprime(String t) {
+		for (int i = 0; i < t.length(); i++) {
+			System.out.print(t.charAt(i));
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException e) {
+			}
+		}
+	}
+}
+
+class TPrint4 extends Thread {
+
+	String txt;
+	static MoniteurImpression mImp = new MoniteurImpression();
+
+	public TPrint4(String t) {
+		txt = t;
+	}
+
+	public void run() {
+		for (int j = 0; j < 3; j++)
+			mImp.imprime(txt);
+	}
+}
+
+public class TestThread4 {
+	static public void main(String args[]) {
+		TPrint4 a = new TPrint4("bonjour ");
+		TPrint4 b = new TPrint4("au revoir ");
+		a.start();
+		b.start();
+	}
+}
+```</script></section><section data-markdown><script type="text/template">## Attente explicite : `wait()` - `notify()`
+
+* Les appels aux méthodes synchronisées sont des sections critiques. Il
+faut les utiliser avec prudence :
+  - Elles suppriment le caractère concurrent du traitement $\Rightarrow$ dégradation des performances ;
+  - Situation d'interblocage.</script></section><section data-markdown><script type="text/template">### `wait()`
+
+* Il y a trois variantes :
+  - `public final void wait() throws InterruptedException` le thread courant attend qu'un autre appelle `notify` ou `notifyAll` sur l'objet.
+  - `public final void wait(long timeout) throws InterruptedException`
+  - `public final void wait(long timeout, int nanos) throws InterruptedException`
+    - Le thread courant attend qu'un autre appelle `notify` ou `notifyAll` sur l'objet ou qu'une limite de temps soit atteinte.</script></section><section data-markdown><script type="text/template">### `notify()` et `notifyAll()`
+
+* `public final void notify()`
+  - La méthode notify ne réveille qu'un seul thread en attente. S'il y a plusieurs threads en attente, le choix du thread à réveiller dépend de l'implémentation du système d'exploitation et de la gestion des threads.
+* `public final void notifyAll()`
+  - Réveille tous les threads de l'objet.</script></section><section data-markdown><script type="text/template">### Producteur/Consommateur
+* Une mémoire tampon est alimentée par un producteur d'objets et utilisée par un consommateur ;
+* On synchronise l'accès à cette mémoire (production et consommation non simultanées) ;
+* Si le producteur doit déposer un objet alors qu'il en existe déjà un dans le tampon $\Rightarrow$ **blocage** ;
+* Même problème pour un consommateur qui attend le dépot.</script></section><section data-markdown><script type="text/template">### Relachement d'exclusion
+* L'attente du consommateur ou du producteur se fait par `wait()` (exception `InterruptedException`) qui relâche l'exclusion ;
+* Un processus sort de son endormissement (attente) quand un autre processus exécute `notify()` ou `notifyAll()` (relance _tous_ les processus en  attente) ;
+* Il est possible d'écrire cela avec une `BlockingQueue`
+```Java
+class MoniteurProdCons {
+	String tampon;
+	boolean estVide = true;
+
+	synchronized void prod(String m) {
+		if (!estVide) {
+			System.out.println("Producteur attend");
+			try {
+				wait();
+			} catch (InterruptedException e) {
+			}
+		}
+		System.out.println("Produit : " + m);
+		tampon = m;
+		estVide = false;
+		notify();
+	}
+
+	synchronized void cons() {
+		if (estVide) {
+			System.out.println("Consommateur attend");
+			try {
+				wait();
+			} catch (InterruptedException e) {
+			}
+		}
+		System.out.println("Consomme : " + tampon);
+		estVide = true;
+		notify();
+	}
+}
+/---------------------------------------------------
+class Producteur extends Thread {
+	MoniteurProdCons tampon;
+
+	public Producteur(MoniteurProdCons t) {
+		tampon = t;
+	}
+
+	public void run() {
+		tampon.prod("message1");
+		tampon.prod("message2");
+		try {
+			sleep(100);
+		} catch (InterruptedException e) {
+		}
+		tampon.prod("message3");
+	}
+}
+/---------------------------------------------------
+class Consommateur extends Thread {
+	MoniteurProdCons tampon;
+
+	public Consommateur(MoniteurProdCons t) {
+		tampon = t;
+	}
+
+	public void run() {
+		tampon.cons();
+		tampon.cons();
+		tampon.cons();
+	}
+}
+/---------------------------------------------------
+public class ProdConsTest {
+	public static void main(String argv[]) {
+		MoniteurProdCons tampon = new MoniteurProdCons();
+		new Producteur(tampon).start();
+		new Consommateur(tampon).start();
+	}
+}
+```</script></section><section data-markdown><script type="text/template">### Exemple avec `notifyAll`
+#### Le tampon
+
+```Java
+package exempledeveloppe;
+
+public class Tampon {
+	private String msg;
+
+	public Tampon(String str) {
+		msg = str;
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String str) {
+		msg = str;
+	}
+}
+```</script></section><section data-markdown><script type="text/template">### Exemple avec `notifyAll`
+#### La notification
+
+```Java
+package exempledeveloppe;
+
+public class Notification implements Runnable {
+
+	private Tampon msg;
+
+	public Notification(Tampon msg) {
+		this.msg = msg;
+	}
+
+	@Override
+	public void run() {
+		String nom = Thread.currentThread().getName();
+		System.out.println(nom + " lancé");
+		try {
+			Thread.sleep(1000);
+			synchronized (msg) {
+				msg.setMsg(nom + " le boulot du notifier est fait");
+				msg.notifyAll();
+				// msg.notify(); On pourra tester ce cas ....
+			}
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+	}
+}
+```</script></section><section data-markdown><script type="text/template">### Exemple avec `notifyAll`
+#### L'attente de notification
+
+```Java
+package exempledeveloppe;
+
+public class Attente implements Runnable{
+
+	private Tampon msg;
+
+	public Attente(Tampon m){
+		msg=m;
+	}
+
+	@Override
+	public void run() {
+		String nom = Thread.currentThread().getName();
+		synchronized (msg) {
+			try{
+				System.out.println(nom + " En attente de notification à : " + System.currentTimeMillis());
+				msg.wait();
+			}catch(InterruptedException e){
+				e.printStackTrace();
+			}
+			System.out.println(nom + " thread d'attente a été notifié à : " + System.currentTimeMillis());
+			System.out.println(nom + " message : "+ msg.getMsg());
+		}
+	}
+}
+```</script></section><section data-markdown><script type="text/template">### Exemple avec `notifyAll`
+#### Le tout en musique
+
+```Java
+package exempledeveloppe;
+public class WaitNotifyTest {
+
+	public static void main(String[] args) {
+		Tampon msg = new Tampon("Allez au travail !");
+		Attente waiter1 = new Attente(msg);
+		new Thread(waiter1,"attente_1").start();
+
+		Attente waiter2 = new Attente(msg);
+		new Thread(waiter2, "attente_2").start();
+
+		Notification notifier = new Notification(msg);
+		new Thread(notifier, "notifier").start();
+		System.out.println("Tous les threads sont nés");
+	}
+}
+```</script></section></section><section ><section data-markdown><script type="text/template"># Pour aller plus loin</script></section><section data-markdown><script type="text/template">## `BlockingQueue`
+
+* Présent depuis Java 1.5 ;
+* Extension de l'interface [`Queue<E>`](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html) (file d'attente) de  l'API `Collection` :
+  * ajout d'un élément ;
+  * retrait d'un élément disponible ;
+  * consultation du prochain élément disponible, sans le retirer.
+* Dans le cas de l'interface [`BlockingQueue`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/BlockingQueue.html)
+  * La demande d'ajout par la méthode `put(E e)`, ou de retrait d'un élément par la méthode `take()` ces deux méthodes attendent si la file est pleine ou vide.</script></section><section data-markdown><script type="text/template">## Producteur-Consommateur
+### Producteur
+
+```Java
+package exempledeveloppe;
+
+import java.util.concurrent.BlockingQueue;
+
+public class Producteur implements Runnable {
+
+	private BlockingQueue<Tampon> fileDAttente;
+
+	public Producteur(BlockingQueue<Tampon> fa){
+		fileDAttente = fa;
+	}
+	@Override
+	public void run() {
+		// Production des messages
+		for(int i=0; i<100; i++){
+			Tampon msg = new Tampon(""+i);
+			try {
+				Thread.sleep(i);
+				fileDAttente.put(msg);
+				System.out.println("Produit "+ msg.getMsg());
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		// Dernier message
+		Tampon msg = new Tampon("Exit");
+		try {
+			fileDAttente.put(msg);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}
+```</script></section><section data-markdown><script type="text/template">## Producteur-Consommateur
+### Consommateur
+
+```Java
+package exempledeveloppe;
+
+import java.util.concurrent.BlockingQueue;
+
+public class Consommateur implements Runnable{
+
+	private BlockingQueue<Tampon> fileDAttente;
+
+	public Consommateur(BlockingQueue<Tampon> fa){
+		this.fileDAttente=fa;
+	}
+
+	@Override
+	public void run() {
+		try{
+			Tampon msg;
+			//On consomme les messages jusqu'à exit
+			while((msg = fileDAttente.take()).getMsg() !="Exit"){
+				Thread.sleep(10);
+				System.out.println("Consommé : "+msg.getMsg());
+			}
+		}catch(InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}
+```</script></section><section data-markdown><script type="text/template">## Producteur-Consommateur
+
+```Java
+package exempledeveloppe;
+
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
+
+public class ProdConsTest {
+
+    public static void main(String[] args) {
+        // File d'attente de taille 10
+        BlockingQueue<Tampon> fileDAttente = new ArrayBlockingQueue<>(10);
+        Producteur producteur = new Producteur(fileDAttente);
+        Consommateur consommateur = new Consommateur(fileDAttente);
+        new Thread(producteur).start();
+        new Thread(consommateur).start();
+        System.out.println("Producteur et consommateur sont lancés");
+        }
+    }
+```</script></section><section data-markdown><script type="text/template">## `Timer` et `TimerTask`
+
+* la classe `Timer` permet d'exécuter des traitements de manière périodique : elle joue le rôle d'un scheduler simple ;
+* La classe `TimerTask` encapsule les traitements d'une tâche qui sera exécutée par un `Timer`. Elle implémente l'interface `Runnable`.
+
+```Java
+package exempledeveloppe;
+
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class MyTimerTask extends TimerTask {
+
+	@Override
+	public void run() {
+		System.out.println("Début du timer :" + new Date());
+		completeTask();
+		System.out.println("Fin du timer : " + new Date());
+	}
+
+	private void completeTask() {
+		try {
+			// On simule 20s de traitement
+			Thread.sleep(20000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String args[]) {
+		TimerTask timerTask = new MyTimerTask();
+		// On crée le timer
+		Timer timer = new Timer(true);
+
+		timer.scheduleAtFixedRate(timerTask, 0, 10 * 1000);
+		System.out.println("TimerTask démarré");
+		// on stoppe après quelques temps.
+		try {
+			Thread.sleep(120000);
+		} catch (InterruptedException e) {
+		}
+	}
+}
+```
+</script></section></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
