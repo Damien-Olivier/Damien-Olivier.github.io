@@ -839,11 +839,7 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#un-peu-dhistoire">Un peu d&rsquo;histoire</a>
-      <ul>
-        <li><a href="#concepts-de-base">Concepts de base</a></li>
-      </ul>
-    </li>
+    <li><a href="#objectifs">Objectifs</a></li>
     <li><a href="#au-programme">Au programme</a></li>
     <li><a href="#les-différents-supports">Les différents supports</a></li>
     <li><a href="#référence">Référence</a></li>
@@ -933,11 +929,7 @@
   <summary class="font-weight-bold">Table des matières</summary>
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#un-peu-dhistoire">Un peu d&rsquo;histoire</a>
-      <ul>
-        <li><a href="#concepts-de-base">Concepts de base</a></li>
-      </ul>
-    </li>
+    <li><a href="#objectifs">Objectifs</a></li>
     <li><a href="#au-programme">Au programme</a></li>
     <li><a href="#les-différents-supports">Les différents supports</a></li>
     <li><a href="#référence">Référence</a></li>
@@ -947,47 +939,39 @@
 </nav>
 </details>
 
-<h2 id="un-peu-dhistoire">Un peu d&rsquo;histoire</h2>
-<p>Java est une technologie composée d&rsquo;un langage de programmation orienté objet et d&rsquo;un environnement d&rsquo;exécution. Préalablement nommé Oak, il a été créé par James Gosling et Patrick Naughton chez Sun Microsystems avec le soutien de Bill Joy.</p>
-<div class="alert alert-note">
-  <div>
-    Oak (&ldquo;Chêne&rdquo;) était le nom qui a été donné à Java dans un premier temps. Mais comme celui-ci était déjà utilisé on lui a donné le nom de Java en l&rsquo;honneur du nom argotique (en américain de Nord) du breuvage le plus consommé par les programmeurs, c&rsquo;est-à-dire le café, dont une partie de la production vient de l&rsquo;île de Java
-  </div>
-</div>
-<p>Le langage Java fut officiellement présenté le 23 mai 1995 au SunWorld.</p>
-<p>Le concept Java est basé sur le langage Java, la machine virtuelle Java et l&rsquo;API Java (ces deux derniers composants forment l&rsquo;environnement d&rsquo;exécution, ou JRE, pour Java Runtime Environment).</p>
-<h3 id="concepts-de-base">Concepts de base</h3>
-<p>La première caractéristique de Java est d&rsquo;être orienté objet. Tout y est objet ou presque &hellip; A la source de l&rsquo;objet, la classe. La classe est le support de l&rsquo;encapsulation : c&rsquo;est un ensemble de données et de fonctions regroupées dans une même entité. Une classe est une description abstraite d&rsquo;un objet. Les fonctions qui opèrent sur les données sont appelées des méthodes. Instancier une classe consiste à créer un objet sur son modèle. Pour accéder à une classe il faut en déclarer une instance de classe ou objet. Une classe comporte sa déclaration, des variables et la définition de ses méthodes. Une classe se compose en deux parties : un en tête et un corps. Le corps peut être divisé en 2 sections : la déclaration des données et des constantes on parle souvent d&rsquo;attributs et la définition des méthodes. Les méthodes et les données sont pourvues de qualificatifs de visibilité qui gèrent leur accessibilité par les composants hors de la classe.</p>
-<p>La deuxième caractéristique du langage, c&rsquo;est la portabilité cela signifie que les programmes écrits en Java doivent fonctionner sur plusieurs types de matériel informatique. Un programmeur doit pouvoir écrire un programme une seule fois et, le faire fonctionner dans n&rsquo;importe quel ordinateur. Ceci est permis en compilant le code source d&rsquo;un programme Java dans un pseudo-code intermédiaire appelé bytecode Java. Le code est par la suite exécuté par une machine virtuelle la JVM, un programme écrit en code natif sur le matériel cible qui interprète le pseudo-code Java en code utilisable pour le matériel concerné. De plus, des bibliothèques sont offertes pour fournir l&rsquo;accès à des fonctionnalités propres à la machine cible &ndash; comme les graphiques ou le réseau &ndash; d&rsquo;une manière unifiée. Le langage Java offre aussi le support au parallélisme et à la distribution.</p>
+<h2 id="objectifs">Objectifs</h2>
+<ul>
+<li>Connaître les principes qui sous-tendent l&rsquo;exploitation efficace d&rsquo;algorithmes type heuristique ou l&rsquo;utilisation de méta-heuristiques.</li>
+<li>Approfondir les principes permettant de concevoir des algorithmes performants capables de simuler une certaine forme d&rsquo;intelligence;</li>
+<li>Acquérir des méthodes de développement usuellement utilisées en intelligence artificielle;</li>
+<li>Avoir la capacité d&rsquo;analyser les tâches complexes qui requièrent des données, des connaissances, des heuristiques, des méthodes d&rsquo;apprentissage, etc.</li>
+</ul>
 <h2 id="au-programme">Au programme</h2>
 <ol>
-<li>Rappel rapide des différents concepts vus les semestres précédents
+<li>Qu&rsquo;est-ce que l&rsquo;IA ?
 <ul>
-<li>Présentation de Java ;</li>
-<li>Types et structures de contrôles;</li>
-<li>Classes et objets en Java ;</li>
+<li>Au travers d&rsquo;une présentation historique nous essaierons de définir l&rsquo;IA, ses promesses et ses échecs, mais également ses différentes approches. Un accent sera mis sur l&rsquo;apprentissage qui est une part importante de sa &ldquo;success story&rdquo; actuelle.</li>
 </ul>
 </li>
-<li>Exceptions;</li>
-<li>Héritage ;
+<li>Méthode de résolution de problème
 <ul>
-<li>Classes abstraites ;</li>
-<li>Le polymorphisme ;</li>
+<li>Nous n&rsquo;avons pas pour de nombreux problèmes réels d&rsquo;algorithmes déterministes. Ainsi étant donné un état initial, un état final et un ensemble d&rsquo;opérations valides sur les états les transformant en un autre, quelle séquence d&rsquo;opérations faut-il appliquer pour de l&rsquo;état initial atteindre l&rsquo;état final.</li>
 </ul>
 </li>
-<li>Généricité
-<ul>
-<li>La classe Object ;</li>
-<li>Types génériques</li>
-</ul>
+<li>Représentation des connaissances
+<ol>
+<li>Cela consiste, en particulier, à essayer de répondre comment représenter formellement les connaissances en particulier avec des objets logiques reliés par des propriétés, axiomes et règles. On peut également utiliser des graphes dans lesquels les nœuds sont étiquetés et les arcs également.</li>
+</ol>
 </li>
-<li>Collections ;</li>
-<li>Entrées/Sorties (fichiers) ;</li>
-<li>Threads;</li>
-<li>Graphismes, fenêtrages (cette partie pourra être non traitée);
-<ul>
-<li><code>Java FX</code>.</li>
-</ul>
+<li>Systèmes à base de connaissances
+<ol>
+<li>On exploite les connaissances représentées pour enrichir les connaissances déjà connues.</li>
+</ol>
+</li>
+<li>Les jeux
+<ol>
+<li>Nous présenterons les algorithmes de base utilisés dans des jeux où l&rsquo;information est totale.</li>
+</ol>
 </li>
 </ol>
 <hr>
@@ -1022,7 +1006,7 @@
 <p><a href="mailto:Antoine.Dutot@univ-lehavre.fr">Antoine Dutot</a></p>
 <hr>
 <h2 id="faq">FAQ</h2>
-<p><details class="spoiler "  id="spoiler-5">
+<details class="spoiler "  id="spoiler-4">
   <summary>Les prérequis</summary>
   <p><ul>
 <li>Maîtriser un langage de programmation ;</li>
@@ -1031,18 +1015,14 @@
 </ul>
 </p>
 </details>
-<details class="spoiler "  id="spoiler-6">
-  <summary>Compétences</summary>
-  <p><ul>
-<li>Maîtriser la programmation JAVA</li>
-<li>Savoir utiliser la documentation JAVA</li>
-<li>Connaître et et savoir utiliser les structures de données présentes  dans les API de base</li>
-<li>Savoir stocker de utiliser de l&rsquo;information sous la forme de fichier</li>
-<li>Avoir des notions de base sur la programmation distribuée</li>
-</ul>
+<details class="spoiler "  id="spoiler-5">
+  <summary>Compétences évaluées</summary>
+  <p><div class="responsive-wrap">
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRWqQd3mPuVU8jjWAnVVJGpfCCrfw-h8lkC3sNAVIpjNWW9_U_jUgCvLPXNTLMtFXRzez8kG0YjW0mp/pubhtml" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
 </p>
-</details></p>
-<details class="spoiler "  id="spoiler-7">
+</details>
+<details class="spoiler "  id="spoiler-6">
   <summary>Évaluations</summary>
   <p><p>Un examen partiel en milieu de semestre et un examen terminal en fin de semestre. Cet examen partiel peut prendre la forme d&rsquo;un projet à rendre.</p>
 <p>Note finale : 1/3 partiel + 2/3 terminal</p>
