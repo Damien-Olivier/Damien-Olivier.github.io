@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Java avancé | Damien Olivier</title>
-    <link>https://Damien-Olivier.github.io/courses/java/</link>
-      <atom:link href="https://Damien-Olivier.github.io/courses/java/index.xml" rel="self" type="application/rss+xml" />
-    <description>Java avancé</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <title>Intelligence Artificielle | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/courses/ia/</link>
+      <atom:link href="https://Damien-Olivier.github.io/courses/ia/index.xml" rel="self" type="application/rss+xml" />
+    <description>Intelligence Artificielle</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Thu, 02 Dec 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://Damien-Olivier.github.io/courses/java/featured.jpg</url>
-      <title>Java avancé</title>
-      <link>https://Damien-Olivier.github.io/courses/java/</link>
+      <url>https://Damien-Olivier.github.io/courses/ia/featured.jpg</url>
+      <title>Intelligence Artificielle</title>
+      <link>https://Damien-Olivier.github.io/courses/ia/</link>
     </image>
     
     <item>
       <title>Les supports de cours</title>
-      <link>https://Damien-Olivier.github.io/courses/java/coursjava/</link>
+      <link>https://Damien-Olivier.github.io/courses/ia/coursjava/</link>
       <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/courses/java/coursjava/</guid>
+      <guid>https://Damien-Olivier.github.io/courses/ia/coursjava/</guid>
       <description>&lt;p&gt;Vous trouverez ici, les différents liens vous permettant de relire/lire les diapositives présentées en cours durant le semestre.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;
@@ -32,16 +32,16 @@ Pour ceux qui voudrait utiliser &lt;code&gt;Swing&lt;/code&gt; et les threads vo
     
     <item>
       <title>Les exercices</title>
-      <link>https://Damien-Olivier.github.io/courses/java/tdjava/</link>
+      <link>https://Damien-Olivier.github.io/courses/ia/tdjava/</link>
       <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/courses/java/tdjava/</guid>
+      <guid>https://Damien-Olivier.github.io/courses/ia/tdjava/</guid>
       <description>&lt;p&gt;Vous trouverez ici, les sujets des TD/TP.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 4 heures par semaine, durant 12 semaines.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Un outil pratique pour écrire vos programmes Java est l&amp;rsquo;environnement de développement intégré (IDE Integrated Development Environment en anglais) &lt;a href=&#34;https://www.eclipse.org/downloads/packages/installer&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Eclipse&lt;/a&gt;. Il simplifie l&amp;rsquo;écriture de code en proposant un certain nombre de raccourcis et d&amp;rsquo;aide. Il est gratuit et disponible pour la plupart des systèmes d&amp;rsquo;exploitation. Un rapide aperçu vous est proposé &lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.Eclipse&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;. Il y a également &lt;a href=&#34;https://code.visualstudio.com/Download&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Visual Studio Code&lt;/a&gt;, pour lequel vous avez les informations pour l&amp;rsquo;installer &lt;a href=&#34;https://eureka.univ-lehavre.fr/course/view.php?id=4420&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Un &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/TD_TP.pdf&#34; target=&#34;_blank&#34;&gt;cahier&lt;/a&gt; d&amp;rsquo;exercice est à votre disposition, nous piocherons dedans des exercices que vous ferez en TD/TP. Certains exercices seront laissés de coté, mais cela ne vous empêche pas de les faire !&lt;/p&gt;
+&lt;p&gt;Un &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/TF_TP.pdf&#34; target=&#34;_blank&#34;&gt;cahier&lt;/a&gt; d&amp;rsquo;exercice est à votre disposition, nous piocherons dedans des exercices que vous ferez en TD/TP. Certains exercices seront laissés de coté, mais cela ne vous empêche pas de les faire !&lt;/p&gt;
 &lt;p&gt;D&amp;rsquo;autres exercices complémentaires vous sont proposés également :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.Polymorphisme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Polymorphisme&lt;/a&gt; ;&lt;/li&gt;
