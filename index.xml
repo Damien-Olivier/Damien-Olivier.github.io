@@ -14,20 +14,19 @@
     
     <item>
       <title>Les supports de cours</title>
-      <link>https://Damien-Olivier.github.io/courses/ia/coursjava/</link>
+      <link>https://Damien-Olivier.github.io/courses/ia/coursia/</link>
       <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/courses/ia/coursjava/</guid>
+      <guid>https://Damien-Olivier.github.io/courses/ia/coursia/</guid>
       <description>&lt;p&gt;Vous trouverez ici, les différents liens vous permettant de relire/lire les diapositives présentées en cours durant le semestre.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 2 heures par semaine, durant 10 semaines.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Les transparents de cours sont &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/1troduction.pdf&#34; target=&#34;_blank&#34;&gt;ici&lt;/a&gt;. Les exemples ne sont pas toujours accessibles via le fichier pdf, voici une &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/exemples.tar.bz2&#34; target=&#34;_blank&#34;&gt;archive&lt;/a&gt; dans laquelle vous trouverez les fichiers sources. Attention, c&amp;rsquo;est éventuellement le bazar, ils ont été commentés en cours, ainsi certains sont mal écrits et/ou ne tiennent pas compte des nouvelles possibilités de Java. Des compléments ont donc été ajoutés et l&amp;rsquo;on se référa à ces derniers.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursJava/collection.html&#34; target=&#34;_blank&#34;&gt;La généricité de type, les collections&lt;/a&gt;, &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursJava/Lambda.html&#34; target=&#34;_blank&#34;&gt;les expressions lambdas, les références de méthodes et les streams&lt;/a&gt; sont maintenant largement utilisés. Un premier survol vous est proposé.&lt;/p&gt;
-&lt;p&gt;L&amp;rsquo;api &lt;code&gt;NIO 2&lt;/code&gt; remplace la classe &lt;code&gt;File&lt;/code&gt; de la très ancienne api &lt;code&gt;IO&lt;/code&gt;. Une série de &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursJava/fichier.html&#34; target=&#34;_blank&#34;&gt;diapositives&lt;/a&gt; présente cela.&lt;/p&gt;
-&lt;p&gt;La notion de &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursJava/Threads.html&#34; target=&#34;_blank&#34;&gt;threads&lt;/a&gt; est également développée.&lt;/p&gt;
-&lt;p&gt;La bibliothèque JavaFX remplace désormais officiellement Swing. Plutôt que mettre à jour mes transparents j&amp;rsquo;en ai fait une &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursJava/javaFX.html&#34; target=&#34;_blank&#34;&gt;présentation séparée&lt;/a&gt;.
-Pour ceux qui voudrait utiliser &lt;code&gt;Swing&lt;/code&gt; et les threads vous avez un &lt;a href=&#34;http://litis.univ-lehavre.fr/~dolivier/PagePerso/pub/cours/java/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;complément&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;Je compléterai au fil du cours les supports disponibles. Pour commencer, un peu d&amp;rsquo;histoire en deux parties :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursIA/HistoireIA.html&#34; target=&#34;_blank&#34;&gt;Les racines de l&amp;rsquo;IA&lt;/a&gt; ;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/1troduction.pdf&#34; target=&#34;_blank&#34;&gt;La success story actuelle de l&amp;rsquo;IA&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
     <item>
@@ -46,29 +45,6 @@ Pour ceux qui voudrait utiliser &lt;code&gt;Swing&lt;/code&gt; et les threads vo
 &lt;p&gt;La notion de &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursJava/Threads.html&#34; target=&#34;_blank&#34;&gt;threads&lt;/a&gt; est également développée.&lt;/p&gt;
 &lt;p&gt;La bibliothèque JavaFX remplace désormais officiellement Swing. Plutôt que mettre à jour mes transparents j&amp;rsquo;en ai fait une &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursJava/JavaFX.html&#34; target=&#34;_blank&#34;&gt;présentation séparée&lt;/a&gt;.
 Pour ceux qui voudrait utiliser &lt;code&gt;Swing&lt;/code&gt; et les threads vous avez un &lt;a href=&#34;http://litis.univ-lehavre.fr/~dolivier/PagePerso/pub/cours/java/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;complément&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Les exercices</title>
-      <link>https://Damien-Olivier.github.io/courses/ia/tdjava/</link>
-      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/courses/ia/tdjava/</guid>
-      <description>&lt;p&gt;Vous trouverez ici, les sujets des TD/TP.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;
-  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 4 heures par semaine, durant 12 semaines.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Un outil pratique pour écrire vos programmes Java est l&amp;rsquo;environnement de développement intégré (IDE Integrated Development Environment en anglais) &lt;a href=&#34;https://www.eclipse.org/downloads/packages/installer&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Eclipse&lt;/a&gt;. Il simplifie l&amp;rsquo;écriture de code en proposant un certain nombre de raccourcis et d&amp;rsquo;aide. Il est gratuit et disponible pour la plupart des systèmes d&amp;rsquo;exploitation. Un rapide aperçu vous est proposé &lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.Eclipse&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;. Il y a également &lt;a href=&#34;https://code.visualstudio.com/Download&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Visual Studio Code&lt;/a&gt;, pour lequel vous avez les informations pour l&amp;rsquo;installer &lt;a href=&#34;https://eureka.univ-lehavre.fr/course/view.php?id=4420&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Un &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/TF_TP.pdf&#34; target=&#34;_blank&#34;&gt;cahier&lt;/a&gt; d&amp;rsquo;exercice est à votre disposition, nous piocherons dedans des exercices que vous ferez en TD/TP. Certains exercices seront laissés de coté, mais cela ne vous empêche pas de les faire !&lt;/p&gt;
-&lt;p&gt;D&amp;rsquo;autres exercices complémentaires vous sont proposés également :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.Polymorphisme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Polymorphisme&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoCollections&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Généricité, collections et exceptions&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoFichiers&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gestion de fichiers&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.CorrecteurOrthographique&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fichiers et collections&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoThreads&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Threads&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/Taquin.pdf&#34; target=&#34;_blank&#34;&gt;Swing&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
     
     <item>

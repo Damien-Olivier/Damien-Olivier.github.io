@@ -2,13 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://Damien-Olivier.github.io/courses/ia/coursjava/</loc>
+    <loc>https://Damien-Olivier.github.io/courses/ia/coursia/</loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/courses/java/coursjava/</loc>
-    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Damien-Olivier.github.io/courses/ia/tdjava/</loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/courses/java/tdjava/</loc>
@@ -60,6 +57,9 @@
     <lastmod>2021-12-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/tag/cours/</loc>
+    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/tag/ia/</loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/tag/java/</loc>
