@@ -5,7 +5,7 @@
     <link>https://Damien-Olivier.github.io/</link>
       <atom:link href="https://Damien-Olivier.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Damien Olivier</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Mon, 13 Dec 2021 18:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Thu, 20 Jan 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
       <title>Damien Olivier</title>
@@ -25,7 +25,7 @@
 &lt;p&gt;Je compléterai au fil du cours les supports disponibles. Pour commencer, un peu d&amp;rsquo;histoire en deux parties :&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursIA/HistoireIA.html&#34; target=&#34;_blank&#34;&gt;Les racines de l&amp;rsquo;IA&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/1troduction.pdf&#34; target=&#34;_blank&#34;&gt;La success story actuelle de l&amp;rsquo;IA&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursIA/SuccessStory.html&#34; target=&#34;_blank&#34;&gt;La success story actuelle de l&amp;rsquo;IA&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;</description>
     </item>
     
@@ -68,6 +68,18 @@ Pour ceux qui voudrait utiliser &lt;code&gt;Swing&lt;/code&gt; et les threads vo
 &lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoThreads&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Threads&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/Taquin.pdf&#34; target=&#34;_blank&#34;&gt;Swing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Les supports de cours</title>
+      <link>https://Damien-Olivier.github.io/courses/epistemologie/supportepistemo/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/courses/epistemologie/supportepistemo/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Une &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursEpistemo/EpistemoIntro.html&#34; target=&#34;_blank&#34;&gt;introduction&lt;/a&gt; dans laquelle on s&amp;rsquo;interroge sur ce que c&amp;rsquo;est savoir et connaître et sur la nature de la connaissance.&lt;/li&gt;
+&lt;li&gt;L&#39;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursEpistemo/EspritCritique.html&#34; target=&#34;_blank&#34;&gt;esprit critique &lt;/a&gt; ou &amp;ldquo;l&amp;rsquo;art de faire la différence entre ce qui relève de la science et ce qui relève de la croyance&amp;rdquo; (Richard Monvoisin).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="-700 -200 600 400" version="1.1" id="svg42" xmlns="http://www.w3.org/2000/svg">
+  <rect x="-699.59119" y="-199.75577" width="600" height="400" rx="5" ry="5" style="fill:#d8d8d8" id="rect2"/>
+  <circle cx="-483.64899" r="160.586" stroke="#000000" stroke-width="2" fill-opacity="0.5" cy="26.275999" style="fill:#bb0101" id="circle4"/>
+  <circle cx="-331.95401" r="160.586" fill="#0000ff" stroke="#000000" stroke-width="2" fill-opacity="0.5" cy="27.860001" id="circle6"/>
+  <text id="text8" style="fill: rgb(51, 51, 51); font-family: DejaVu Sans, sans-serif; font-size: 28px; white-space: pre;" x="-687.807" y="-158.61">Propositional beliefs</text>
+  <circle style="fill:#ffea00;stroke-width:0.999258" cx="-407.59509" cy="24.786005" id="circle10" r="80"/>
+  <text id="text30" style="fill: rgb(4, 4, 4); font-family: DejaVu Sans, sans-serif; font-size: 26px; font-style: normal; white-space: pre;" x="-479.934" y="39.806"/>
+  <g id="path37804">
+    <path style="color:#000000;fill:#000000;-inkscape-stroke:none" d="m -372.43945,-161.44141 -21.45313,0.18946 -10.90234,73.490231 1.21875,0.179688 10.74805,-72.447269 20.40039,-0.18164 z" id="path114633"/>
+    <g id="g114611">
+      <g id="path114623">
+        <path style="color:#000000;fill:#000000;fill-rule:evenodd;stroke-width:0.492808pt;-inkscape-stroke:none" d="m -377.36189,-160.826 -2.46404,2.46404 8.62414,-2.46404 -8.62414,-2.46404 z" id="path114627"/>
+        <path style="color:#000000;fill:#000000;fill-rule:evenodd;-inkscape-stroke:none" d="m -380.95508,-163.95508 3.12891,3.12891 -3.12891,3.1289 10.94922,-3.1289 z m 2.25781,1.32813 6.29688,1.80078 -6.29492,1.79883 1.79883,-1.79883 -0.23243,-0.23242 z" id="path114629"/>
+      </g>
+      <g id="path114613">
+        <path style="color:#000000;fill:#000000;fill-rule:evenodd;stroke-width:0.985616pt;-inkscape-stroke:none" d="m -403.47715,-92.449096 c 2.69085,0.399187 4.55075,2.907044 4.15157,5.597895 -0.39919,2.690852 -2.90705,4.550755 -5.5979,4.151568 -2.69085,-0.399186 -4.55075,-2.907043 -4.15156,-5.597895 0.39918,-2.690852 2.90704,-4.550754 5.59789,-4.151568 z" id="path114617"/>
+        <path style="color:#000000;fill:#000000;fill-rule:evenodd;-inkscape-stroke:none" d="m -403.38086,-93.099609 c -3.04252,-0.451356 -5.8924,1.662556 -6.34375,4.705078 -0.45136,3.04252 1.66256,5.894347 4.70508,6.345703 3.04252,0.451357 5.89239,-1.662558 6.34375,-4.705078 0.45135,-3.042519 -1.66256,-5.894346 -4.70508,-6.345703 z m -0.19336,1.300781 c 2.33918,0.347016 3.94662,2.512384 3.59961,4.851562 -0.34702,2.339179 -2.51239,3.944673 -4.85156,3.597657 -2.33918,-0.347016 -3.94663,-2.512385 -3.59961,-4.851563 0.34701,-2.339177 2.51239,-3.944671 4.85156,-3.597656 z" id="path114619"/>
+      </g>
+    </g>
+  </g>
+  <text id="text24491" style="font-family: DejaVu Sans, sans-serif; font-size: 22px; font-style: normal; fill: rgb(51, 51, 51); white-space: pre;"><tspan x="-364.582" y="-168.537">Justified true beliefs</tspan><tspan x="-364.5820007324219" dy="1.2em">that are not knowledge</tspan></text>
+  <text style="fill: rgb(255, 254, 254); font-family: DejaVu Sans, sans-serif; font-size: 32px; white-space: pre;"><tspan x="-620.972" y="13.203">True</tspan><tspan x="-620.972" dy="1.2em">beliefs</tspan></text>
+  <text style="fill: rgb(255, 254, 254); font-family: DejaVu Sans, sans-serif; font-size: 32px; white-space: pre;" x="-309.771" y="13.21"><tspan x="-309.771" y="13.21" style="font-size: 32px; word-spacing: 0px;">Justified</tspan><tspan dy="1.2em" x="-309.771" style="font-size: 32px; word-spacing: 0px;">beliefs</tspan></text>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: DejaVu Sans, sans-serif; font-size: 24.7px;" x="-476.716" y="32.781">Knowledge</text>
+</svg>

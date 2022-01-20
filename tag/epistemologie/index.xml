@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Épistémologie | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/tag/epistemologie/</link>
+      <atom:link href="https://Damien-Olivier.github.io/tag/epistemologie/index.xml" rel="self" type="application/rss+xml" />
+    <description>Épistémologie</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>Épistémologie</title>
+      <link>https://Damien-Olivier.github.io/tag/epistemologie/</link>
+    </image>
+    
+    <item>
+      <title>Les supports de cours</title>
+      <link>https://Damien-Olivier.github.io/courses/epistemologie/supportepistemo/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/courses/epistemologie/supportepistemo/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Une &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursEpistemo/EpistemoIntro.html&#34; target=&#34;_blank&#34;&gt;introduction&lt;/a&gt; dans laquelle on s&amp;rsquo;interroge sur ce que c&amp;rsquo;est savoir et connaître et sur la nature de la connaissance.&lt;/li&gt;
+&lt;li&gt;L&#39;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursEpistemo/EspritCritique.html&#34; target=&#34;_blank&#34;&gt;esprit critique &lt;/a&gt; ou &amp;ldquo;l&amp;rsquo;art de faire la différence entre ce qui relève de la science et ce qui relève de la croyance&amp;rdquo; (Richard Monvoisin).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
