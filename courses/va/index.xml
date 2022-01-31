@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vie artificielle | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/courses/va/</link>
+      <atom:link href="https://Damien-Olivier.github.io/courses/va/index.xml" rel="self" type="application/rss+xml" />
+    <description>Vie artificielle</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Thu, 02 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/courses/va/featured.jpg</url>
+      <title>Vie artificielle</title>
+      <link>https://Damien-Olivier.github.io/courses/va/</link>
+    </image>
+    
+  </channel>
+</rss>
