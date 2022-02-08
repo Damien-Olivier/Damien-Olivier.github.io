@@ -48,33 +48,6 @@ Pour ceux qui voudrait utiliser &lt;code&gt;Swing&lt;/code&gt; et les threads vo
     </item>
     
     <item>
-      <title>Les exercices</title>
-      <link>https://Damien-Olivier.github.io/courses/java/tdjava/</link>
-      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/courses/java/tdjava/</guid>
-      <description>&lt;p&gt;Vous trouverez ici, les sujets des TD/TP.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;
-  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 4 heures par semaine, durant 12 semaines.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Un outil pratique pour écrire vos programmes Java est l&amp;rsquo;environnement de développement intégré (IDE Integrated Development Environment en anglais) &lt;a href=&#34;https://www.eclipse.org/downloads/packages/installer&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Eclipse&lt;/a&gt;. Il simplifie l&amp;rsquo;écriture de code en proposant un certain nombre de raccourcis et d&amp;rsquo;aide. Il est gratuit et disponible pour la plupart des systèmes d&amp;rsquo;exploitation. Un rapide aperçu vous est proposé &lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.Eclipse&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;. Il y a également &lt;a href=&#34;https://code.visualstudio.com/Download&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Visual Studio Code&lt;/a&gt;, pour lequel vous avez les informations pour l&amp;rsquo;installer &lt;a href=&#34;https://eureka.univ-lehavre.fr/course/view.php?id=4420&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ici&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Un &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/TD_TP.pdf&#34; target=&#34;_blank&#34;&gt;cahier&lt;/a&gt; d&amp;rsquo;exercice est à votre disposition, nous piocherons dedans des exercices que vous ferez en TD/TP. Certains exercices seront laissés de coté, mais cela ne vous empêche pas de les faire !&lt;/p&gt;
-&lt;p&gt;D&amp;rsquo;autres exercices complémentaires vous sont proposés également :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.Polymorphisme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Polymorphisme&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoCollections&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Généricité, collections et exceptions&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoFichiers&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gestion de fichiers&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.CorrecteurOrthographique&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fichiers et collections&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoThreads&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Threads&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/Taquin.pdf&#34; target=&#34;_blank&#34;&gt;Swing&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;quelques-corrections-au-fil-du-temps&#34;&gt;Quelques corrections au fil du temps&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/polynomes.tar.gz&#34; target=&#34;_blank&#34;&gt;Polynomes&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
       <title>Les supports de cours</title>
       <link>https://Damien-Olivier.github.io/courses/epistemologie/supportepistemo/</link>
       <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
