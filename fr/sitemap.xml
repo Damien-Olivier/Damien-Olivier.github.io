@@ -8,6 +8,9 @@
     <loc>https://Damien-Olivier.github.io/courses/java/coursjava/</loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://Damien-Olivier.github.io/courses/java/tdjava/</loc>
+    <lastmod>2021-12-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://Damien-Olivier.github.io/courses/epistemologie/supportepistemo/</loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -59,23 +62,17 @@
     <loc>https://Damien-Olivier.github.io/talk/ethique-et-intelligence-artificielle/</loc>
     <lastmod>2021-12-13T18:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://Damien-Olivier.github.io/tag/cours/</loc>
+    <lastmod>2021-12-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://Damien-Olivier.github.io/courses/ia/</loc>
     <lastmod>2021-12-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Damien-Olivier.github.io/courses/va/</loc>
+    <loc>https://Damien-Olivier.github.io/tag/java/</loc>
     <lastmod>2021-12-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Damien-Olivier.github.io/tag/cours/</loc>
-    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Damien-Olivier.github.io/tag/ia/</loc>
-    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Damien-Olivier.github.io/tag/java/</loc>
-    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://Damien-Olivier.github.io/tags/</loc>
-    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-02T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -86,6 +83,12 @@
                 hreflang="fr"
                 href="https://Damien-Olivier.github.io/tags/"
                 />
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/courses/va/</loc>
+    <lastmod>2021-12-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/tag/ia/</loc>
+    <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/tag/epistemologie/</loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
