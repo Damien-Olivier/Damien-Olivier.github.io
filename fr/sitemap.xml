@@ -14,6 +14,54 @@
     <loc>https://Damien-Olivier.github.io/courses/epistemologie/supportepistemo/</loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://Damien-Olivier.github.io/courses/java/exos/correcteur/</loc>
+    <lastmod>2022-02-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/</loc>
+    <lastmod>2022-02-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://Damien-Olivier.github.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://Damien-Olivier.github.io/"
+                />
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/courses/</loc>
+    <lastmod>2022-02-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://Damien-Olivier.github.io/en/courses/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://Damien-Olivier.github.io/courses/"
+                />
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/tag/java/</loc>
+    <lastmod>2022-02-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/tags/</loc>
+    <lastmod>2022-02-02T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://Damien-Olivier.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://Damien-Olivier.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/tag/td/</loc>
+    <lastmod>2022-02-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://Damien-Olivier.github.io/talk/30-ans-au-c%C5%93ur-des-epidemies/</loc>
     <lastmod>2022-01-24T18:00:00+00:00</lastmod>
   </url><url>
@@ -28,19 +76,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://Damien-Olivier.github.io/authors/"
-                />
-  </url><url>
-    <loc>https://Damien-Olivier.github.io/</loc>
-    <lastmod>2022-01-24T18:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/"
                 />
   </url><url>
     <loc>https://Damien-Olivier.github.io/author/denis-coulombier/</loc>
@@ -59,34 +94,8 @@
                 href="https://Damien-Olivier.github.io/event/"
                 />
   </url><url>
-    <loc>https://Damien-Olivier.github.io/tags/</loc>
-    <lastmod>2022-01-24T18:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/tags/"
-                />
-  </url><url>
     <loc>https://Damien-Olivier.github.io/tag/up/</loc>
     <lastmod>2022-01-24T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Damien-Olivier.github.io/courses/</loc>
-    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://Damien-Olivier.github.io/en/courses/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://Damien-Olivier.github.io/courses/"
-                />
   </url><url>
     <loc>https://Damien-Olivier.github.io/courses/epistemologie/</loc>
     <lastmod>2022-01-20T00:00:00+00:00</lastmod>
@@ -101,9 +110,6 @@
     <lastmod>2021-12-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/courses/ia/</loc>
-    <lastmod>2021-12-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://Damien-Olivier.github.io/tag/java/</loc>
     <lastmod>2021-12-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/courses/va/</loc>

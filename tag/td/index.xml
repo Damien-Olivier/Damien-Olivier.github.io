@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TD | Damien Olivier</title>
+    <link>https://Damien-Olivier.github.io/tag/td/</link>
+      <atom:link href="https://Damien-Olivier.github.io/tag/td/index.xml" rel="self" type="application/rss+xml" />
+    <description>TD</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Wed, 02 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <title>TD</title>
+      <link>https://Damien-Olivier.github.io/tag/td/</link>
+    </image>
+    
+    <item>
+      <title>Correcteur orthographique</title>
+      <link>https://Damien-Olivier.github.io/courses/java/exos/correcteur/</link>
+      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/courses/java/exos/correcteur/</guid>
+      <description>&lt;h1 id=&#34;gestion-de-fichiers-et-collections&#34;&gt;Gestion de fichiers et collections&lt;/h1&gt;
+&lt;p&gt;Ce TP est inspiré du livre &lt;strong&gt;Introduction to Programming in Java&lt;/strong&gt; de  Robert Sedgewick et Kevin Wayne.&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;L&amp;rsquo;objectif est de réaliser un correcteur orthographique capable de détecter les fautes d&amp;rsquo;orthographe et de les corriger si possible. Le programme à réaliser n&amp;rsquo;est qu&amp;rsquo;une ébauche, mais néanmoins montrera une démarche classiquement utilisée en informatique qui repose sur l&amp;rsquo;utilisation d&amp;rsquo;un corpus.&lt;/p&gt;
+&lt;h2 id=&#34;principe&#34;&gt;Principe&lt;/h2&gt;
+&lt;p&gt;La méthode est simple, cela consiste à créer un &amp;lsquo;&amp;lsquo;dictionnaire&amp;rsquo;&amp;rsquo; et lorsqu&amp;rsquo;un mot n&amp;rsquo;est pas présent dans ce dernier il est considéré comme mal orthographié.&lt;/p&gt;
+&lt;p&gt;Il est difficile et très pénible de créer un tel dictionnaire à partir de rien. En effet, il faut recenser tous les mots connus d&amp;rsquo;une langue &amp;hellip;.. et ajouter la conjugaison des verbes, le féminin et le pluriel des noms, les noms propres, les acronymes &amp;hellip; En général dans un dictionnaire on fait apparaître le lemme (ex:  infinitif du verbe) et les flexions (ex : conjugaison).&lt;/p&gt;
+&lt;p&gt;Une autre façon de faire consiste à utiliser un corpus de textes supposés bien orthographiés et de récupérer automatiquement les mots pour générer automatiquement le dictionnaire. Si l &amp;lsquo;on suppose que le corpus est suffisamment important et diversifié on peut espérer avoir généré un système utilisable. La limite de l&amp;rsquo;idée ne vous échappera pas !&lt;/p&gt;
+&lt;h2 id=&#34;réalisation&#34;&gt;Réalisation&lt;/h2&gt;
+&lt;p&gt;On procède en deux temps, la recherche des mots incorrects ou supposés et ensuite la correction.&lt;/p&gt;
+&lt;h3 id=&#34;vérification-dun-texte&#34;&gt;Vérification d&amp;rsquo;un texte&lt;/h3&gt;
+&lt;p&gt;Il faut donc être en mesure de créer le dictionnaire à partir d&amp;rsquo;un corpus constitué de fichiers textes et ensuite de détecter à l&amp;rsquo;aide du dictionnaire les fautes d&amp;rsquo;orthographe. Les choix faits d&amp;rsquo;implantation qui vous sont imposés ci-dessous ne sont pas nécessairement les meilleurs. Ils ont pour objectifs de vous faire utiliser les collections et les fichiers, principalement.&lt;/p&gt;
+&lt;p&gt;Le dictionnaire est stocké dans une une table associative &lt;code&gt;HasMap&amp;lt;k, V&amp;gt;&lt;/code&gt;. Le mot sera la clef et la valeur le nombre d’occurrences du mot dans le corpus.&lt;/p&gt;
+&lt;p&gt;Pour commencer vous devez écrire une classe &lt;code&gt;UtilitaireFichier&lt;/code&gt; qui comportera en particulier les méthodes suivantes :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;public static ArrayList&amp;lt;File&amp;gt; listeRepertoire(String nomDuRepertoire)&lt;/code&gt;. Cette méthode doit retourner l&amp;rsquo;ensemble des fichiers contenus dans un répertoire donné et ayant pour extension &lt;code&gt;.txt&lt;/code&gt;. Si le répertoire est vide votre méthode devra lever une exception de type &lt;code&gt;RepertoireVideException&lt;/code&gt; que vous aurez définie au préalable.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;public static String LireFichier(File f)&lt;/code&gt;. Cette méthode retourne le contenu d&amp;rsquo;un fichier contenant du texte. Les lignes vides sont supprimées et le symbole retour à la ligne (&amp;quot;\n&amp;quot;) est remplacé par un espace.
+Cette classe doit appartenir à un package &lt;code&gt;utilfic&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si vous avez un peu de mal pour écrire ces méthodes vous pouvez vous aider de cette [[Attach:UtilitaireFichier.java|solution]].&lt;/p&gt;
+&lt;p&gt;Vous devez maintenant créer une classe &lt;code&gt;Dictionnaire&lt;/code&gt; qui crée donc le dictionnaire à partir d’un ensemble de documents. On fournit le nom du répertoire contenant l&amp;rsquo;ensemble des documents avec pour extension &lt;code&gt;.txt&lt;/code&gt;. Le dictionnaire créé est constitué sous la forme d&amp;rsquo;une table d&amp;rsquo;association &lt;code&gt;HashMap&amp;lt;String, Integer&amp;gt;&lt;/code&gt;, la clef est le mot et la valeur du nombre de fois où le mot apparaît dans les documents.&lt;/p&gt;
+&lt;p&gt;On passe maintenant au problème de la correction. On suppose que le texte considéré ne comporte pas de ponctuation et que tous les mots sont en minuscule. On définit une classe &lt;code&gt;Correction&lt;/code&gt; qui comporte le dictionnaire ainsi que le texte à corriger. La méthode &lt;code&gt;corrige&lt;/code&gt; de cette classe doit retourner une &lt;code&gt;ArrayList&lt;/code&gt; de booléen qui a le même nombre d’éléments que la liste décrivant le texte. Le n^ième^ élément de la liste correspond au n^ième^ mot du texte. S&amp;rsquo;il est vrai, le mot apparaît donc dans le dictionnaire, sinon il est faux. Par exemple si le texte en entrée est &lt;code&gt;ceci estt un exemple&lt;/code&gt; alors la fonction retournera &lt;code&gt;true, false, true, true&lt;/code&gt;. Vous compléterez votre classe en ajoutant une méthode &lt;code&gt;afficheTexteAnnote()&lt;/code&gt; qui affiche le texte annoté. Les mots incorrects pourront être écrit en rouge par exemple ou entouré par deux étoiles.&lt;/p&gt;
+&lt;p&gt;Ils vous reste à écrire une classe &lt;code&gt;MainCorrection&lt;/code&gt; pour tester. L&amp;rsquo;utilisateur doit pouvoir fournir le texte saisit au clavier dans un premier temps et le répertoire contenant le corpus pour constituer le dictionnaire. Vous testerez également les cas d&amp;rsquo;erreurs.&lt;/p&gt;
+&lt;h3 id=&#34;correction-du-texte&#34;&gt;Correction du texte&lt;/h3&gt;
+&lt;p&gt;Il est donc possible maintenant de détecter les mots mal orthographiés ou plus précisément ceux qui ne sont pas présents dans notre dictionnaire. On cherche ainsi maintenant à corriger automatiquement les mots. Pour cela on procède en deux étapes :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pour chaque mots supposés erronés, on génère l&amp;rsquo;ensemble des mots possibles ;&lt;/li&gt;
+&lt;li&gt;on associe à chaque correction une note, plus elle est élevée plus le mot proposé a de la chance d&amp;rsquo;être correct.
+Corriger consiste donc à remplacer le mot erroné par celui qui a la meilleure note.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;ensemble-des-corrections-possibles&#34;&gt;Ensemble des corrections possibles&lt;/h4&gt;
+&lt;p&gt;Tout d&amp;rsquo;abord introduisons la notion de distance d&amp;rsquo;édition (ou distance de Levenshtein) qui est fréquemment utilisée. Si l&amp;rsquo;on considère deux chaînes de caractères, cette distance est égale au nombre de caractères qu’il faut supprimer, insérer ou remplacer pour passer d&amp;rsquo;une chaîne à l&amp;rsquo;autre. Elle mesure le degré de similarité entre deux chaînes de caractères.
+Une des applications de cette distance est donc la correction orthographique. Pour un mot mal orthographié on cherche parmi
+les mots du dictionnaire ceux dont la distance de &lt;em&gt;Levenshtein&lt;/em&gt; au mot tapé est inférieure à une limite donnée. Vous pouvez toujours tester, mais vous allez vous rendre compte que c&amp;rsquo;est un peu long comme méthode. On va utiliser une heuristique basée sur une observation qui montre qu&amp;rsquo;en général la distance entre un mot incorrect et sa correction est de 1. Il suffit donc de générer tous les mots suivants :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ceux qui ont un caractère en plus du mot considéré ;&lt;/li&gt;
+&lt;li&gt;ceux qui ont un caractère en moins du mot considéré ;&lt;/li&gt;
+&lt;li&gt;ceux qui ont un caractère différent du mot considéré ;&lt;/li&gt;
+&lt;li&gt;ceux qui ont deux caractères consécutifs inversé par rapport au mot considéré (&amp;ldquo;abc&amp;rdquo; donnera &amp;ldquo;bac&amp;rdquo; et &amp;ldquo;acb&amp;rdquo;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pour simplifier les choses, les mots sont écrits en minuscules et l’alphabet comporte [[https://fr.wikipedia.org/wiki/Alphabet_fran%C3%A7ais|42 lettres]] (26 de base a..z, 13 voyelles accentuées, le ç, le œ, le æ).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Combien de mots générés avec les règles ci-dessus contient l&amp;rsquo;ensemble des corrections candidates possibles si le mot à corriger comporte n lettres ?\&lt;br&gt;
+Combien y a-t-il de mots dont la distance de Levenshtein à un mot comportant n lettres est 2 ?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Pour générer les différentes corrections candidates vous devez définir quatre méthodes (&lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsInsertion(String)&lt;/code&gt;, &lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsDeletion(String)&lt;/code&gt;, &lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsSubstitution(String)&lt;/code&gt;, &lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsInversion(String)&lt;/code&gt;) qui correspondent aux règles de transformation énoncées ci-dessus.&lt;/p&gt;
+&lt;h4 id=&#34;correction&#34;&gt;Correction&lt;/h4&gt;
+&lt;p&gt;Le choix de la correction la plus probable se fait en attribuant à chaque correction candidate une note. Plus elle est élevée, plus il est probable que ce soit la bonne orthographe du mot à corriger. Cette note correspond au nombre d’occurrences du mot dans le corpus de référence.&lt;/p&gt;
+&lt;p&gt;Pour résumer, étant donné un mot à corriger, vous devez donc :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Génèrer toutes les corrections possibles en utilisant les méthodes &lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsInsertion(String)&lt;/code&gt;, &lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsDeletion(String)&lt;/code&gt;, &lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsSubstitution(String)&lt;/code&gt;, &lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsInversion(String)&lt;/code&gt; ;&lt;/li&gt;
+&lt;li&gt;Calculer la note de chaque correction possible, vous devez pour cela écrire une nouvelle méthode ;&lt;/li&gt;
+&lt;li&gt;Rechercher la correction ayant la meilleure note. Si plusieurs corrections ont la même note, vous en choisissez une de façon aléatoire.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Compléter en écrivant une méthode &lt;code&gt;correction&lt;/code&gt; qui prend en paramètre un mot mal orthographié et retourne la correction de celui-ci si elle-existe.&lt;/p&gt;
+&lt;p&gt;Vous devez maintenant pouvoir fournir un texte en entrée et le retourner corrigé. Le texte pourra être fourni soit sous la forme d&amp;rsquo;un fichier ou saisi au niveau de la console.&lt;/p&gt;
+&lt;h2 id=&#34;ressources&#34;&gt;Ressources&lt;/h2&gt;
+&lt;p&gt;Le premier corpus est constitué de 6 livres issus du projet &lt;a href=&#34;http://www.gutenberg.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gutenberg&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/DicoJava/data.tar.bz2&#34; target=&#34;_blank&#34;&gt;L&amp;rsquo;archive&lt;/a&gt;. vous devez la décompressez dans un répertoire et c&amp;rsquo;est ce répertoire que vous donnerez.&lt;/li&gt;
+&lt;li&gt;Histoires extraordinaires, d’Edgar Allan Poe ;&lt;/li&gt;
+&lt;li&gt;Nouvelles histoires extraordinaires, d’Edgar Allan Poe ;&lt;/li&gt;
+&lt;li&gt;Le barbier de Séville ou la précaution inutile, de Pierre Augustin Caron de Beaumarchais ;&lt;/li&gt;
+&lt;li&gt;Les épaves de Charles Baudelaire ;&lt;/li&gt;
+&lt;li&gt;Correspondance inédite de Hector Berlioz ;&lt;/li&gt;
+&lt;li&gt;Les Fleurs du Mal, de Charles Baudelaire.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Les textes sont pré-traités (suppression des entêtes de chapitre, des caractères spéciaux, de la ponctuation&amp;hellip;) et segmentés de manière à ce que chaque mot soit précédé et suivi d’un unique espace. Ce corpus comporte, au final, 388 476 mots (ce qui est très très petit selon les standards actuels).&lt;/p&gt;
+&lt;p&gt;Le &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/DicoJava/wikipedia.txt.bz2&#34; target=&#34;_blank&#34;&gt;second corpus&lt;/a&gt; est de plus grande taille, il est issu de la wikipédia et a été pré-traité. Il contient 4 162 309 mots.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
