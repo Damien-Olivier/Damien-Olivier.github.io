@@ -46,7 +46,7 @@ Pour ceux qui voudrait utiliser &lt;code&gt;Swing&lt;/code&gt; et les threads vo
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.Polymorphisme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Polymorphisme&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoCollections&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Généricité, collections et exceptions&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoFichiers&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gestion de fichiers&lt;/a&gt; ;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/&#34;&gt;Gestion de fichiers&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/courses/java/exos/correcteur/&#34;&gt;Fichiers et collections&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoThreads&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Threads&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/Taquin.pdf&#34; target=&#34;_blank&#34;&gt;Swing&lt;/a&gt;.&lt;/li&gt;
@@ -132,6 +132,44 @@ Combien y a-t-il de mots dont la distance de Levenshtein à un mot comportant n 
 &lt;/ul&gt;
 &lt;p&gt;Les textes sont pré-traités (suppression des entêtes de chapitre, des caractères spéciaux, de la ponctuation&amp;hellip;) et segmentés de manière à ce que chaque mot soit précédé et suivi d’un unique espace. Ce corpus comporte, au final, 388 476 mots (ce qui est très très petit selon les standards actuels).&lt;/p&gt;
 &lt;p&gt;Le &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/DicoJava/wikipedia.txt.bz2&#34; target=&#34;_blank&#34;&gt;second corpus&lt;/a&gt; est de plus grande taille, il est issu de la wikipédia et a été pré-traité. Il contient 4 162 309 mots.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fichier de mesures</title>
+      <link>https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/</link>
+      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/</guid>
+      <description>&lt;h1 id=&#34;gestion-de-fichier-en-java&#34;&gt;Gestion de fichier en java&lt;/h1&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-bouée-connectée&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../boueeConnectee.png&#34; alt=&#34;Bouée connectée&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      Bouée connectée
+    &lt;/figcaption&gt;&lt;/figure&gt;
+L&amp;rsquo;estuaire de la Seine est fortement industrialisé et la surveillance de la qualité des eaux peux se faire à l&amp;rsquo;aide de bouées connectées qui renvoient des mesures qui sont récupérées de façon centralisées. Ces données sont ensuite stockées dans un fichier CSV en UTF-8. On a par exemple le &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/FicMesures/mesure0.csv&#34; target=&#34;_blank&#34;&gt;fichier &lt;code&gt;CSV&lt;/code&gt; &lt;/a&gt; suivant.&lt;/p&gt;
+&lt;h2 id=&#34;calcul-de-la-moyenne-globale&#34;&gt;Calcul de la moyenne globale&lt;/h2&gt;
+&lt;p&gt;Écrire un code qui lit ce fichier, l&amp;rsquo;analyse (le parse), et calcule la moyenne des températures sur la période complète. Des colonnes peuvent être vide (absence de mesure) ou contenir également &lt;code&gt;NaN&lt;/code&gt; (défaut de mesure).&lt;/p&gt;
+&lt;h2 id=&#34;calcul-de-la-moyenne-par-jour&#34;&gt;Calcul de la moyenne par jour&lt;/h2&gt;
+&lt;p&gt;On veut être en mesure de calculer la moyenne des valeurs journalières et stocker l&amp;rsquo;ensemble des résultats dans un fichier CSV composé de deux colonnes; la date et la moyenne du jour correspondant. On devra également retourner la moyenne globale.&lt;/p&gt;
+&lt;h2 id=&#34;calcul-de-la-moyenne-par-jour-et-globale-entre-deux-dates&#34;&gt;Calcul de la moyenne par jour et globale entre deux dates&lt;/h2&gt;
+&lt;p&gt;L&amp;rsquo;objectif est maintenant de réaliser le même traitement que précédemment mais entre deux dates données.&lt;/p&gt;
+&lt;h2 id=&#34;plusieurs-fichiers-de-mesure&#34;&gt;Plusieurs fichiers de mesure&lt;/h2&gt;
+&lt;p&gt;En fait les fichiers de mesure sont stockés dans un répertoire et on doit être capable de lire l&amp;rsquo;ensemble et de faire les différents calcul de moyenne.&lt;/p&gt;
 </description>
     </item>
     
