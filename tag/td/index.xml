@@ -94,8 +94,8 @@ Combien y a-t-il de mots dont la distance de Levenshtein à un mot comportant n 
       <link>https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/</link>
       <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
       <guid>https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/</guid>
-      <description>&lt;h1 id=&#34;gestion-de-fichier-en-java&#34;&gt;Gestion de fichier en java&lt;/h1&gt;
-&lt;p&gt;
+      <description>&lt;p&gt;Mise en oeuvre du cours sur les fichiers.&lt;/p&gt;
+
 
 
 
@@ -111,11 +111,12 @@ Combien y a-t-il de mots dont la distance de Levenshtein à un mot comportant n 
 
 &lt;figure  id=&#34;figure-bouée-connectée&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../boueeConnectee.png&#34; alt=&#34;Bouée connectée&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;../../Exos/boueeConnectee.png&#34; alt=&#34;Bouée connectée&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       Bouée connectée
     &lt;/figcaption&gt;&lt;/figure&gt;
-L&amp;rsquo;estuaire de la Seine est fortement industrialisé et la surveillance de la qualité des eaux peux se faire à l&amp;rsquo;aide de bouées connectées qui renvoient des mesures qui sont récupérées de façon centralisées. Ces données sont ensuite stockées dans un fichier CSV en UTF-8. On a par exemple le &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/FicMesures/mesure0.csv&#34; target=&#34;_blank&#34;&gt;fichier &lt;code&gt;CSV&lt;/code&gt; &lt;/a&gt; suivant.&lt;/p&gt;
+&lt;h1 id=&#34;gestion-de-fichier-en-java&#34;&gt;Gestion de fichier en java&lt;/h1&gt;
+&lt;p&gt;L&amp;rsquo;estuaire de la Seine est fortement industrialisé et la surveillance de la qualité des eaux peux se faire à l&amp;rsquo;aide de bouées connectées qui renvoient des mesures qui sont récupérées de façon centralisées. Ces données sont ensuite stockées dans un fichier CSV en UTF-8. On a par exemple le &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/FicMesures/mesure0.csv&#34; target=&#34;_blank&#34;&gt;fichier &lt;code&gt;CSV&lt;/code&gt; &lt;/a&gt; suivant.&lt;/p&gt;
 &lt;h2 id=&#34;calcul-de-la-moyenne-globale&#34;&gt;Calcul de la moyenne globale&lt;/h2&gt;
 &lt;p&gt;Écrire un code qui lit ce fichier, l&amp;rsquo;analyse (le parse), et calcule la moyenne des températures sur la période complète. Des colonnes peuvent être vide (absence de mesure) ou contenir également &lt;code&gt;NaN&lt;/code&gt; (défaut de mesure).&lt;/p&gt;
 &lt;h2 id=&#34;calcul-de-la-moyenne-par-jour&#34;&gt;Calcul de la moyenne par jour&lt;/h2&gt;
