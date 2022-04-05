@@ -128,5 +128,27 @@ Combien y a-t-il de mots dont la distance de Levenshtein à un mot comportant n 
 </description>
     </item>
     
+    <item>
+      <title>Utilisation de threads</title>
+      <link>https://Damien-Olivier.github.io/courses/java/exos/threads/</link>
+      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/courses/java/exos/threads/</guid>
+      <description>&lt;h1 id=&#34;histoire-de-chauffage&#34;&gt;Histoire de chauffage&lt;/h1&gt;
+&lt;p&gt;Considérons un immeuble chauffé par une unique chaudière, composé de 10 appartements tous équipés d&amp;rsquo;une commande permettant d&amp;rsquo;augmenter ou diminuer la température de l&amp;rsquo;eau de la chaudière.
+Je sais c&amp;rsquo;est sans doute une mauvaise idée, mais cela permet de vous proposer un problème simple mettant en avant les problèmes qui peuvent survenir avec les threads.
+Pour éviter de faire cuire ou congeler les locataires les commandes sont équipées d&amp;rsquo;une sécurité qui empêche de trop monter la température ou trop la descendre.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Écrire une classe &lt;code&gt;Chaudiere&lt;/code&gt; dont l&amp;rsquo;état est représenté par une température ;&lt;/li&gt;
+&lt;li&gt;Écrire une classe &lt;code&gt;Commande&lt;/code&gt;, qui interroge la chaudière, et permet de faire varier la température de celle-ci, si celle-ci est pas déjà trop haute ou trop basse.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Il faut maintenant définir le système global, cela peut être fait par une méthode &lt;code&gt;main&lt;/code&gt;. Chaque habitant est un &amp;ldquo;thread&amp;rdquo; qui possède une commande. Comme on traverse une période froide chacun des habitants va tenter d&amp;rsquo;augmenter la température cinq fois.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Écrire le programme en conséquence.&lt;/li&gt;
+&lt;li&gt;Vérifier le comportement de votre chaudière en affichant sa température.&lt;/li&gt;
+&lt;li&gt;Si votre programme fonctionne correctement expliquer votre code en insistant sur les points essentiels concernant la gestion des threads, sinon modifier le en réfléchissant en particulier au problème de la concurrence d&amp;rsquo;accès.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
