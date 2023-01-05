@@ -17,14 +17,14 @@
     <loc>https://Damien-Olivier.github.io/courses/java/exos/correcteur/</loc>
     <lastmod>2022-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/</loc>
+    <loc>https://Damien-Olivier.github.io/courses/java/exos/fichier-de-mesures/</loc>
     <lastmod>2022-02-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/courses/java/exos/threads/</loc>
     <lastmod>2022-02-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/</loc>
-    <lastmod>2022-02-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -37,7 +37,7 @@
                 />
   </url><url>
     <loc>https://Damien-Olivier.github.io/courses/</loc>
-    <lastmod>2022-02-02T00:00:00+00:00</lastmod>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -48,6 +48,9 @@
                 hreflang="fr"
                 href="https://Damien-Olivier.github.io/courses/"
                 />
+  </url><url>
+    <loc>https://Damien-Olivier.github.io/courses/java/</loc>
+    <lastmod>2023-01-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/tag/java/</loc>
     <lastmod>2022-02-02T00:00:00+00:00</lastmod>
@@ -106,9 +109,6 @@
     <loc>https://Damien-Olivier.github.io/courses/epistemologie/</loc>
     <lastmod>2022-01-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Damien-Olivier.github.io/courses/java/</loc>
-    <lastmod>2022-01-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://Damien-Olivier.github.io/talk/ethique-et-intelligence-artificielle/</loc>
     <lastmod>2021-12-13T18:00:00+00:00</lastmod>
   </url><url>
@@ -121,10 +121,10 @@
     <loc>https://Damien-Olivier.github.io/courses/va/</loc>
     <lastmod>2021-12-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Damien-Olivier.github.io/tag/ia/</loc>
+    <loc>https://Damien-Olivier.github.io/tag/epistemologie/</loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Damien-Olivier.github.io/tag/epistemologie/</loc>
+    <loc>https://Damien-Olivier.github.io/tag/ia/</loc>
     <lastmod>2021-12-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/author/helene-marquie-et-al/</loc>
@@ -582,6 +582,9 @@
     <loc>https://Damien-Olivier.github.io/publication/alileche-hal-02375438/</loc>
     <lastmod>2021-10-18T17:51:21+02:00</lastmod>
   </url><url>
+    <loc>https://Damien-Olivier.github.io/publication/alileche-hal-02314374/</loc>
+    <lastmod>2021-10-18T17:51:21+02:00</lastmod>
+  </url><url>
     <loc>https://Damien-Olivier.github.io/author/j.-buvat/</loc>
     <lastmod>2021-10-18T17:51:21+02:00</lastmod>
   </url><url>
@@ -592,9 +595,6 @@
     <lastmod>2021-10-18T17:51:21+02:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/author/v.-cozzani/</loc>
-    <lastmod>2021-10-18T17:51:21+02:00</lastmod>
-  </url><url>
-    <loc>https://Damien-Olivier.github.io/publication/alileche-hal-02314374/</loc>
     <lastmod>2021-10-18T17:51:21+02:00</lastmod>
   </url><url>
     <loc>https://Damien-Olivier.github.io/author/francoise-lucchini/</loc>

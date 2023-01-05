@@ -63,19 +63,18 @@ Pour ceux qui voudrait utiliser &lt;code&gt;Swing&lt;/code&gt; et les threads vo
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.Polymorphisme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Polymorphisme&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoCollections&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Généricité, collections et exceptions&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/&#34;&gt;Gestion de fichiers&lt;/a&gt; ;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/courses/java/exos/fichier-de-mesures/&#34;&gt;Gestion de fichiers&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/courses/java/exos/correcteur/&#34;&gt;Fichiers et collections&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoThreads&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Threads&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/Taquin.pdf&#34; target=&#34;_blank&#34;&gt;Swing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;quelques-corrections-au-fil-du-temps&#34;&gt;Quelques corrections au fil du temps&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/polynomes.tar.gz&#34; target=&#34;_blank&#34;&gt;Polynomes&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/FarWest.tar.bz2&#34; target=&#34;_blank&#34;&gt;Le farwest&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/SuiteReccurente.tar.bz2&#34; target=&#34;_blank&#34;&gt;Les suites récurrentes&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/Integration.tar.bz2&#34; target=&#34;_blank&#34;&gt;Integration&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/Bou%c3%a9es.tar.gz&#34; target=&#34;_blank&#34;&gt;Fichiers de mesure (bouées)&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Elles viendront au fil des exercices !&lt;/p&gt;
+&lt;!-- * &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/polynomes.tar.gz&#34; target=&#34;_blank&#34;&gt;Polynomes&lt;/a&gt;.
+* &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/FarWest.tar.bz2&#34; target=&#34;_blank&#34;&gt;Le farwest&lt;/a&gt;.
+* &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/SuiteReccurente.tar.bz2&#34; target=&#34;_blank&#34;&gt;Les suites récurrentes&lt;/a&gt;.
+* &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/Integration.tar.bz2&#34; target=&#34;_blank&#34;&gt;Integration&lt;/a&gt;.
+* &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/Bou%c3%a9es.tar.gz&#34; target=&#34;_blank&#34;&gt;Fichiers de mesure (bouées)&lt;/a&gt;. --&gt;
 &lt;h2 id=&#34;correction-du-partiel-202122&#34;&gt;Correction du partiel 2021/22&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/ExamJava/EntierNat.tar.bz2&#34; target=&#34;_blank&#34;&gt;Exceptions&lt;/a&gt;.&lt;/li&gt;
@@ -90,7 +89,7 @@ Pour ceux qui voudrait utiliser &lt;code&gt;Swing&lt;/code&gt; et les threads vo
       <guid>https://Damien-Olivier.github.io/courses/epistemologie/supportepistemo/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Une &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursEpistemo/EpistemoIntro.html&#34; target=&#34;_blank&#34;&gt;introduction&lt;/a&gt; dans laquelle on s&amp;rsquo;interroge sur ce que c&amp;rsquo;est savoir et connaître et sur la nature de la connaissance.&lt;/li&gt;
-&lt;li&gt;L&#39;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursEpistemo/EspritCritique.html&#34; target=&#34;_blank&#34;&gt;esprit critique &lt;/a&gt; ou &amp;ldquo;l&amp;rsquo;art de faire la différence entre ce qui relève de la science et ce qui relève de la croyance&amp;rdquo; (Richard Monvoisin).&lt;/li&gt;
+&lt;li&gt;L&amp;rsquo;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursEpistemo/EspritCritique.html&#34; target=&#34;_blank&#34;&gt;esprit critique &lt;/a&gt; ou &amp;ldquo;l&amp;rsquo;art de faire la différence entre ce qui relève de la science et ce qui relève de la croyance&amp;rdquo; (Richard Monvoisin).&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

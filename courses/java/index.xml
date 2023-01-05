@@ -5,7 +5,7 @@
     <link>https://Damien-Olivier.github.io/courses/java/</link>
       <atom:link href="https://Damien-Olivier.github.io/courses/java/index.xml" rel="self" type="application/rss+xml" />
     <description>Java avancé</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Thu, 20 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Thu, 05 Jan 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://Damien-Olivier.github.io/courses/java/featured.jpg</url>
       <title>Java avancé</title>
@@ -46,19 +46,18 @@ Pour ceux qui voudrait utiliser &lt;code&gt;Swing&lt;/code&gt; et les threads vo
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.Polymorphisme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Polymorphisme&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoCollections&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Généricité, collections et exceptions&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/&#34;&gt;Gestion de fichiers&lt;/a&gt; ;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/courses/java/exos/fichier-de-mesures/&#34;&gt;Gestion de fichiers&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/courses/java/exos/correcteur/&#34;&gt;Fichiers et collections&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoThreads&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Threads&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/Taquin.pdf&#34; target=&#34;_blank&#34;&gt;Swing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;quelques-corrections-au-fil-du-temps&#34;&gt;Quelques corrections au fil du temps&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/polynomes.tar.gz&#34; target=&#34;_blank&#34;&gt;Polynomes&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/FarWest.tar.bz2&#34; target=&#34;_blank&#34;&gt;Le farwest&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/SuiteReccurente.tar.bz2&#34; target=&#34;_blank&#34;&gt;Les suites récurrentes&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/Integration.tar.bz2&#34; target=&#34;_blank&#34;&gt;Integration&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/Bou%c3%a9es.tar.gz&#34; target=&#34;_blank&#34;&gt;Fichiers de mesure (bouées)&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Elles viendront au fil des exercices !&lt;/p&gt;
+&lt;!-- * &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/polynomes.tar.gz&#34; target=&#34;_blank&#34;&gt;Polynomes&lt;/a&gt;.
+* &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/FarWest.tar.bz2&#34; target=&#34;_blank&#34;&gt;Le farwest&lt;/a&gt;.
+* &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/SuiteReccurente.tar.bz2&#34; target=&#34;_blank&#34;&gt;Les suites récurrentes&lt;/a&gt;.
+* &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/Integration.tar.bz2&#34; target=&#34;_blank&#34;&gt;Integration&lt;/a&gt;.
+* &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/Bou%c3%a9es.tar.gz&#34; target=&#34;_blank&#34;&gt;Fichiers de mesure (bouées)&lt;/a&gt;. --&gt;
 &lt;h2 id=&#34;correction-du-partiel-202122&#34;&gt;Correction du partiel 2021/22&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/ExamJava/EntierNat.tar.bz2&#34; target=&#34;_blank&#34;&gt;Exceptions&lt;/a&gt;.&lt;/li&gt;
@@ -113,7 +112,7 @@ les mots du dictionnaire ceux dont la distance de &lt;em&gt;Levenshtein&lt;/em&g
 &lt;/ul&gt;
 &lt;p&gt;Pour simplifier les choses, les mots sont écrits en minuscules et l’alphabet comporte [[https://fr.wikipedia.org/wiki/Alphabet_fran%C3%A7ais|42 lettres]] (26 de base a..z, 13 voyelles accentuées, le ç, le œ, le æ).&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Combien de mots générés avec les règles ci-dessus contient l&amp;rsquo;ensemble des corrections candidates possibles si le mot à corriger comporte n lettres ?\&lt;br&gt;
+&lt;p&gt;Combien de mots générés avec les règles ci-dessus contient l&amp;rsquo;ensemble des corrections candidates possibles si le mot à corriger comporte n lettres ?\
 Combien y a-t-il de mots dont la distance de Levenshtein à un mot comportant n lettres est 2 ?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Pour générer les différentes corrections candidates vous devez définir quatre méthodes (&lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsInsertion(String)&lt;/code&gt;, &lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsDeletion(String)&lt;/code&gt;, &lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsSubstitution(String)&lt;/code&gt;, &lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsInversion(String)&lt;/code&gt;) qui correspondent aux règles de transformation énoncées ci-dessus.&lt;/p&gt;
@@ -145,9 +144,9 @@ Combien y a-t-il de mots dont la distance de Levenshtein à un mot comportant n 
     
     <item>
       <title>Fichier de mesures</title>
-      <link>https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/</link>
+      <link>https://Damien-Olivier.github.io/courses/java/exos/fichier-de-mesures/</link>
       <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/</guid>
+      <guid>https://Damien-Olivier.github.io/courses/java/exos/fichier-de-mesures/</guid>
       <description>&lt;p&gt;Mise en oeuvre du cours sur les fichiers.&lt;/p&gt;
 
 

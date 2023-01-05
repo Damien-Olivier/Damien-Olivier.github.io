@@ -59,7 +59,7 @@ les mots du dictionnaire ceux dont la distance de &lt;em&gt;Levenshtein&lt;/em&g
 &lt;/ul&gt;
 &lt;p&gt;Pour simplifier les choses, les mots sont écrits en minuscules et l’alphabet comporte [[https://fr.wikipedia.org/wiki/Alphabet_fran%C3%A7ais|42 lettres]] (26 de base a..z, 13 voyelles accentuées, le ç, le œ, le æ).&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Combien de mots générés avec les règles ci-dessus contient l&amp;rsquo;ensemble des corrections candidates possibles si le mot à corriger comporte n lettres ?\&lt;br&gt;
+&lt;p&gt;Combien de mots générés avec les règles ci-dessus contient l&amp;rsquo;ensemble des corrections candidates possibles si le mot à corriger comporte n lettres ?\
 Combien y a-t-il de mots dont la distance de Levenshtein à un mot comportant n lettres est 2 ?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Pour générer les différentes corrections candidates vous devez définir quatre méthodes (&lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsInsertion(String)&lt;/code&gt;, &lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsDeletion(String)&lt;/code&gt;, &lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsSubstitution(String)&lt;/code&gt;, &lt;code&gt;ArrayList&amp;lt;String&amp;gt; candidatsInversion(String)&lt;/code&gt;) qui correspondent aux règles de transformation énoncées ci-dessus.&lt;/p&gt;
@@ -91,9 +91,9 @@ Combien y a-t-il de mots dont la distance de Levenshtein à un mot comportant n 
     
     <item>
       <title>Fichier de mesures</title>
-      <link>https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/</link>
+      <link>https://Damien-Olivier.github.io/courses/java/exos/fichier-de-mesures/</link>
       <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/</guid>
+      <guid>https://Damien-Olivier.github.io/courses/java/exos/fichier-de-mesures/</guid>
       <description>&lt;p&gt;Mise en oeuvre du cours sur les fichiers.&lt;/p&gt;
 
 
