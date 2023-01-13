@@ -20,7 +20,7 @@
       <description>&lt;p&gt;Vous trouverez ici, les différents liens vous permettant de relire/lire les diapositives présentées en cours durant le semestre.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;
-  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 2 heures par semaine, durant 10 semaines.&lt;/p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1h30 heure par semaine, durant 12 semaines.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Les transparents de cours sont &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/1troduction.pdf&#34; target=&#34;_blank&#34;&gt;ici&lt;/a&gt;. Les exemples ne sont pas toujours accessibles via le fichier pdf, voici une &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/exemples.tar.bz2&#34; target=&#34;_blank&#34;&gt;archive&lt;/a&gt; dans laquelle vous trouverez les fichiers sources. Attention, c&amp;rsquo;est éventuellement le bazar, ils ont été commentés en cours, ainsi certains sont mal écrits et/ou ne tiennent pas compte des nouvelles possibilités de Java. Des compléments ont donc été ajoutés et l&amp;rsquo;on se référa à ces derniers.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursJava/collection.html&#34; target=&#34;_blank&#34;&gt;La généricité de type, les collections&lt;/a&gt;, &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/diapoCoursJava/Lambda.html&#34; target=&#34;_blank&#34;&gt;les expressions lambdas, les références de méthodes et les streams&lt;/a&gt; sont maintenant largement utilisés. Un premier survol vous est proposé.&lt;/p&gt;
