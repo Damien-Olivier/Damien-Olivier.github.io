@@ -1,0 +1,3 @@
+z1 et z3 contiennent la même référence
+Ce n'est pas la même référence
+C'est le même contenu

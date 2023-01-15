@@ -1,0 +1,6 @@
+Classe : Classe1 === Implémentation de la méthode m() de Interface1
+Classe : Classe2 === méthode m() 
+Classe : Classe2 === Implémentation de la méthode m() de Interface1
+Classe : Classe2 === Implémentation de la méthode p() de Interface2
+Classe : Classe3 === Implémentation de la méthode m() de Interface1
+Classe : Classe3 === méthode s() 

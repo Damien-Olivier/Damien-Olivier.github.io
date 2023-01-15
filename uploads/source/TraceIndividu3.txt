@@ -1,0 +1,5 @@
+jumeau1 = AlphonseTACAISSE
+jumeau2 = AlphonseTACAISSE
+jumeau1 = AlphonseTACAISSE
+jumeau2 = AlphonsePASTACAISSE
+Ce n'est pas une copie de surface !

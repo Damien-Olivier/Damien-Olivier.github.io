@@ -1,0 +1,3 @@
+z1 et z3 contiennent la même référence
+Ce n'est pas la même référence
+Egaux : z1 = 7.0 + i7.0 et z2 = 7.0 + i7.0
