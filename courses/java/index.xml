@@ -46,7 +46,7 @@ Pour ceux qui voudrait utiliser &lt;code&gt;Swing&lt;/code&gt; et les threads vo
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.Polymorphisme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Polymorphisme&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoCollections&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Généricité, collections et exceptions&lt;/a&gt; ;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/courses/java/exos/fichier-de-mesures/&#34;&gt;Gestion de fichiers&lt;/a&gt; ;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/&#34;&gt;Gestion de fichiers&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/courses/java/exos/correcteur/&#34;&gt;Fichiers et collections&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://litis.univ-lehavre.fr/~dolivier/PagePerso/pmwiki.php?n=Enseignement.ExoThreads&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Threads&lt;/a&gt; ;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://Damien-Olivier.github.io/uploads/Taquin.pdf&#34; target=&#34;_blank&#34;&gt;Swing&lt;/a&gt;.&lt;/li&gt;
@@ -144,9 +144,9 @@ Combien y a-t-il de mots dont la distance de Levenshtein à un mot comportant n 
     
     <item>
       <title>Fichier de mesures</title>
-      <link>https://Damien-Olivier.github.io/courses/java/exos/fichier-de-mesures/</link>
+      <link>https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/</link>
       <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/courses/java/exos/fichier-de-mesures/</guid>
+      <guid>https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/</guid>
       <description>&lt;p&gt;Mise en oeuvre du cours sur les fichiers.&lt;/p&gt;
 
 
