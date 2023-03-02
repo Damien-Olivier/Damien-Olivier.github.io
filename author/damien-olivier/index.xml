@@ -5,83 +5,57 @@
     <link>https://Damien-Olivier.github.io/author/damien-olivier/</link>
       <atom:link href="https://Damien-Olivier.github.io/author/damien-olivier/index.xml" rel="self" type="application/rss+xml" />
     <description>Damien Olivier</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Sat, 01 May 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>fr-FR</language><copyright>© Copyright 2021 Damien Olivier. Powered by Hugo with academic theme. Hosted by GitHub Pages.</copyright><lastBuildDate>Fri, 01 Oct 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png</url>
+      <url>https://Damien-Olivier.github.io/author/damien-olivier/avatar_hud212d2c6455c355c2d7845be6deefc04_9123_270x270_fill_lanczos_center_3.png</url>
       <title>Damien Olivier</title>
       <link>https://Damien-Olivier.github.io/author/damien-olivier/</link>
     </image>
     
     <item>
-      <title>A reaction-diffusion system drives the morphogenesis of spatial complex networks</title>
-      <link>https://Damien-Olivier.github.io/publication/tirico-hal-03357563/</link>
-      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/publication/tirico-hal-03357563/</guid>
+      <title>L’université populaire à 15 ans</title>
+      <link>https://Damien-Olivier.github.io/post/universite-populaire/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/post/universite-populaire/</guid>
+      <description>&lt;p&gt;15 ans de savoirs partagés et de regards croisés de chercheur.euse.s et d’artistes sur un monde en profonde mutation, toujours plus difficile à analyser et à comprendre. La crise sanitaire, à bien des égards, est un révélateur de
+ces transformations. Elles rendent plus que jamais essentiels ces espaces de rencontres et d’échanges, cette &amp;ldquo;Université Populaire&amp;rdquo; portée depuis l’origine par Le Volcan, Scène nationale du Havre et l’université Le Havre Normandie.
+Merci aux quelque deux cent cinquante-cinq intervenants et intervenantes qui s’y sont succédé.e.s et merci à vous, auditeurs et auditrices fidèles !&lt;/p&gt;
+&lt;p&gt;15 ans, c’est l’âge de l’adolescence et de ses métamorphoses : à ces ados qui ont grandi en même temps que l’Université Populaire, quel monde proposons-nous ? Quels outils leur donne-t-on pour agir sur lui ? Et comment s’y projettent-ils ? 15 ans, ce sera le fil rouge de cette édition anniversaire qui reviendra sur les grands enjeux de ces années passées et futures (environnement, crises migratoires, pandémies, intelligence artificielle, réseaux sociaux et influenceurs, avenir du travail… ) y compris dans le champ plus intime du corps : le genre, la GPA, une histoire de la pédophilie…&lt;/p&gt;
+&lt;p&gt;Plusieurs rencontres autour de la littérature, de la musique (le rap), d’une fiction radiophonique, donneront aussi la parole à des élèves de collège et de lycée, des étudiant.e.s, et même de jeunes doctorant.e.s ayant choisi
+d’embrasser la recherche. Excellente saison à toutes et à tous. Et, ne l’oubliez pas… la curiosité n’a pas d’âge !&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Morphogenesis of Complex Networks - A Reaction Diffusion Framework for Spatial Graphs</title>
+      <link>https://Damien-Olivier.github.io/publication/conference-paper/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/conference-paper/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Morphogenesis of Complex Networks: A Reaction Diffusion Framework for Spatial Graphs</title>
-      <link>https://Damien-Olivier.github.io/publication/tirico-hal-01959369/</link>
-      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/publication/tirico-hal-01959369/</guid>
-      <description></description>
+      <title>An example journal article</title>
+      <link>https://Damien-Olivier.github.io/publication/journal-article/</link>
+      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <guid>https://Damien-Olivier.github.io/publication/journal-article/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
-    <item>
-      <title>Functional-biogeography of the reef fishes of the islands of the Gulf of California: Integrating functional divergence into marine conservation</title>
-      <link>https://Damien-Olivier.github.io/publication/olivier-hal-01993771/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/publication/olivier-hal-01993771/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>IA Historique et enjeux - (épisode 1)</title>
-      <link>https://Damien-Olivier.github.io/publication/olivier-hal-03374274/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/publication/olivier-hal-03374274/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>IA Historique et enjeux - (épisode 2)</title>
-      <link>https://Damien-Olivier.github.io/publication/olivier-hal-03374304/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/publication/olivier-hal-03374304/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>To bits or not to bits</title>
-      <link>https://Damien-Olivier.github.io/publication/olivier-hal-03374324/</link>
-      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/publication/olivier-hal-03374324/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Analysis of domino effect in the process industry using the event tree method</title>
-      <link>https://Damien-Olivier.github.io/publication/alileche-hal-02314369/</link>
-      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/publication/alileche-hal-02314369/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Workshop on Advance in NonLinear Complex Systems and Applications - WANCSA&#39;2017</title>
-      <link>https://Damien-Olivier.github.io/publication/azizalaoui-hal-02117116/</link>
-      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/publication/azizalaoui-hal-02117116/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Traces du corps et intelligence collective : les fourmis sont-elles plus intelligentes que les informaticiens ?</title>
-      <link>https://Damien-Olivier.github.io/publication/olivier-hal-02375470/</link>
-      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
-      <guid>https://Damien-Olivier.github.io/publication/olivier-hal-02375470/</guid>
-      <description></description>
+  </channel>
+</rss>
+iption></description>
     </item>
     
     <item>
