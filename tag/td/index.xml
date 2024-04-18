@@ -115,15 +115,15 @@ Combien y a-t-il de mots dont la distance de Levenshtein à un mot comportant n 
   &lt;/div&gt;&lt;figcaption&gt;
       Bouée connectée
     &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;h1 id=&#34;gestion-de-fichier-en-java&#34;&gt;Gestion de fichier en java&lt;/h1&gt;
-&lt;p&gt;L&amp;rsquo;estuaire de la Seine est fortement industrialisé et la surveillance de la qualité des eaux peux se faire à l&amp;rsquo;aide de bouées connectées qui renvoient des mesures qui sont récupérées de façon centralisées. Ces données sont ensuite stockées dans un fichier CSV en UTF-8. On a par exemple le &lt;a href=&#34;https://Damien-Olivier.github.io/uploads/CorrectionTPJava/FicMesures/mesures0.csv&#34; target=&#34;_blank&#34;&gt;fichier &lt;code&gt;CSV&lt;/code&gt; &lt;/a&gt; suivant.&lt;/p&gt;
-&lt;h2 id=&#34;calcul-de-la-moyenne-globale&#34;&gt;Calcul de la moyenne globale&lt;/h2&gt;
+&lt;h2 id=&#34;fichier-de-mesures&#34;&gt;Fichier de mesures&lt;/h2&gt;
+&lt;p&gt;L&amp;rsquo;estuaire de la Seine est fortement industrialisé et la surveillance de la qualité des eaux peux se faire à l&amp;rsquo;aide de bouées connectées qui renvoient des mesures qui sont récupérées de façon centralisées. Ces données sont ensuite stockées dans un fichier CSV en UTF-8. On a par exemple le fichier &lt;a href=&#34;https://eureka.univ-lehavre.fr/pluginfile.php/198367/mod_resource/content/1/mesure0.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;code&gt;CSV&lt;/code&gt; suivant&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;calcul-de-la-moyenne-globale&#34;&gt;Calcul de la moyenne globale&lt;/h3&gt;
 &lt;p&gt;Écrire un code qui lit ce fichier, l&amp;rsquo;analyse (le parse), et calcule la moyenne des températures sur la période complète. Des colonnes peuvent être vide (absence de mesure) ou contenir également &lt;code&gt;NaN&lt;/code&gt; (défaut de mesure).&lt;/p&gt;
-&lt;h2 id=&#34;calcul-de-la-moyenne-par-jour&#34;&gt;Calcul de la moyenne par jour&lt;/h2&gt;
+&lt;h3 id=&#34;calcul-de-la-moyenne-par-jour&#34;&gt;Calcul de la moyenne par jour&lt;/h3&gt;
 &lt;p&gt;On veut être en mesure de calculer la moyenne des valeurs journalières et stocker l&amp;rsquo;ensemble des résultats dans un fichier CSV composé de deux colonnes; la date et la moyenne du jour correspondant. On devra également retourner la moyenne globale.&lt;/p&gt;
-&lt;h2 id=&#34;calcul-de-la-moyenne-par-jour-et-globale-entre-deux-dates&#34;&gt;Calcul de la moyenne par jour et globale entre deux dates&lt;/h2&gt;
+&lt;h3 id=&#34;calcul-de-la-moyenne-par-jour-et-globale-entre-deux-dates&#34;&gt;Calcul de la moyenne par jour et globale entre deux dates&lt;/h3&gt;
 &lt;p&gt;L&amp;rsquo;objectif est maintenant de réaliser le même traitement que précédemment mais entre deux dates données.&lt;/p&gt;
-&lt;h2 id=&#34;plusieurs-fichiers-de-mesure&#34;&gt;Plusieurs fichiers de mesure&lt;/h2&gt;
+&lt;h3 id=&#34;plusieurs-fichiers-de-mesure&#34;&gt;Plusieurs fichiers de mesure&lt;/h3&gt;
 &lt;p&gt;En fait les fichiers de mesure sont stockés dans un répertoire et on doit être capable de lire l&amp;rsquo;ensemble et de faire les différents calcul de moyenne.&lt;/p&gt;
 </description>
     </item>

@@ -31,7 +31,7 @@
     
   
   <meta name="description" content="Mise en oeuvre du cours sur les fichiers.
-Bouée connectée Gestion de fichier en java L&rsquo;estuaire de la Seine est fortement industrialisé et la surveillance de la qualité des eaux peux se faire à l&rsquo;aide de bouées connectées qui renvoient des mesures qui sont récupérées de façon centralisées." />
+Bouée connectée Fichier de mesures L&rsquo;estuaire de la Seine est fortement industrialisé et la surveillance de la qualité des eaux peux se faire à l&rsquo;aide de bouées connectées qui renvoient des mesures qui sont récupérées de façon centralisées." />
 
   
   <link rel="alternate" hreflang="fr-FR" href="https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/" />
@@ -303,7 +303,7 @@ Bouée connectée Gestion de fichier en java L&rsquo;estuaire de la Seine est fo
   <meta property="og:url" content="https://Damien-Olivier.github.io/courses/java/exos/fichiersmesures/" />
   <meta property="og:title" content="Fichier de mesures | Damien Olivier" />
   <meta property="og:description" content="Mise en oeuvre du cours sur les fichiers.
-Bouée connectée Gestion de fichier en java L&rsquo;estuaire de la Seine est fortement industrialisé et la surveillance de la qualité des eaux peux se faire à l&rsquo;aide de bouées connectées qui renvoient des mesures qui sont récupérées de façon centralisées." /><meta property="og:image" content="https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png" />
+Bouée connectée Fichier de mesures L&rsquo;estuaire de la Seine est fortement industrialisé et la surveillance de la qualité des eaux peux se faire à l&rsquo;aide de bouées connectées qui renvoient des mesures qui sont récupérées de façon centralisées." /><meta property="og:image" content="https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://Damien-Olivier.github.io/media/icon_hubd9a6434f994e18d069f13c1a1a2fbac_1095_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="fr-FR" />
   
     
@@ -862,10 +862,14 @@ Bouée connectée Gestion de fichier en java L&rsquo;estuaire de la Seine est fo
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#calcul-de-la-moyenne-globale">Calcul de la moyenne globale</a></li>
-    <li><a href="#calcul-de-la-moyenne-par-jour">Calcul de la moyenne par jour</a></li>
-    <li><a href="#calcul-de-la-moyenne-par-jour-et-globale-entre-deux-dates">Calcul de la moyenne par jour et globale entre deux dates</a></li>
-    <li><a href="#plusieurs-fichiers-de-mesure">Plusieurs fichiers de mesure</a></li>
+    <li><a href="#fichier-de-mesures">Fichier de mesures</a>
+      <ul>
+        <li><a href="#calcul-de-la-moyenne-globale">Calcul de la moyenne globale</a></li>
+        <li><a href="#calcul-de-la-moyenne-par-jour">Calcul de la moyenne par jour</a></li>
+        <li><a href="#calcul-de-la-moyenne-par-jour-et-globale-entre-deux-dates">Calcul de la moyenne par jour et globale entre deux dates</a></li>
+        <li><a href="#plusieurs-fichiers-de-mesure">Plusieurs fichiers de mesure</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -947,15 +951,15 @@ Bouée connectée Gestion de fichier en java L&rsquo;estuaire de la Seine est fo
   </div><figcaption>
       Bouée connectée
     </figcaption></figure>
-<h1 id="gestion-de-fichier-en-java">Gestion de fichier en java</h1>
-<p>L&rsquo;estuaire de la Seine est fortement industrialisé et la surveillance de la qualité des eaux peux se faire à l&rsquo;aide de bouées connectées qui renvoient des mesures qui sont récupérées de façon centralisées. Ces données sont ensuite stockées dans un fichier CSV en UTF-8. On a par exemple le <a href="/uploads/CorrectionTPJava/FicMesures/mesures0.csv" target="_blank">fichier <code>CSV</code> </a> suivant.</p>
-<h2 id="calcul-de-la-moyenne-globale">Calcul de la moyenne globale</h2>
+<h2 id="fichier-de-mesures">Fichier de mesures</h2>
+<p>L&rsquo;estuaire de la Seine est fortement industrialisé et la surveillance de la qualité des eaux peux se faire à l&rsquo;aide de bouées connectées qui renvoient des mesures qui sont récupérées de façon centralisées. Ces données sont ensuite stockées dans un fichier CSV en UTF-8. On a par exemple le fichier <a href="https://eureka.univ-lehavre.fr/pluginfile.php/198367/mod_resource/content/1/mesure0.csv" target="_blank" rel="noopener"><code>CSV</code> suivant</a>.</p>
+<h3 id="calcul-de-la-moyenne-globale">Calcul de la moyenne globale</h3>
 <p>Écrire un code qui lit ce fichier, l&rsquo;analyse (le parse), et calcule la moyenne des températures sur la période complète. Des colonnes peuvent être vide (absence de mesure) ou contenir également <code>NaN</code> (défaut de mesure).</p>
-<h2 id="calcul-de-la-moyenne-par-jour">Calcul de la moyenne par jour</h2>
+<h3 id="calcul-de-la-moyenne-par-jour">Calcul de la moyenne par jour</h3>
 <p>On veut être en mesure de calculer la moyenne des valeurs journalières et stocker l&rsquo;ensemble des résultats dans un fichier CSV composé de deux colonnes; la date et la moyenne du jour correspondant. On devra également retourner la moyenne globale.</p>
-<h2 id="calcul-de-la-moyenne-par-jour-et-globale-entre-deux-dates">Calcul de la moyenne par jour et globale entre deux dates</h2>
+<h3 id="calcul-de-la-moyenne-par-jour-et-globale-entre-deux-dates">Calcul de la moyenne par jour et globale entre deux dates</h3>
 <p>L&rsquo;objectif est maintenant de réaliser le même traitement que précédemment mais entre deux dates données.</p>
-<h2 id="plusieurs-fichiers-de-mesure">Plusieurs fichiers de mesure</h2>
+<h3 id="plusieurs-fichiers-de-mesure">Plusieurs fichiers de mesure</h3>
 <p>En fait les fichiers de mesure sont stockés dans un répertoire et on doit être capable de lire l&rsquo;ensemble et de faire les différents calcul de moyenne.</p>
 
           </div>
