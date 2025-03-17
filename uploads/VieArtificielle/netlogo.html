@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+  <meta name="generator" content="atom" >
+  <meta charset="utf-8">
+
+  <title>Vie artificielle</title>
+  <meta name="description" content="Un outil NetLogo">
+  <meta name="author" content="Damien" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content=
+  "black-translucent">
+  <link rel="stylesheet" href="css/reveal.min.css" type="text/css">
+  <link rel="stylesheet" href="css/theme/night.css" id="theme"
+  type="text/css"><!-- For syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css" type=
+  "text/css">
+  <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+
+  <script type="text/javascript">
+                    document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+  </script><!--[if lt IE 9]>
+                <script src="lib/js/html5shiv.js"></script>
+                <![endif]-->
+<!-- pb video <script>
+    $('.close-reveal-modal').click(function() {
+        $('video, audio').each(function() {
+            $(this)[0].player.pause();
+        });
+    });
+</script> -->
+</head>
+
+<body>
+  <div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+
+    <div class="slides">
+      <section>
+        <!-- Slide titre -->
+
+        <section>
+          <h1><font color="#CCCCFF">Vie artificielle</font></h1>
+
+          <h6><font face="trebuchet ms"><i>Master 1 - informatique</i></font></h6>
+
+          <p><font color="#66CCFF">D. Olivier et A. Dutot</font></p><br>
+          <br>
+
+          <p>Damien.Olivier@gmail.com<br></p>
+        </section><!-- Fin du slide titre -->
+        <!-- Slide 1 -->
+
+        <section>
+          <h2><font color="#000099">Objectifs</font></h2><br>
+
+          <div style=
+          "text-align: justify;text-indent: 1.25cm;font-size:28px;line-height:120%;padding:10px;">
+          <ul>
+              <li>Apprendre à concevoir des modèles ;</li>
+
+              <li>Comprendre et utiliser l'approche systémique
+              ;</li>
+
+              <li>Usage de la simulation, approche <i>in
+              silico&nbsp;</i></li>
+
+              <li>Utiliser la métaphore naturelle ;</li>
+              <li> Aborder le paradigme de la vie artificielle ;</li>
+
+              <li>Utilisation d'un outil&nbsp;<a href=
+              "http://ccl.northwestern.edu/netlogo/">NetLogo</a></li>
+            </ul>
+          </div>
+
+          <div style=
+          "text-align: justify;text-indent: 47.244095px;">
+            <img src="images/nuee.jpg" width=
+            "380">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=
+            "images/boids04.png" width="350"><br>
+          </div>
+        </section><!-- Fin du slide 1 -->
+
+        <section>
+          <h2><span style=
+          "background-color: rgb(0,0,153);">Déroulement</span></h2>
+
+          <p style="text-align: justify;"></p>
+
+          <ul>
+            <li><font color="#000099">Pré-requis</font></li>
+
+            <li style="list-style: none; display: inline">
+              <ul>
+                <li>
+                  <p style="font-size:20px">De la curiosité ;</p>
+                </li>
+
+                <li>
+                  <p style="font-size:20px">De l'envie ;</p>
+                </li>
+                <li>
+                  <p style="font-size:20px">De la bonne
+                  volonté ;</p>
+                </li>
+                <li>
+                  <p style="font-size:20px">Un peu d'algorithmique.</p>
+                </li>
+              </ul>
+            </li>
+
+            <li><font color="#000099">Méthode de travail</font></li>
+
+            <li style="list-style: none; display: inline">
+              <ul>
+                <li>
+                  <p style="font-size:20px">Cours intégré ;</p>
+                </li>
+                <li>
+                  <p style="font-size:20px">Travail personnel ;</p>
+                </li><li>
+                  <p style="font-size:20px">Projet à rendre.</p>
+                </li>
+              </ul>
+            </li>
+            </li>
+          </ul>
+        </section>
+	<section>
+
+		<h2><span style=
+	          "background-color: rgb(0,0,153);">Exemple</span></h2>
+		<div id="vid-1" class="reveal-modal">
+      			<div style="float:left;width:450px;">
+				<video width="420" height="345" controls="controls" type="video/webm" preload="none" src="videos/BBC.webm"></video>
+			</div>
+      			<div style="float:right;width:450px;">
+			<video width="420" height="345" controls="controls" type="video/webm" preload="none" src="videos/output.webm"></video>
+			</div>
+		</div>
+<!--<div id="bfx" class="reveal-modal">
+            <video width="480" height="270" controls="controls" preload="none">
+                <source src="videos/boids1000.avi" />
+            </video>
+        <a class="close-reveal-modal">&#215;</a>
+    </div><!--end bfx video container-->
+
+	</section>
+
+      </section>
+
+      <section>
+        <h2>Plan</h2>
+
+        <div style="text-align: left;">
+          <ol>
+            <li>Modèle</li>
+	    <li>Simulation</li>
+	    <li>NetLogo
+		<ul>
+		 <li>NetLogo, qu’est-ce que c’est ?</li>
+ 		 <li>Interface graphique : les 3 onglets</li>
+ 		 <li>Concepts de programmation</li>
+ 		 <li>Fonctionnalités supplémentaires</li>
+		 <li>Exemples de modèles</li>
+	        </ul>
+	    </li>
+          </ol>
+        </div>
+      </section>
+
+      <section>
+      <section>
+        <h2><font color="#000099">Modéle</font></h2>
+
+        <h3>Du problème au modèle</h3>
+
+        <div style="font-size:25px;line-height:120%;padding:10px;">
+          <ul>
+            <li>Modélisation : concevoir une représentation d'un
+            objet ou d'un phénomène d'une manière
+            utilisable.<br></li>
+          </ul>
+          <pre>
+<i><div style="text-align:center;">Tout ce qui est simple est faux,
+tout ce qui ne l'est pas est inutilisable</i>
+                   -- Paul Valéry
+</pre><br>
+
+          <div style="float:left;margin:20px;"><img src=
+          "images/plan-rer-paris.gif" width="330" height=
+          "208"></div>
+
+          <div style="float:right;width:460px;">
+            <ul>
+              <li>Différents types de modèles :</li>
+
+              <li style="list-style: none; display: inline">
+                <ul>
+                  <li>
+                    <p style="font-size:16px">Cartes, plan ou
+                    maquettes physiques</p>
+                  </li>
+
+                  <li>
+                    <p style="font-size:16px">Algorithme</p>
+                  </li>
+
+                  <li>
+                    <p style="font-size:16px">Formules
+                    mathématiques</p>
+                  </li>
+
+                  <li>
+                    <p style="font-size:16px">.....</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+	  <div>
+        </div>
+	</section>
+        <section>
+        	<h2><font color="#000099">Modèle</font></h2>
+        	<h3>Précision de la description</h3>
+                <div style="float:left;width:460px;font-size:18px">
+			<ul>
+				<li> Pour un phénomène ou un objet, il existe plusieurs niveaux de description. Il faut trouver le niveau pertinent.</li>
+				<li> Modélisation d'un avion ... comment le décrire ?
+					<ul>
+						<li> <p style="font-size:14px">Une seule entité ponctuelle et indivisible qui se déplace : pertinent pour la gestion du trafic aérien.</p> </li>
+                                                <li> <p style="font-size:14px">Représentation des molécules constituant le gaz du réacteur : pertinent pour l'étude de la combustion et compression interne.</p> </li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	       <div style="float:right;margin:20px;"><img src="images/avion.png" width="350"></div>
+   <p class="fragment roll-in" style="font-size:15px">Plusieurs niveaux de description peuvent être simultanément nécessaires (déstabilisation d'un écosystème p.e et ses conséquences à grande échelle)</p>
+	</section>
+      <section>
+        <h2><font color="#000099">Modèle</font></h2>
+        <h3>Du problème à la simulation</h3>
+	<div style="font-size:16px">
+	<ul>
+		<li>La modélisation consiste à créer une représentation simplifiée d'un problème.</li>
+		<li>Le modèle doit permettre de simuler le comportement du problème.</li>
+		<li>2 étapes :
+			<ul>
+				<li>L'analyse qui étudie problème.</li>
+				<li>La conception qui simule le problème pour le résoudre.</li>
+			</ul>
+		</li>
+	</ul>
+	</div>
+	<img src="images/peuplier.jpg" height="230"> &nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="images/peuplierFractal.jpg" height="230">
+	</section>
+
+	<section>
+	 <h2><font color="#000099">Modèle</font></h2>
+	 <h3>Définition</h3>
+ <div style="font-size:25px;line-height:120%;padding:10px;">
+    		<blockquote>Pour un observateur <font face="impact">B</font>, un objet <font face="impact">A<sub>*</sub></font> est un modèle de <font face="impact">A</font> dans la mesure où <font face="impact">B</font> peut utiliser <font face="impact">A<sub>*</sub></font> pour répondre aux
+		questions qui l'intéresse sur <font face="impact">A</font>"<br>
+		    <i>Marvin Minski 1965</i>
+		</blockquote>
+		<ul>
+			<li>Un modèle pourquoi ?
+				<ul>
+					<li>Révéler les propriétés des systèmes étudiés ;</li>
+  					<li> Révéler les carences de connaissances ;</li>
+  					<li> Tester des hypothèses ;</li>
+  					<li> Formaliser, transmettre des connaissance.</li>
+ 				</ul>
+        <li class="fragment grow"> Grande question : peut-on imaginer une modèle de l'apparition de la vie ?
+			</li>
+		</ul>
+		<div style="text-align: justify;">
+    			  <p class="fragment roll-in" style="font-size:15px">
+<br>
+    			<font color="#ff0000">Problème</font>&nbsp;: Les systèmes naturels sont complexes à cause de nombreuses interactions, pro-actions et retro-actions.
+			Seule une modélisation prenant en compte les interactions peut faire apparaître les comportements émergents. </p>
+		</div>
+	</div>
+	</section>
+
+	<section>
+	 <h2><font color="#000099">Modèle</font></h2>
+	 <h3>Les grandes classes de modèles</h3>
+	 <div style="font-size:30px;line-height:120%;padding:10px;">
+	 <ul>
+		<li> 3 classes + 1
+	 	<ul>
+
+			<li>Modèles analytiques : déterministes, systèmes d'équations linéaires, programmation linéaire
+		            et équations différentielles (macro);
+			    <ul>
+				<li> Modèles simples ;</li>
+				<li> Modèles compartimentaux.</li>
+			    </ul>
+			</li>
+	                <li>Modèles stochastiques : probabilistes, analyse de Markov (macro);</li>
+	                <li>Modèles par simulation (micro)
+		           <ul>
+		             	<li>Simulations à composantes analytiques ;</li>
+		                <li>Simulations discrètes sans composantes analytiques ;</li>
+			   </ul>
+	  		<li>Combinaison des modèles.</li>
+		</ul>
+		</li>
+	</ul>
+	</div>
+	</section>
+      </section>
+
+     <section>
+	 <h2><font color="#000099">Simulation</font></h2>
+	 <h3>Le temps et l'espace</h3>
+         <div style="float:left;width:450px;font-size:22px">
+	 Le temps
+	   <ul>
+		<li>Le temps envahit nos modèles ;</li>
+		<li>La simulation c'est le modèle plongé dans le temps (D. Hill) ;</li>
+	   </ul>
+		<br><br><br>
+	</div>
+	<div style="float:right;width:450px;font-size:22px">
+	 L'espace
+	   <ul>
+		<li>Nécessite la localisation des entités du modèle et l'évolution dans le temps ;</li>
+		<li>Définir les relations spatiales et leurs évolutions.</li>
+	   </ul>
+		<br><br>
+	</div>
+	<div style="font-size:22px">
+	Questions
+		<ul>
+			<li>Problème de la flèche du temps : reversibilité au niveau micro vs. irreversibilité au niveau macro ;</li>
+		 	<li>Temps discret / Temps continu ;</li>
+		 	<li>Espace discret / Espace continu.</li>
+		</ul>
+	</div>
+     </section>
+
+<section>
+ <section>
+  <img src="http://i.imgur.com/u1P4wMn.png">
+	<div>Une introduction</div>
+	<div>D'après J. Fiegel - R Doursat</div>
+	<div>
+    		<img src="images/artifice.png">
+    		<br>
+	</div>
+ </section>
+
+ <section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <div style="text-align: justify;">
+    <ul>
+        <li>Un outil de programmation original ;</li>
+            <li>Un environnement simple...</li>
+            <li>... mais puissant !</li>
+            <li>Un outil en constante évolution...</li>
+            <li>... et utilisé dans une large variété de contextes</li>
+            <li>Un monde de tortues <;)</li>
+            <li>Un manuel utilisateur complet et agréable à lire.</li>
+    </ul>
+  </div>
+ </section>
+ <section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Un outil de programmation original</h4>
+	<div>
+    		<img src="images/HistoNetlogo.png">
+    		<br>
+	</div>
+   <div style="text-align: justify;font-size:22px">
+   <br>
+    Issu des langages Logo, spécialement conçus dans une
+    démarche de pédagogie active, originalement à visée
+    éducative (forte notion de jeu, de tests, d’expériences)
+    <br> <br>
+<blockquote>
+La voie normale de l’acquisition n’est nullement l’observation,
+l’explication et la démonstration, processus essentiel de
+l’École, mais le tâtonnement expérimental, démarche naturelle
+et universelle.
+</blockquote><div style="text-align: center;font-size:18px">(Freinet, 1964)
+	</div>
+ </section>
+
+ <section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Un outil de programmation original</h4>
+	<ul>
+ 		<li>Langage de programmation orientée agent :
+			<ul> <li>création et étude d’un monde, dans lequel des milliers
+			    d’entités virtuelles peuvent être placés simultanément,
+			    possédant chacune leurs propres processus.</li></ul>
+		</li>
+		<li> Moyens de visualisation variés :
+			<ul><li> dessins, graphiques, moniteurs, fichiers CSV (Comma-
+                                 separated values) et de films.</li></ul>
+		</li>
+
+		<li>Multiplateforme (basé sur Java / Scala).</li>
+		<li>Création automatique d’applications web.</li>
+ </section>
+
+ <section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Un environnement</h4>
+   <ul>
+ 	<li>Facile à prendre en main :
+		<ul>
+			<li>présence d’une longue liste de modèles modifiables,
+   			    pour un apprentissage par l’exemple (thèmes variés :
+			    sciences sociales, biologie, physique, jeux...).</li>
+			<li> quelques clics suffisent pour jouer, tester des modèles,
+			     lancer des simulations et obtenir des résultats.</li></ul>
+	</li>
+
+	<li>Langage de programmation simple d’accès :
+		<ul>
+			<li> on peut facilement lire un programme ;</li>
+			<li> compilation automatique.</li></ul>
+	</li>
+
+	<li>Interface graphique claire et facilement modifiable.</li>
+  </ul>
+ </section>
+ <section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Un environnement</h4>
+   <ul>
+ 	<li>Puissant :
+		<ul>
+ 		  <li>convient bien à la modélisation de systèmes
+			complexes évoluant dans le temps ;</li>
+ 		  <li>création jusqu’à des dizaines de milliers d’agents ; </li>
+		  <li>permet l’étude des liens entre le comportement individuel des agents (niveau <em>microscopique</em>) et
+			les phénomènes émergents qui peuvent apparaître
+			lorsqu’ils interagissent ensemble et avec leur
+			environnement (niveau <em>macroscopique</em>).</li></ul>
+	</li>
+  </ul>
+</section>
+
+ <section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Un outil aux multiples applications</h4>
+   <ul>
+	<li><strong>Education</strong> : dessins, introduction à la
+	programmation, modèles participatifs ...</li>
+        <li><strong>Simulation</strong> de systèmes simples ou complexes en
+	sociologie, biologie, médecine, physique, chimie,
+	mathématiques, informatique, économie,
+	psychologie sociale...
+		<ul><li>Cinétique des gaz, systèmes solaires, comportements
+		humains...</li></ul>
+	</li>
+ 	<li>Bon outil de <strong>communication</strong></li>
+   </ul>
+ </section>
+
+ <section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Un monde d'agents</h4>
+	<ul>
+ 		<li> 4 types d’agents dans un monde NetLogo :
+			<ul>
+				<li>les <b><font color="#3399ff"><i>turtles</i></font></b> : agents qui peuvent se déplacer.</li>
+				<li>les <b><font color="#3399ff"><i>patches</i></font></b> : portion du sol (case) sur laquelle les <font color="#3399ff">turtles</font>
+				    peuvent se situer et se déplacer (notion d’environnement).</li>
+				<li>les <b><font color="#3399ff"><i>links</i></font></b> : permet de relier des <font color="#3399ff">turtles</font> entre eux (graphes, réseaux...)
+				<li>L’<b><font color="#3399ff"><i>observer</i></font></b> : agent unique, se situant nulle part et partout.</li>
+				Il régit, modifie et observe le monde. Sorte de big brother !</li>
+			</ul>
+		</li>
+	</ul>
+ </section>
+
+ <section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Un monde d'agents</h4>
+	<div>
+	<img src="images/mondeNetLogo.png" width="800">
+	</div>
+ </section>
+
+<section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Un monde d'agents</h4>
+	<table>
+   <tr>
+	<td class="TabTitre" valign="middle" align="center"><img style="vertical-align:middle" src="images/Boiling.png"  width="65%"></td>
+	<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <td class="TabTitre" valign="middle" align="center"><li>Modèle Boiling utilisant uniquement des <font color="#3399ff">patches</font> (automate cellulaire)</li> </div></td>
+   </tr>
+   <tr>
+	<td class="TabTitre" valign="middle" align="center"><img style="vertical-align:middle" src="images/Small Worlds.png" width="65%"></td>
+	<td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+        <td class="TabTitre" valign="middle" align="center"><li> Modèle de création de réseaux, utilisant des <font color="#3399ff">turtles</font> (en bleu) et des <font color="#3399ff">links</font>
+         (en gris).</li> </div></td>
+   </tr>
+</table>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Un manuel utilisateur complet</h4>
+   <ul>
+ 	<li>Livré avec le logiciel ;</li>
+ 	<li>Très bien fait, très lisible ; </li>
+ 	<li>Traite :
+		<ul>
+			<li>des concepts de base de NetLogo ; </li>
+			<li>des astuces de programmation ; </li>
+			<li>de toutes les fonctionnalités du système.</li>
+		</ul>
+	</li>
+	<li>Contient un dictionnaire et de multiples tutoriels ;</li>
+	<li>À lire et à relire !</li>
+    </ul>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Une interface graphique</h4>
+	<ul>
+		<li>Onglet 1 : Une interface graphique claire pour les modèles
+			<ul>
+				<li>3 types d’éléments pour 3 couleurs :
+					<ul>
+						<li>Bleu = <font color="#3300cc">contrôles</font> ;</li>
+						<li>Vert = <font color="#33ff00">variables</font> ;</li>
+						<li>Beige = <font color="#999966">visualisation</font>.</li>
+					</ul>
+				</li>
+				<li>Une fenêtre de visualisation aux multiples options</li>
+			</ul>
+		</li>
+		<li>Onglet 2 : Une aide intégrée.</li>
+		<li>Onglet 3 : Une interface de programmation simple, mais plutôt efficace.</li>
+	</ul>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Une interface graphique</h4>
+	<div>
+    		<img src="images/interface.png" width="800">
+	</div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Une interface graphique - onglet 1</h4>
+	<ul>
+		<li>Fenêtre de visualisation : affichage du monde créé ;</li>
+		<li><em>Command Center</em> : ligne de commandes (tests rapides).
+		<li>Type d'éléments n° 1 : les <font color="#3300cc">CONTROLS</font> :
+			<ul>
+				<li>Couleur : <font color="#3300cc">bleu</font> ;</li>
+				<li>Fonction : exécution de commandes ;</li>
+				<li>Apparence : <em>buttons</em> (+ <em>command center</em>) ;</li>
+				<li>Détail : une seule exécution ou exécution continue.</li>
+			</ul>
+		</li>
+	</ul>
+	<div>
+    		<img src="images/run.png">
+	</div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Une interface graphique - onglet 1</h4>
+	<ul>
+		<li>Type d’éléments n°2 : les <font color="#33ff00">SETTINGS</font>
+			<ul>
+				<li>Couleur : <font color="#33ff00">vert</font> ;</li>
+				<li>Fonction : paramétrage du modèle ;</li>
+				<li>Apparence : sliders, switches, inputs, choosers ;</li>
+				<li>Détail : valeurs disponibles peuvent aussi être paramétrées.</li>
+			</ul>
+		</li>
+	</ul>
+	<div style="text-align: center;">
+		<img src="images/settings.png" style=style="display:block;margin-left:auto;margin-right:auto;">
+	</div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Une interface graphique - onglet 1</h4>
+	<ul>
+ 		<li>Type d’éléments n°3 : les <font color="#999966">VIEWERS</font>
+			<ul>
+				<li>Couleur : <font color="#999966">beige</font> ;</li>
+				<li>Fonction : affichage d’informations, permettent de surveiller l’état courant du monde ;</li>
+				<li>Apparence : <em>monitors</em>, <em>plots</em>, <em>outputs</em> ;</li>
+				<li>Détail : Exportation de graphiques possible.</li>
+			</ul>
+		</li>
+	</ul>
+	<div style="text-align: center;">
+		<img src="images/viewers.png" style=style="display:block;margin-left:auto;margin-right:auto;">
+	</div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Une interface graphique - onglet 1</h4>
+	<div style="text-align: center;">
+		<img src="images/monde.png" style=style="display:block;margin-left:auto;margin-right:auto;">
+	</div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Une interface graphique - onglet 1</h4>
+	<li>Clic droit la fenêtre de visualisation + inspect &lsaquo;agent&rsaquo; = agent monitor</li>
+	<div style="text-align: center;">
+		<img src="images/monitor.png" style=style="display:block;margin-left:auto;margin-right:auto;">
+	</div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Une interface graphique - onglet 1</h4>
+	<ul>
+		<li>3 couches de dessin :
+			<ul>
+				<li>peuvent s’importer, s’exporter (sauf celle du milieu) ;</li>
+				<li>peuvent être copiées (image ou vidéo).</li>
+			</ul>
+		</li>
+	</ul>
+	<p> <br><br></p>
+	<div style="text-align: center;">
+		<img src="images/couchesDessin.png" style=style="display:block;margin-left:auto;margin-right:auto;">
+	</div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>Aide intégrée - onglet 2</h4>
+   <p> <br>  </p>
+   <div style="float:right;width:450px;">
+		<img src="images/aide.png" style=style="display:block;margin-left:auto;margin-right:auto;">
+   </div>
+   <div style="float:left;width:450px;"><p><br><br></p>
+	Utilisation d’un langage markup : <strong>Markdown</strong>,
+	assez complet pour insérer des titres, images, listes, formules, notes, citations ...
+   </div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Netlogo c'est</font></h2>
+   <h4>interface de programmation - onglet 3</h4>
+	<div style="text-align: center;">
+		<img src="images/Programmation.png" style=style="display:block;margin-left:auto;margin-right:auto;">
+	</div>
+</section>
+</section>
+
+<section>
+
+ <section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+   <h4>Concepts</h4>
+	<ul>
+		<li> À chaque type d’agents, ses fonctionnalités ;</li>
+		<li> Types et primitives « basiques » ;</li>
+		<li> Longue liste de primitives pour gérer les agents ;</li>
+		<li> Création de groupes d’agents ;</li>
+		<li> Création de nouveaux types de <font color="#3399ff">turtles</font> ou de <font color="#3399ff">links</font> ;</li>
+		<li> Exécution : synchronisation ou « parallèle » ;</li>
+		<li> Un programme = suite de reporters et de commandes.</li>
+	</ul>
+ </section>
+
+ <section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+	<h4>Types d'agents - les patches</h4>
+	<ul>
+		<li><code><font color="#6699ff">patch</font></code> (1 patch), <code><font color="#6699ff">patches</font></code> (plusieurs) :
+			<ul>
+				<li> Coordonnées entières uniques / centre : <code><font color="#6699ff">pxcor pycor</font></code> ;</li>
+				<li> Couleur <code><font color="#6699ff">pcolor</font></code> ;</li>
+				<li> Étiquette <code><font color="#6699ff">plabel</font></code> ;</li>
+				<li> Ne bouge pas ! Présence obligatoire ; </li>
+				<li> Utilisations principales : automates cellulaires, dessin, sol et stockage d’informations environnementales pour les <font color="#3399ff">turtles</font>.
+			</ul>
+		</li>
+	</ul>
+ </section>
+ <section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+	<h4>Types d'agents - les turtles</h4>
+	<div style="text-align: justify;font-size:24px; line-height:120%;padding:10px;">
+	<ul>
+		<li><code><font color="#6699ff">turtle</font></code> (1 turtle), <code><font color="#6699ff">turtles</font></code> (plusieurs) :
+			<ul>
+				<li> Identifiant : <code><font color="#6699ff">who</font></code> ;</li>
+				<li> Coordonnées : <code><font color="#6699ff">xcor ycor</font></code>, nombre réel, elle ne sont pas forcément au centre du patch ;</li>
+				<li> Couleur : <code><font color="#6699ff">color</font></code> ;</li>
+				<li> Orientation :  <code><font color="#6699ff">heading</font></code> 0 à 360°, 0 = Nord, rotation horaire ; </li>
+				<li> Forme : <code><font color="#6699ff">shape</font></code> ; </li>
+				<li> Type (espèce) : <code><font color="#6699ff">breed</font></code> ; </li>
+				<li> Taille : <code><font color="#6699ff">size</font></code> ; </li>
+				<li> Étiquette : <code><font color="#6699ff">label</font></code> ;</li>
+				<li> Caché ou non : <code><font color="#6699ff">hidden?</font></code> ;</li>
+				<li> Trace activée ou non : <code><font color="#6699ff">pen-mode</font></code> ;</li>
+				<li> Utilisations principales : entités des modèles. </li>
+			</ul>
+		</li>
+	</ul>
+	</div>
+ </section>
+ <section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+	<h4>Types d'agents - les links</h4>
+	<div style="text-align: justify;font-size:24px; line-height:120%;padding:10px;">
+	<ul>
+		<li><code><font color="#6699ff">link</font></code> (1 turtle), <code><font color="#6699ff">links</font></code> (plusieurs) :
+			<ul>
+				<li> Relié à deux turtles : <code><font color="#6699ff">end1 end2</font></code> (lien unique) ;</li>
+				<li> Couleur : <code><font color="#6699ff">color</font></code> ;</li>
+				<li> Épaisseur :  <code><font color="#6699ff">thickness</font></code> ; </li>
+				<li> Forme : <code><font color="#6699ff">shape</font></code> ; </li>
+				<li> Type (espèce) : <code><font color="#6699ff">breed</font></code> ; </li>
+				<li> Étiquette : <code><font color="#6699ff">label</font></code> ;</li>
+				<li> Caché ou non : <code><font color="#6699ff">hidden?</font></code> ;</li>
+				<li> Type de lien : <code><font color="#6699ff">tie-mode</font></code> ;</li>
+				<li> Utilisations principales : arêtes de graphes, de réseaux, connexion visuelle entre agents ..... </li>
+			</ul>
+		</li>
+	</ul>
+	</div>
+ </section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+	<h4>Types d'agents - l'observer</h4>
+	<div style="text-align: justify;font-size:24px; line-height:120%;padding:10px;">
+	<ul>
+		<li> Peut créer des nouvelles turtles ;</li>
+		<li> Peut accéder à tous les agents (patches, turtles, links) et lire et modifier leurs états.
+	</ul>
+	</div>
+	<div style="text-align: center;">
+		<img src="images/Capture-NetLogo1.png" width="340">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<img src="images/Capture-NetLogo2.png" width="340">
+ </section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+	<h4>Variables</h4>
+	<div style="text-align: justify;font-size:28px; line-height:120%;padding:10px;">
+	<ul>
+		<li> Associer une valeur simple ou structurée à identificateur (nom) </li>
+		<li> Type des variables : nature des valeurs que peut prendre une variable :
+			<ul>
+				<li> Boolean : <code>true</code>, <code>false</code> ;</li>
+				<li> Number : <code>0</code>, <code>0.01</code>, <code>pi</code>, <code>blue</code> .... ;</li>
+				<li> String : <code>"aabbccdd"</code> ;</li>
+				<li> Liste : <code>(list)</code>, <code>[ ]</code>, <code>(list 0 1)</code>, <code>[0 1]</code>, <code>(list 1 (list 2 "truc"))</code>.</li>
+			</ul>
+		</li>
+		<li>Déclaration et modification de variables :
+			<ul>
+				<li>Globales (observer) : <code><font color="#00ff00">globals</font> [&lsaquo;nom&rsaquo;]</code> ;</li>
+				<li>Globales (pour un type d’agents) : <code><font color="#00ff00">turtles-own</font> [&lsaquo;nom&rsaquo;]</code> ;</li>
+				<li>Locales : <code><font color="#0000cc">let</font> &lsaquo;nom&rsaquo; &lsaquo;valeur&rsaquo;</code> (dans une procédure) ;</li>
+ 				<li>Modification : <code><font color="#0000cc">set</font> &lsaquo;nom&rsaquo; &lsaquo;valeur&rsaquo;</code> (dans une procédure) ;</li>
+			</ul>
+		</li>
+	</ul>
+	</div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+	<h4>Instructions</h4>
+	<div style="text-align: justify;font-size:34px; line-height:120%;padding:10px;">
+	<ul>
+		<li> Boucles :
+			<ul>
+				<li><code><font color="#0000cc">while</font> [&lsaquo;bool&rsaquo;][ ]</code>,
+				    <code><font color="#0000cc">foreach</font> &lsaquo;liste&rsaquo; [ ]</code>,
+				    <code><font color="#0000cc">repeat</font> &lsaquo;number&rsaquo; [ ]</code>,
+				    <code><font color="#0000cc">loop</font> [ &lsaquo;...&rsaquo; stop ]</code> ;</li>
+			</ul>
+		</li>
+		<li> Mathématiques : <code>sin, cos, random, sum, variance</code> ... ; </li>
+ 		<li> Tests logiques : <code>and, xor, is-number?, is-turtle?</code> ... ; </li>
+		<li> Listes : <code>length, first, sort, sort-by [&lsaquo;test&rsaquo;]</code> ...</li>
+	</ul>
+	</div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+	<h4>Instructions - structures de contrôle</h4>
+	<div style="text-align: justify;font-size:34px; line-height:120%;padding:10px;">
+	<ul>
+		<li> <code><font color="#0000cc">if</font> &lsaquo;reporter&rsaquo;[&lsaquo;commande&rsaquo;]</code>
+			<ul>
+				<li>Le <code>&lsaquo;reporter&rsaquo;</code> rapporte différentes
+					valeurs (true ou false)à partir de différents agents ainsi
+					certains agents executeront les commandes
+					d’autres pas ! </li>
+			</ul>
+		</li>
+		<li> <code><font color="#0000cc">ifelse</font> &lsaquo;reporter&rsaquo;[&lsaquo;commande1&rsaquo;][&lsaquo;commande2&rsaquo;]</code></li>
+<pre><code>ask patches
+  [ ifelse pxcor > 0
+      [ set pcolor blue ]
+      [ set pcolor red ] ]
+</code>
+</pre>
+		<li> <code><font color="#0000cc">ifelse-value</font> &lsaquo;reporter&rsaquo;[&lsaquo;commande1&rsaquo;][&lsaquo;commande2&rsaquo;]</code></li>
+
+	</ul>
+	</div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+	<h4>Gestion des agents</h4>
+<div style="text-align: justify;font-size:28px; line-height:120%;padding:10px;">
+   <ul>
+   	<li>Observer :
+   		<ul>
+   			<li>Création : <code><font color="#0000cc">create-turtles</font>, <font color="#0000cc">resize-world</font></code> ... ; </li>
+				<li>Demande à au moins 1 turtle/patch/link de réaliser des choses
+				<pre><code>ask turtle 10 [<...>], ask patches [<...>]</code></pre></li>
+			</ul>
+		</li>
+		<li>Patches : <code><font color="#0000cc">distance, neighbors, diffuse, turtles-here</font></code> ... ;</li>
+		<li>Turtles : <code><font color="#0000cc">forward (fd), towards, create-link-with, die</font></code> ...&nbsp;;</li>
+		<li>Links : <code><font color="#0000cc">tie, link-neighbors, link-length</font></code>... ;</li>
+		<li>Chaque agent peut demander à son tour :
+		<pre><code>ask x [ ask y [<...>] ] ;;Chaque x demande à chaque y de...</code></pre>
+		</li>
+	</ul>
+</div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+	<h4>Groupe d'agents</h4>
+	<div style="text-align: justify;font-size:28px; line-height:120%;padding:10px;">
+   <ul>
+   	<li>Sélection de groupes d’agents du même type :
+			<ul>
+				<li> <code>with</code> :
+					<pre><code>ask patches with [ pcolor = red ] [<...>]</code></pre>
+				</li>
+				<li><code>&lsaquo;agent&rsaquo;-set</code> :
+					<pre><code>(patch-set patch 0 0 patch 10 9)</code></pre>
+				</li>
+			</ul>
+		</li>
+ 		<li>Groupe d'agents = agentset
+ 			<ul>
+ 				<li>Liste vide <code>(no-patches)</code> ;</li>
+ 				<li>Contenir un seul agent <code>((turtle-set one-of turtles))</code></li>
+ 				<li>Sélection enregistrable dans une variable :
+ 				<pre><code>let tortues-bleues turtles with [ color = blue ]
+ask one-of tortue-bleue [ print "Adieu monde cruel" die ]</pre></code>
+ 				</li>
+ 			</ul>
+ 		</li>
+   </ul>
+   </div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+	<h4>Groupe d'agents</h4>
+	<div style="text-align: justify;font-size:28px; line-height:120%;padding:10px;">
+ 	<ul>
+ 		<li><code>ask</code> : donner des ordres à tous les agents dans un agentset ; </li>
+ 		<li><code>any?</code> : pour savoir si un agentset est vide ; </li>
+ 		<li><code>all?</code> : pour savoir si chaque élément d'un agentset vérifie une condition ;</li>
+ 		<li><code>count</code> : retourne le cardinal d'un agentset ;
+ 		<li><code>one-of</code> : choisir un agent au hazard dans un agentset ;
+<pre><code>ask one-of turtles [set color green]</code></pre>
+ 		</li>
+ 		<li><code>max-one-of</code> ou <code>min-one-of</code> : trouver l'agent le meilleur ou le pire suivant un critère :
+<pre><code>ask max-one-of turtles [sum assets] [ die ]</code></pre>
+ 		</li>
+ 	</ul>
+ 	</div>
+ </section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+	<h4>Groupe d'agents</h4>
+	<div style="text-align: justify;font-size:28px; line-height:120%;padding:10px;">
+<pre><code>
+other turtles                       ;; Toutes les autres tortues
+other turtles-here                  ;; Toutes les tortues sur le patch
+turtles with [color = red]          ;; Toutes les tortues rouges
+turtles-here with [color = red]     ;; Toutes les tortues rouges sur le patch
+patches with [pxcor > 0]            ;; Patches sur le coté droit
+turtles in-radius 3                 ;; Toutes les tortues à moins de 3 patches
+patches at-points [[1 0] [0 1] [-1 0] [0 -1]] ;; Les patches E N O S
+neighbors4                          ;; Racourci pour désigner la même chose
+turtles with [(xcor > 0) and (ycor > 0)
+        and (pcolor = green)]       ;; Tortues dans le premier quadrant qui
+                                       sont sur un patch vert
+turtles-on neighbors4               ;; Tortues sur le 4 patches cardinaux voisins
+[my-links] of turtle 0              ;; Tous les links connecté à la tortue 0
+</code></pre>
+</div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+	<h4>Quand les tortues deviennent des loups</h4>
+	<div style="text-align: justify;font-size:30px; line-height:120%;padding:10px;">
+   <ul>
+   	<li>Turtles et links peuvent être spécialisés (1 niveau)
+   		<ul>
+				<li>Déclaration : <br><code>breed [ loups loup ]</code><br>
+										<code>undirected-link-breed [ liens lien ]</code></li>
+				<li>Les nouveaux types d’agents font toujours partie de leur super-groupe, mais peuvent recevoir leurs propres variables​‍&nbsp:&nbsp<code>&lsaquo;agentset&rsaquo;-own [&lsaquo;...&rsaquo;]</code>.</li>
+   		</ul>
+   	</li>
+ 		<li>Exemple :
+			<pre><code>breed [ portes porte ]
+portes-own [ ouverte? ]
+create-portes 1 [ set ouverte? true setxy -5 10 ] ;; porte 1, ouverte en -5 10
+</code></pre>
+		</li>
+	</ul>
+	</div>
+</section>
+
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+   	<h4>Séquentiel et paralléle</h4>
+   	<div style="text-align: justify; color:black; font-size:16px; line-height:120%;padding:10px;">
+    			<div style="float:left;width:280px;margin-right:5px; background: Lavender">
+				La tortue se déplace de 2 pas et devient rouge.<br><br>
+				<pre><code>ask turtles
+  [ fd 3
+    set color red]</code></pre>
+    			</div>
+    			<div style="float:left;width:280px;margin-right:5px;background: Lavender;">
+    			Toutes les tortues se déplacent à leur tour d'un pas, puis d'un autre et ensuite deviennent rouge. Cette instruction est en cours d'abandon. Comment l'écrire ?
+<pre><code>ask-concurrent turtles
+  [
+    fd 3
+    set color red
+  ]
+</code></pre>
+    			</div>
+    			<div style="float:left;width:280px;background: Lavender">
+				Toute les tortues se déplacent de 2 pas puis deviennent rouge.<br><br>
+				<pre><code>ask turtles [ fd 2 ]
+ask turtles [ set color red]</code></pre>
+    			</div>
+    	</div>
+    	 <a href="./programmes/ask.html" target="_blank"><img src="images/ask_interface.png" width="60%" alt="" /></a>
+<!--<applet code="org.nlogo.lite.Applet"
+		codebase="applet/"
+        archive="NetLogoLite.jar"
+        width="675" height="320">
+  <param name="DefaultModel"
+         value="ask.nlogo">
+  <param name="java_arguments"
+         value="-Djnlp.packEnabled=true">
+</applet>-->
+</section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+   	<h4>Commandes</h4>
+   	<ul>
+			<li>Une commande définit les actions à exécuter par les agents
+				<ul>
+					<li>prédéfinie : <strong>primitive</strong> NetLogo ;</li>
+					<li>à définir par le programmeur : <strong>procédure</strong>.
+				</ul>
+			</li>
+			<li>  Une procédure est définie par :
+			</li></ul>
+   	<div style="text-align: justify;font-size:20px; line-height:120%;padding:10px;">
+<div style="float:left;width:280px;;margin-right:5px;background: Lavender">
+<pre><code>
+to &lsaquo;unNom&rsaquo;
+  &lsaquo;liste de commandes&rsaquo;
+end
+</code></pre>
+</div>
+<div style="float:left;width:280px;;margin-right:5px;background: Lavender">
+<pre><code>
+to-report &lsaquo;unNom&rsaquo;  ;; retourne un résultat
+   &lsaquo;liste de commandes&rsaquo;
+end
+</code></pre>
+</div>
+<div style="float:left;width:280px;background: Lavender">
+<pre><code>
+to &lsaquo;unNom&rsaquo; [liste1 liste2]  ;; paramètres en entrée
+  &lsaquo;liste de commandes&rsaquo;
+end
+</code></pre>
+</div>
+</div>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+   	<h4>Primitives</h4>
+   	<ul>
+   		<li>Exemples :
+   			<ul>
+   				<li><code>ca</code> (clear all) ; </li>
+   				<li><code>crt</code> (create turtles) ; </li>
+					<li><code>lt</code> (left turn), <code>rt</code> (right turn), <code>fd</code> (forward) ; </li>
+					<li><code>set</code> (affectation de variable) ; </li>
+					<li><code>ask</code>, ... </li>
+				</ul>
+			</li>
+			<li>Elles peuvent avoir des valeurs en entrée :
+				<ul>
+					<li><code>crt 100</code> ; </li>
+					<li><code>rt 17</code> ; </li>
+				</ul>
+			</li>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+   	<h4>Utiliser le command center</h4>
+   	<ul>
+   	 	<li>Choisir « <code>New</code> » dans le fichier menu ;</li>
+ 			<li>Créer des turtles :
+ 				<ul>
+ 					<li><code>observer> crt 100</code></li>
+ 				</ul>
+ 			</li>
+ 			<li>Les turtles créées sont regroupées au centre, pour les
+				voir il faut augmenter le rayon du cercle :
+				<ul>
+					<li>Passer de <code>observer></code> à <code>turtle></code> (cliquer dessus)</li>
+ 					<li><code>turtles> fd 10</code></li>
+ 					<li>ou <code>turtles> turtles> fd (random 10)</code></li>
+ 				</ul>
+ 			</li>
+ 		</ul>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+   	<h4>Écrire une procédure</h4>
+   	<ul>
+   	 	<li>Créer un bouton <code>setup</code>
+   	 		<ul>
+   	 			<li>Cliquer sur l’icône bouton dans la barre d’outil ; </li>
+					<li>Puis cliquer dans un endroit de la fenêtre graphique où vous voulez placer votre bouton ;</li>
+					<li>Une fenêtre de dialogue s’ouvrira, écrire « setup » dans display name, et cliquer sur le bouton « ok » ;</li>
+					<li>Le bouton s’affichera sur l’interface graphique.</li>
+				</ul>
+			</li>
+		</ul>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+   	<h4>Écrire une procédure</h4>
+		<ul>
+			<li>Choisir l'onglet « code » ;</li>
+			<li>Saisir le code suivant :
+<pre style="width:800px;font-size:50%;"><code>
+to setup                               ;; Le nom de la procédure
+   ca                                  ;; On fait le ménage
+   crt 100                             ;; On crée 100 turtles
+   ask patches [
+      if (pxcor > 0) [set pcolor blue] ;; Demander aux patches à droite de devenir bleu
+   ]
+   ask turtles [                       ;; Demander aux turtles de se déplacer de 10 patches
+		fd 10
+   ]
+end
+</code></pre>
+			</li>
+			<li>Revenir au niveau de l'onglet « interface » ;</li>
+			<li>Cliquer avec le bouton droit sur « setup » ;</li>
+			<li>Choisir « edit », puis dans « command » mettre <code>setup</code>.</li>
+		</ul>
+</section>
+
+<section>
+   <h2><font color="#ff3333">Programmation NetLogo</font></h2>
+   	<h4>Un autre exemple</h4>
+   	<ul style="text-align: justify;font-size:70%;">
+   		<li> Choisir l'onglet « Code » ; </li>
+
+ 			<li> Remplacer le code par :
+<pre style="width:500px"><code>
+to setup
+ ca
+ crt 100
+ ask turtles [
+   setxy (random 100) (random 100)
+   set shape "fish"
+ ]
+end
+</code></pre>
+		</li>
+	<li>Commenter le code (expliquer ce qu'il fait), vous devez vous aider de la documentation ;</li>
+	<li>Ajouter un slider de façon à fixer la population initiale ;</li>
+	<li>Modifier votre code de façon à ce que des poissons au hasard deviennent des croix :
+		<ul>
+			<li>Ajouter pour cela une procédure qui réalise cela ;</li>
+			<li>Associer un bouton permettant d'appeler cette procédure ;</li>
+			<li>Créer un bouton et ce qui est nécessaire pour faire nager les poissons et pas les croix ;</li>
+			<li>Modifier votre procédure pour que les poissons n'entre pas en collision
+				<ul>
+					<li>Indications : utiliser un agentset constitué des tortues dans le patch devant et verifier qu'il est vide
+					<code>patch-ahead, any?, turtles-on</code>
+				</ul>
+			</li>
+		</ul>
+		</li>
+		 </ul>
+<!--		 </li>
+		</ul>-->
+</section>
+
+</section>
+
+</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
