@@ -1,44 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Les collections en Java</title>
-    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./assets/theme/myblack.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
+
+    <script>
+      document.write(
+        '<script src="http://' +
+          (location.host || 'localhost').split(':')[0] +
+          ':35729/livereload.js?snipver=1"></' +
+          'script>'
+      );
+    </script>
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="\n\n\n\n" data-separator-vertical="\n\n\n">
+          <textarea data-template>
+            
 
 ## Les collections en Java
 ### Université du Havre - LITIS
 #### L2 Math-Info - Spécialisation informatique
-[D. Olivier](http://litis.univ-lehavre.fr/~olivier/PagePerso)</script></section><section  data-markdown><script type="text/template">## Plan du cours
+[D. Olivier](http://litis.univ-lehavre.fr/~olivier/PagePerso)
+
+
+
+## Plan du cours
 * [Généralités](#/2)
 * [Généricité](#/3)
 * [Collections](#/8)
 * [Parcourir une collection](#/10)
-* [Exemple](#/13)</script></section><section ><section data-markdown><script type="text/template"># Généralités</script></section><section data-markdown><script type="text/template">## Généralités
+* [Exemple](#/13)
+
+
+
+# Généralités
+
+
+## Généralités
 * Une collection est un objet qui contient d'autres objets.
-* Les collections font appels à la généricité de type.</script></section></section><section ><section data-markdown><script type="text/template"># Généricité</script></section><section data-markdown><script type="text/template">## Généricité
+* Les collections font appels à la généricité de type.
+
+
+
+# Généricité
+
+
+## Généricité
 <div style="font-size:100%;text-align:justify;">
 <ul>
   <li>Avant Java 1.5, les collections peuvent contenir n'importe quel type d'objets.</li>
   <li>Après, on peut indiquer le type des objets contenus dans une collection grâce à la généricité.
-    <pre><code class="java">
+
+```java
     List&lt;Employe&gt; liste = new ArrayList&lt;Employe&gt;();
-    </code></pre>
-  On a créé une liste de <code style="font-size:80%;">Employe</code> ;
+```
+
+  On a créé une liste de `Employe` ;</li>
   <li>La syntaxe pour mettre en &oelig;uvre la généricité utilise les symboles <code>&lt;</code> et <code>&gt;</code> pour préciser le ou
-  les types des objets à utiliser.
+  les types des objets à utiliser.</li>
   <li>Seuls des objets peuvent être utilisés avec la généricité : si un type primitif est utilisé dans les generics,
-  une erreur de type <code style="font-size:80%;">unexpected type</code> est générée lors de la compilation.
-</div></script></section></section><section ><section data-markdown><script type="text/template">## Généricité et polymorphisme
+  une erreur de type `unexpected type` est générée lors de la compilation.</li>
+</ul>  
+</div>
+
+
+
+## Généricité et polymorphisme
 
 <div style="font-size:100%;text-align:justify;">
 
@@ -48,7 +86,10 @@
 * Idem pour le passage de paramètre.
 	* Soit `afficheCollection(List<Personne> l)`, même si `Employee` est une classe dérivée de `Personne`, vous ne pouvez pas appeler votre méthode avec une variable de ce type.
 
-</div></script></section><section data-markdown><script type="text/template">## Généricité et polymorphisme
+</div>
+
+
+## Généricité et polymorphisme
 ```java
 import java.util.*;
 
@@ -64,17 +105,28 @@ public class GeneriqueTypeErreur {
         // Et il y aurait un loup dans la bergerie .....
         }
     }
-```</script></section></section><section  data-markdown><script type="text/template">## Méthodes génériques
+```
+
+
+
+## Méthodes génériques
 * Prévues pour fonctionner avec une variété de type ;
-* Les types des paramètres son entre `< >`.
+* Les types des paramètres sont entre `< >`.
 ```java
 static <T> void addToCollection(T p, Collection<T> c) {
     c.add(p);
 }
-```</script></section><section ><section data-markdown><script type="text/template">## Type jocker
+```
+
+
+
+## Type jocker
 * Le paramètre de type jocker ```?``` est interprété comme type inconnu.
 * Ainsi déclarer une variable comme ```List<?>``` signifie que vous pouvez stocker n'importe quel type d'objet.
-* On ne peut faire aucune hypothèse sur le type des objets stockés.</script></section><section data-markdown><script type="text/template">## Type jocker
+* On ne peut faire aucune hypothèse sur le type des objets stockés.
+
+
+## Type jocker
 ```java
 import java.util.*;
 
@@ -85,17 +137,24 @@ public class GeneriqueJockerExemple {
 
         List<?> objs = bergerie;
 
-        for (Object o: objs) { // On remarquera la bouble (cf. suite)
+        for (Object o: objs) { // On remarquera la boucle (cf. suite)
             System.out.println(o + " est dans la bergerie.");
         }
     }
-```</script></section></section><section ><section data-markdown><script type="text/template">## Contraindre un type générique
+```
+
+
+
+## Contraindre un type générique
 * Lors de l'utilisation d'un type générique ```T1``` ou ```?``` il est possible de le contraindre&nbsp;
-    *  ```? extends T``` ou ```T1 extends T```
-      * ```?``` ou ```T1``` représentent une classe ***ou une interface*** "ancètre".
-    *  ```? super T``` ou ```T1 super T```
-      * ```?``` ou ```T1``` doivent être une classe ou une interface ancètre. (Autre sens dans l'arbre d'héritage).
-* Syntaxe ```<T extends type>``` et ```<T super type>```</script></section><section data-markdown><script type="text/template">## Exemple de contrainte (1)
+*  ```? extends T``` ou ```T1 extends T```
+	* ```?``` ou ```T1``` représentent une classe ***ou une interface*** "fille".
+*  ```? super T``` ou ```T1 super T```
+	* ```?``` ou ```T1``` doivent être une classe ou une interface ancêtre. (Autre sens dans l'arbre d'héritage).
+* Syntaxe ```<T extends type>``` et ```<T super type>```
+
+
+## Exemple de contrainte (1)
 ```java
 public class Animal {
 	String nourriture;
@@ -143,7 +202,10 @@ public class Berger extends Proprietaire<Chien>{ // Chien hérite bien de Animal
 		animalCompagnie.caresse();
 	}
 }
-```</script></section><section data-markdown><script type="text/template">## Exemple de contrainte (2)
+```
+
+
+## Exemple de contrainte (2)
 * Interface : `java.util.List` nous permet de gérer des listes d'objets auxquels nous pouvons accéder via un index.
 * Classe : `java.util.ArrayList` tableau dynamique, implante l'interface `List`.
 
@@ -170,13 +232,19 @@ public class GeneriqueJocker3 {
 		// bergerie.add(new Loup());
 	}
 }
-```</script></section><section data-markdown><script type="text/template">### Utilisation de ? et contraintes
+```
+
+
+### Utilisation de ? et contraintes
 * L'utilisation de ```<? ...>``` dépendra du rôle que joue le
-paramètre générique dans la méthode :
-* En entrée de méthode : définis avec ```extends``` &nbsp;
-  * Sauf si accédés exclusivement avec des méthodes de Object , on utilise un joker non borné &nbsp;
-* En sortie : définis avec ```super```  &nbsp;
-* En entrée/sortie et en retour : pas de jocker !</script></section><section data-markdown><script type="text/template">### Considérations générales
+paramètre générique dans la méthode :
+  * En entrée de méthode : définis avec ```extends``` &nbsp;
+    * Sauf si accédé exclusivement avec des méthodes de Object, on utilise un joker non borné ;
+  * En sortie : définis avec ```super```  &nbsp;
+  * En entrée/sortie et en retour : pas de jocker !
+
+
+### Considérations générales
 * Lors de l'introduction de la généricité dans le langage, la machine
 virtuelle n'a pas été modifiée. Une classe paramétrée est compilée
 en une classe non paramétrée.
@@ -192,44 +260,70 @@ public class UneClasse<T> {
   T temp = new T(); // Erreur à la compilation
   ...
 }
-```</script></section></section><section ><section data-markdown><script type="text/template"># Collections</script></section><section data-markdown><script type="text/template">## Collections - généralités
+```
+
+
+
+# Collections
+
+
+## Collections - généralités
 * Une collection est un objet qui contient d'autres objets.
 * Par exemple, un tableau est une collection.
 * Java fournit d'autres types de collections sous la forme de classes et d'interfaces.
-* Ces classes et interfaces sont dans le paquetage [```java.util```](https://docs.oracle.com/javase/8/docs/api/index.html?java/util/package-summary.html).</script></section><section data-markdown><script type="text/template">## Collection et généricité
+* Ces classes et interfaces sont dans le paquetage [```java.util```](https://docs.oracle.com/javase/8/docs/api/index.html?java/util/package-summary.html).
+
+
+## Collection et généricité
 * Avant Java 1.5, les collections peuvent contenir n'importe quel type d'objets ;
 * Après, on peut indiquer le type des objets contenus dans une collection grâce à la généricité.
-```List<String> liste = new ArrayList<String>();```. On a créé une liste de ```String``` ;
+ `List<String> liste = new ArrayList<String>();`
+   + On a créé une liste de `String` ;
+
 * Exemple de programme qui pouvait poser problème :
-```Java
+
+```java
 Collection pommes = new ArrayList() ;
 pommes.add(new Pomme()) ;
 pommes.add(new Pomme()) ;
 pommes.add(new Scoubidou()) ;
-for(int i=0 ;i<pommes.size() ;i++){
+for(int i=0; i<pommes.size(); i++){
     // erreur exécution à la 3me itération
     Pomme p = (Pomme)pommes.get(i) ;
     p.extraireJus() ;
 }
-```</script></section><section data-markdown><script type="text/template">## Collection et généricité
- ```
+```
+
+
+## Collection et généricité
+
+```java
 Collection<Pomme> pommes = new ArrayList<Pomme>() ;
 pommes.add(new Pomme()) ;
 pommes.add(new Pomme()) ;
-/*pommes.add(new Scoubidou()) ; */
+/* pommes.add(new Scoubidou()) ; */
 // erreur de compilation
 for(int i=0 ;i<pommes.size() ;i++){
     Pomme p = pommes.get(i) ; // casting implicite
     p.extraireJus() ;
 }
-```</script></section><section data-markdown><script type="text/template">## Les interfaces
+```
+
+
+## Les interfaces
 * Deux hiérarchies d'héritage principales :
-    * ``` Collection<E>```<br>implementée par la plupart des classes qui gèrent des collections ;
-    * ```Map<K,V>```<br>collections indexées par des clés ;  définit des méthodes pour des objets qui gèrent des collections sous la forme clé/valeur ;</script></section><section data-markdown><script type="text/template">## Hiérarchie des interfaces
+    * ```Collection<E>```<br>implementée par la plupart des classes qui gèrent des collections ;
+    *  ```Map<K,V>```<br>collections indexées par des clés ;  définit des méthodes pour des objets qui gèrent des collections sous la forme clé/valeur ;
+
+
+## Hiérarchie des interfaces
 
 ![Collections](images/collections.gif) <!-- .element: width="800px" -->
 
-* Il existe des classes abstraites qui implémentent un squelette ```AbstractXXX``` (ex : ```AbstractList```).</script></section><section data-markdown><script type="text/template">## Hierachie des interfaces
+* Il existe des classes abstraites qui implémentent un squelette ```AbstractXXX``` (ex : ```AbstractList```).
+
+
+## Hierachie des interfaces
 * Il existe des classes concrètes qui implémentent ces interfaces.
 
 | | ```Set<E>``` | ```List<E>``` | ```Map<K,V>``` | ```Deque<E>``` |
@@ -242,7 +336,10 @@ for(int i=0 ;i<pommes.size() ;i++){
 * `Set` : collection d'éléments non ordonnés par défaut qui n'accepte pas les doublons
 * `List` : collection d'éléments ordonnés qui accepte les doublons
 * `Map` : collection sous la forme d'une association de paires clé/valeur
-* `Deque` : collections qui stockent des éléments dans un certain ordre avant qu'ils ne soient extraits pour traitement</script></section><section data-markdown><script type="text/template">## Quelques propriétés
+* `Deque` : collections qui stockent des éléments dans un certain ordre avant qu'ils ne soient extraits pour traitement
+
+
+## Quelques propriétés
 
 |NOM|ORDONNÉE|DOUBLONS|ACCÈS DIRECT|VALEURS NULLES|THREAD-SAFE|
 |:--:|:--:|:--:|:--:|:--:|:--:|
@@ -253,7 +350,10 @@ for(int i=0 ;i<pommes.size() ;i++){
 |**Stack**|✔|✔|❌|✔|✔|
 |**TreeMap**|✔|❌|✔|❌|❌|
 |**TreeSet**|✔|❌|❌|❌|❌|
-|**Vector**|✔|✔|✔|✔|✔|</script></section><section data-markdown><script type="text/template">## L'interface ```Collection<E>``` (suite)
+|**Vector**|✔|✔|✔|✔|✔|
+
+
+## L'interface ```Collection<E>``` (suite)
 * Cette interface représente un minimum commun pour les objets qui gèrent des collections
 
 | Méthode | Description |
@@ -262,7 +362,10 @@ for(int i=0 ;i<pommes.size() ;i++){
 | ```boolean addAll(Collection<? extends E> c)``` |ajoute à la collection tous les éléments de la collection fournie en paramètre.|
 | ```void clear()``` | supprime tous les éléments de la collection.|
 | ```boolean contains(Object)``` | indique si la collection contient au moins un élément identique à celui fourni en paramètre.|
-| ```boolean containsAll(Collection<?> c)``` | indique si tous les éléments de la collection fournie en paramètre sont contenus dans la collection.|</script></section><section data-markdown><script type="text/template">## L'interface ```Collection<E>```
+| ```boolean containsAll(Collection<?> c)``` | indique si tous les éléments de la collection fournie en paramètre sont contenus dans la collection.|
+
+
+## L'interface ```Collection<E>```
 * Cette interface représente un minimum commun pour les objets qui gèrent des collections
 
 | Méthode | Description |
@@ -272,18 +375,26 @@ for(int i=0 ;i<pommes.size() ;i++){
 | ```boolean remove(Object o)``` | supprime l'élément fourni en paramètre.|
 | ```boolean removeAll(Collection<?> c)``` |	supprime tous les éléments de la collection qui sont contenus dans la collection fournie en paramètre.|
 | ```int size()``` | renvoie le nombre d'éléments contenu dans la collection.|
-| ```Object[] toArray()``` | renvoie un tableau d'objets qui contient tous les éléments de la collection.|</script></section><section data-markdown><script type="text/template">## Méthodes optionnelles
+| ```Object[] toArray()``` | renvoie un tableau d'objets qui contient tous les éléments de la collection.|
+
+
+## Méthodes optionnelles
 
 * Il existe plein de sortes de collections
   * collections de taille fixe,
   * collections dont on ne peut enlever des objets
   * ....
 * Plutôt que de fournir une interface pour chaque cas particulier, l'API sur les collections
-comporte la notion de méthode optionnelle</script></section><section data-markdown><script type="text/template">## Méthodes optionnelles
+comporte la notion de méthode optionnelle
+
+
+## Méthodes optionnelles
 
 * Lorsqu'une méthode n'est pas définie elle lève l'exception ```UnsupportedOperationException```
 * Les méthodes optionnelles renvoient cette exception dans les classes abstraites du paquetage
-* Ex : pour des listes non modifiables, on ne redéfinit pas les méthodes ```set``` , ```add``` et ```remove``` de la classe squelette `AbstractList`</script></section></section><section ><section data-markdown><script type="text/template">
+* Ex : pour des listes non modifiables, on ne redéfinit pas les méthodes ```set``` , ```add``` et ```remove``` de la classe squelette `AbstractList`
+
+
 ## Méthodes optionnelles
 
 ```java
@@ -292,19 +403,28 @@ List<String> list2 = Collections.unmodifiableList(list);
 list2.add("hello"); // Lève une exception UnsupportedOperationException
 list.add("hello"); list.add("world"); // ok
 Systeme.out.println(list2.size);      // affiche 2
-```</script></section><section data-markdown><script type="text/template">## Les différentes ```Collection<E>```
+```
+
+
+## Les différentes ```Collection<E>```
 Il existe plusieurs implémentations de ```Collection<E>```.
 * Les classes [```ArrayList<E>```](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) (tableau de taille variable) et [```LinkedList<E>```](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html) (liste chainée) qui  implémentent l'interface ```List<E>```  ;
 * La classe [```HashSet<E>```](https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html) implémente l'interface [```Set<E>```](https://docs.oracle.com/javase/8/docs/api/java/util/Set.html) ;
 * La classe [```TreeSet<E>```](https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html)  implémente l'interface [```SortedSet<E>```](https://docs.oracle.com/javase/8/docs/api/java/util/SortedSet.html) ;
-* ...</script></section><section data-markdown><script type="text/template">## L'interface ```Map<K,V>```
+* ...
+
+
+## L'interface ```Map<K,V>```
 
 * L'interface [```Map<K,V>```](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html) correspond à un groupe de couples clé-valeur<br>
 * Une clé repère une et une seule valeur<br>
 * Dans la map il ne peut exister 2 clés égales au sens de ```equals()```<br>
 * La même valeur peut-être présente dans deux clés différentes
 * Permettent de retrouver rapidement une valeur en fonction de leur clé
-* Utilisé pour les dictionnaires, les annuaires ....</script></section><section data-markdown><script type="text/template">## Les méthodes de ```Map<K,V>```
+* Utilisé pour les dictionnaires, les annuaires ....
+
+
+## Les méthodes de ```Map<K,V>```
 | Méthode | Description |
 | --- | --- |
 | ```void clear()``` | supprime les éléments de la table associative |
@@ -313,44 +433,132 @@ Il existe plusieurs implémentations de ```Collection<E>```.
 | ```V get(Object clé)``` | retourne la valeur associée à la clé passée en paramètre ou ```null``` si cette clé n'existe pas |
 | ```boolean isEmpty()``` | teste si la table est vide |
 | ```Set<K> keySet()``` | retourne un objet représentant la liste des clés contenues dans la table associative |
-| ```Collection<V> values()``` | retourne un objet contenant toute les valeur contenue dans la table associative |</script></section><section data-markdown><script type="text/template">## Les méthodes de ```Map<K,V>```
+| ```Collection<V> values()``` | retourne un objet contenant toute les valeur contenue dans la table associative |
+
+
+## Les méthodes de ```Map<K,V>```
 | Méthode | Description |
 | --- | --- |
 | ```put(K clé, V valeur)``` | Ajoute la clé et la valeur dans la collection en retournant la valeur insérée. Si la clé existe déjà, sa valeur sera écrasée par celle passée en paramètre de la méthode. |
 | ```putAll(Map<? extends K,? extends V> m)``` | Ajoute le contenu de la collection en paramètre dans la collection appelante |
-| ```remove(Object clé)``` | Supprime le couple clé-valeur associé à la clé passée en paramètre et retourne la valeur supprimée |</script></section><section data-markdown><script type="text/template">## Les différentes ```Map<K,V>```
+| ```remove(Object clé)``` | Supprime le couple clé-valeur associé à la clé passée en paramètre et retourne la valeur supprimée |
+
+
+## Les différentes ```Map<K,V>```
 
 Il y 4 implantations principales des ```Map<K,V>``` :
 
 1. [```HashMap<K,V>```](https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html) table d'association. Pas d'ordre sur les clés et les valeurs.
 2. [```TreeMap<K,V>```](https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html) arbre rouge et noir, ordonné sur la clé.
 3. [```LinkedHashMap<K,V>```](https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html) conserve l'ordre d'insertion.
-4. [```HashTable<K,V>```](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html) synchronisée par rapport à  ```HashMap<K,V>```.</script></section></section><section ><section data-markdown><script type="text/template">
-# Parcourir une collection</script></section><section data-markdown><script type="text/template">## Différents parcours
+4. [```HashTable<K,V>```](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html) synchronisée par rapport à  ```HashMap<K,V>```.
+
+
+## Fonctionnement d'une `Map` (`HashMap`, `TreeMap` ...)
+
+Java procède en deux étapes :
+
+* Étape 1 : Calcule le `hashCode()` pour déterminer dans quel bucket (emplacement référencé par la clé) placer l’objet.
+* Étape 2 : Si plusieurs objets tombent dans le même bucket, Java utilise `equals()` pour vérifier s’ils sont vraiment égaux.
+
+**Règle fondamentale** :
+* Si deux objets sont égaux selon `equals()` alors ils doivent avoir le même `hashCode()`.
+`a.equals(b)  =>  a.hashCode() == b.hashCode()`. Sinon les collections basées sur le hash ne fonctionneront pas correctement.
+
+
+## Exemple problèmatique
+
+```Java
+class Personne {
+    String name;
+
+    Person(String name){
+        this.name = name;
+    }
+
+    public boolean equals(Object o){
+	if (this == o) return true;
+        if (!(o instanceof Personne)) return false;
+
+        Personne p = (Personne) o;
+        return name.equals(p.name);
+    }
+}
+// Etc
+HashSet<Personne> set = new HashSet<>();
+
+set.add(new Personne("Alice"));
+set.add(new Personne("Alice"));
+
+System.out.println(set.size());
+```
+Résutat : 2 ! `hashCode()` n'a pas été redéfini.
+
+
+## Implémentation correcte
+```Java
+class Personne {
+
+    String name;
+
+    public boolean equals(Object o) {
+
+        if (this == o) return true;
+        if (!(o instanceof Personne)) return false;
+
+        Person p = (Person) o;
+        return name.equals(p.name);
+    }
+
+    public int hashCode() {
+        return name.hashCode();
+    }
+}
+```
+*Toujours redéfinir les deux ensemble.*
+
+
+
+# Parcourir une collection
+
+
+## Différents parcours
 
 Il existe 3 façons de parcourir une collection :
 
 1. En utilisant un `Iterator`
 2. Avec une boucle `for-each`
-3. Depuis Java 1.8 en utilisant un `stream`</script></section><section data-markdown><script type="text/template">## Les itérateurs
+3. Depuis Java 1.8 en utilisant un `stream`
+
+
+## Les itérateurs
 * Un itérateur est une instance d'une classe qui implante
 l'interface [```Iterator<E>```](https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html)
 * Ils permettent d'énumérer les éléments contenus dans une collection
 * Ils encapsulent la structure de la collection
   * on pourrait changer de type de collection  sans modifier le code qui utilise l'itérateur
-* Toutes les collections ont une méthode ```iterator()``` qui renvoie un itérateur</script></section><section data-markdown><script type="text/template">## L'interface ```Iterator<E>```
+* Toutes les collections ont une méthode ```iterator()``` qui renvoie un itérateur
+
+
+## L'interface ```Iterator<E>```
 Méthode  | Action
 --|--
 `boolean hasNext()`  | indique s'il reste au moins un élément
 `E next()` | renvoie le prochain élément de la collection
-`void remove()` | supprime le dernier élément **parcouru**<!-- .element: class="fragment highlight-red" --> <br>Méthode optionnelle</script></section><section data-markdown><script type="text/template">## Obtenir un itérateur
+`void remove()` | supprime le dernier élément **parcouru**<!-- .element: class="fragment highlight-red" --> <br>Méthode optionnelle
+
+
+## Obtenir un itérateur
 * ```Iterator<E> iterator()``` renvoie un itérateur pour parcourir les
 éléments de la collection
 * L'interface ```List<E>``` contient en plus la méthode ```ListIterator<E> listIterator()```
 qui renvoie un ```ListIterator```
   * offre plus de possibilités qu'```Iterator``` pour parcourir une liste et la modifier
 	* Possibilité de parcourir la liste dans les deux sens, c'est-à-dire en avant et en arrière.
-* Avec un `Iterator` votre code fonctionne que vous passiez une `List` ou un `Set` en paramétre (vous travaillerez avec une collection). `ListIterator` ne fonctionne qu'avec `List`.</script></section><section data-markdown><script type="text/template">## Exemple
+* Avec un `Iterator` votre code fonctionne que vous passiez une `List` ou un `Set` en paramétre (vous travaillerez avec une collection). `ListIterator` ne fonctionne qu'avec `List`.
+
+
+## Exemple
 ```
 import java.awt.Color;
 import java.util.ArrayList;
@@ -401,7 +609,11 @@ public class TestForme {
 			System.out.println(it.next());
 	}
 }
-```</script></section></section><section ><section data-markdown><script type="text/template">## Exemple
+```
+
+
+
+## Exemple
 ```
 import java.util.ArrayList;
 import java.util.ListIterator;
@@ -430,9 +642,15 @@ public class ExampleListIterator {
       System.out.println(listIterator.previous());
   }
 }
-```</script></section><section data-markdown><script type="text/template">## Itérateur et modification de la collection
+```
+
+
+## Itérateur et modification de la collection
 * L'utilisation d'un itérateur sur une collection modifiée directement provoque une `ConcurrentModificationException`
-* L'interface Iterator fournit la méthode optionnelle `remove()` qui permet de supprimer le dernier élément retourné par l'itérateur</script></section><section data-markdown><script type="text/template">## Exemple de qu'il ne faut pas faire
+* L'interface Iterator fournit la méthode optionnelle `remove()` qui permet de supprimer le dernier élément retourné par l'itérateur
+
+
+## Exemple de qu'il ne faut pas faire
 
 ```java
 import java.util.ArrayList;
@@ -463,9 +681,16 @@ public class ConcurrentListModif {
         }
     }
 }
-```</script></section></section><section ><section data-markdown><script type="text/template">## Itérateur et modification de la collection
+```
 
-* Pour faire des ajouts/modifs dans une liste (impossible avec une collection qui n'implante pas l'interface `List` ) pendant qu'elle est parcourue par un itérateur, on utilise `ListIterator`.   </script></section><section data-markdown><script type="text/template">```java
+
+
+## Itérateur et modification de la collection
+
+* Pour faire des ajouts/modifs dans une liste (impossible avec une collection qui n'implante pas l'interface `List` ) pendant qu'elle est parcourue par un itérateur, on utilise `ListIterator`.   
+
+
+```java
 public class ListIteratorSet {
   public static void main(String[] args) {
     ArrayList <String> informaticiens = new ArrayList <String>();
@@ -487,7 +712,10 @@ public class ListIteratorSet {
     }
   }
 }
-```</script></section><section data-markdown><script type="text/template">## La boucle `for-each`
+```
+
+
+## La boucle `for-each`
 * Boucle avec un itérateur :
 ```
 for (Iterator<Forme<?>> it = f.iterator(); it.hasNext();)
@@ -497,17 +725,30 @@ for (Iterator<Forme<?>> it = f.iterator(); it.hasNext();)
 ```
 for (Forme ff : f)
       System.out.println(ff);
-```</script></section><section data-markdown><script type="text/template">## La boucle `for-each`
+```
+
+
+## La boucle `for-each`
 * `for` (_TypeDev_  `v :` _expression_) _instruction_
 *  _TypeDev_  `v ` : déclaration d'une variable
 * _expression_ : une expression dont l'évaluation donne un tableau `typeT[]` ou un
-objet qui implante `Iterable<E>`, t.q `typeT` ou `E` est affectable à `v`</script></section><section data-markdown><script type="text/template">## Restriction `for-each`
+objet qui implante `Iterable<E>`, t.q `typeT` ou `E` est affectable à `v`
+
+
+## Restriction `for-each`
 
 * On ne dispose pas de la position dans le
 tableau ou la collection pendant le parcours
 * On ne peut pas modifier la collection pendant
-qu'on parcourt la boucle</script></section></section><section ><section data-markdown><script type="text/template"># Exemple</script></section><section data-markdown><script type="text/template">## Exemple : utilisation d'un `ArrayList`
-```
+qu'on parcourt la collection
+
+
+
+# Exemple
+
+
+## Exemple : utilisation d'un `ArrayList`
+```java
 import java.util.*;
 
 public class ArrayListExemples {
@@ -532,7 +773,7 @@ public class ArrayListExemples {
 
 		// On teste si c'est vide
 		boolean check = list.isEmpty();
-		System.out.println("L'ArrayListe est vide : ? " + check);
+		System.out.println("L'ArrayList est vide : ? " + check);
 
 		// Taille
 		int size = list.size();
@@ -585,10 +826,15 @@ public class ArrayListExemples {
 	}
 }
 ```
-</script></section></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -616,6 +862,10 @@ public class ArrayListExemples {
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -628,12 +878,26 @@ public class ArrayListExemples {
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {}, queryOptions);
+      var options = extend(defaultOptions, {"_":["collection.md"],"watch":true,"w":true,"separator":"\\n\\n\\n\\n","vertical-separator":"\\n\\n\\n","verticalSeparator":"\\n\\n\\n","theme":"theme/myblack.css","static":"siteHTML","static-dirs":"images","staticDirs":"images"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>
