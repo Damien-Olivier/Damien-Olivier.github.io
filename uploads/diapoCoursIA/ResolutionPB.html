@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -12,6 +12,14 @@
     <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
 
+    <script>
+      document.write(
+        '<script src="http://' +
+          (location.host || 'localhost').split(':')[0] +
+          ':35729/livereload.js?snipver=1"></' +
+          'script>'
+      );
+    </script>
   </head>
   <body>
     <div class="reveal">
@@ -46,7 +54,7 @@
 ## Résolution de problèmes
 ### Recherches à l'aide d'heuristique
 #### M1 Info
-[D. Olivier](http://litis.univ-lehavre.fr/~olivier/PagePerso)
+[D. Olivier](https://damien-olivier.github.io/)
 
 
 
@@ -59,7 +67,8 @@
 * [Espace des états d'un problème](#/6)
 * [Définition de l'espace des états](#/7)
 * [Méthodes de recherche aveugle](#/8)
-* [Méthodes de recherche heuristique](#/8)
+* [Méthodes de recherche heuristique](#/9)
+* [Les Problèmes de Satisfaction de Contraintes (CSP)](#/10)
 
 
 
@@ -950,12 +959,259 @@ FIN
       - la taille de la file d'attente est limitée ;
       - le père du nœud supprimé mémorise la valeur du meilleur descendant oublié.
 
+
+
+# CSP
+## Modélisation, inférence et optimisation combinatoire
+
+
+## Le paradigme CSP
+### Changer de perspective
+![alt text](images/ImperatifVsDeclaratif.png)
+
+
+## Le formalisme mathématique
+### Le triplet (V, D, C)
+![alt text](images/image-1.png)
+
+
+## Typologie des contraintes
+![](image-2.png)
+
+
+## Graphe de contraintes
+* Il permet de modéliser schématiquement la structure logique du problème à résoudre.
+* Analyser la forme du graphe permet de repérer des variables indépendantes pour décomposer le problème, ou d'appliquer des techniques comme la Tree Decomposition (cf. suite)
+![alt text](images/image-3.png)
+
+
+## Approche naïve - le backtracking
+![](images/image-4.png)
+
+
+## Utilisation d'heuristiques
+* Cela rend le backtracking "intelligent"
+![alt text](images/image-5.png)
+
+
+## Le forward checking
+* Mécanisme d'inférence
+![alt text](images/image-6.png)
+
+
+## Arc-consistency
+* Mécanisme d'inférence plus puissant que le forward checking
+![alt text](images/image-7.png)
+
+
+## Implémentation de l'arc-consistency (AC-3)
+```python
+def AC3(csp):
+    # Initialsation de la file d'attente avec tous les arcs du graphe de contraintes
+    queue = [(Xi, Xj) for Xi in csp.variables for Xj in csp.neighbors[Xi]]
+    while queue:
+        Xi, Xj = queue.pop(0)
+        if revise(csp, Xi, Xj): # Suppression des valeurs de Xi 
+                                # qui ne sont pas compatibles avec les valeurs de Xj
+            if not csp.domains[Xi]:
+                return False
+            for Xk in csp.neighbors[Xi]:
+                if Xk != Xj:
+                    queue.append((Xk, Xi)) # Si le domaine de Xi a été modifié, on ajoute
+                    # les arcs (Xk, Xi) à la file d'attente pour vérifier si cela affecte 
+                    # les domaines des autres variables
+    return True 
+```
+
+
+## Utilisation des heuristiques et du backtracking
+```python
+def backtracking_search(assignement, csp):
+  if len(assignement) == len(csp.variables):
+    return assignement
+  var = select_unassigned_variable(csp, mrv=True)  # Heuristique de sélection
+
+  for value in order_domain_values(var, assignement, lcv=True):  # Heuristique de tri
+    if is_consistent(var, value, assignement):
+      assignement[var] = value
+      inferences = forward_check_or_ac3(csp, var, value)  # Mécanisme d'inférence
+      if inferences != FAILURE: # Si l'inférence est réussie
+        result = backtracking_search(assignement, csp) # Appel récursif
+        if result:  # Si une solution est trouvée, on la retourne
+          return result
+
+    del assignement[var] # Supprimer l'affectation pour essayer une autre valeur
+  ```
+  * On voit l'élégance du CSP : on peut facilement combiner différentes heuristiques (MRV/LCV) et l'inférence (AC-3) dans un algo de recherche en profondeur.  
+
+
+## Au-delà des arcs : la k-consistence
+![alt text](images/image-8.png)
+* K-consistence : un CSP est `k-consistent` si pour tout ensemble de `k-1` variables et pour toute affectation de ces variables qui satisfait les contraintes, il existe une valeur pour toute k-ième variable qui satisfait les contraintes.
+* Théorème : si un CSP est `k-consistent` pour `k` égal au nombre de variables, alors il est garanti de trouver une solution sans backtracking.
+
+
+## Gérer l'échelle : recherche locale
+
+<div class="column7" style="font-size:70%">
+
+* Le problème d'échelle
+  * Pour les graphes massifs (ex : N-reines avec $10^6$ variables), AC-3 devient impraticable et le backtracking est inefficace.
+* Les algorithmes stochastique (ex : min-conflicts) sont plus adaptés
+  1. On part d'un état initial aléatoire complet mais invalide ;
+  2. À chaque étape, on choisit une variable en conflit.
+  3. On lui assigne la valeur qui minimise le nombre de conflits.  
+</div>
+<div class="column3">
+
+  ![alt text](images/image-9.png)
+
+</div>
+
+
+## Échapper à l'optimum local
+![alt text](images/image-10.png)<!-- .element: style="width:300px" -->
+
+<div class="column5" style="font-size:70%">
+
+#### Recuit simulé (cf. TD)
+* Les algorithmes stochastiques peuvent se retrouver coincés dans des optima locaux.
+* Pour échapper à ces optima, on peut introduire de la randomisation :
+  - Avec une probabilité `p`, on choisit une valeur aléatoire au lieu de la valeur qui minimise les conflits.
+  - Cela permet de sortir des optima locaux et d'explorer d'autres parties de l'espace de recherche.   
+</div>
+<div class="column5" style="font-size:70%">
+#### Recherche tabou
+* Tabu Search est une autre technique pour échapper aux optima locaux.
+* Elle utilise une mémoire à court terme pour garder une trace des mouvements récents et éviter de revenir à des solutions précédentes qui ont déjà été explorées.
+* Cela permet de diversifier la recherche et d'explorer de nouvelles régions de l'espace de solutions.
+</div>
+
+
+## Exploiter la structure : tree decomposition
+
+<div style="font-size:60%">
+
+* Certains CSP ont une structure de graphe de contraintes qui peut être exploitée pour résoudre le problème plus efficacement.
+* La tree decomposition est une technique qui transforme le graphe de contraintes en un arbre de sous-problèmes plus petits, permettant de résoudre le CSP de manière plus efficace en utilisant des algorithmes de programmation dynamique.
+* Cette approche est particulièrement efficace pour les CSP dont le graphe de contraintes a une faible largeur d'arbre (treewidth), ce qui signifie que les variables sont organisées en groupes relativement petits et peu connectés entre eux.
+  * Regroupe les variables en "bags" (sacs) de variables, où chaque bag contient un ensemble de variables qui sont fortement connectées entre elles.
+  * Les bags sont organisés en un arbre, où chaque bag est connecté à ses voisins de manière à respecter les contraintes du CSP.
+  * Permet de résoudre le CSP en utilisant des algorithmes de programmation dynamique sur l'arbre de bags, ce qui peut être beaucoup plus efficace que les méthodes de recherche traditionnelles pour les CSP avec une structure de graphe de contraintes appropriée
+* Cependant, la tree decomposition peut être coûteuse à calculer pour les CSP avec des graphes de contraintes complexes, et son efficacité dépend fortement de la structure du graphe de contraintes.
+</div>
+
+![alt text](images/image-11.png)<!-- .element: style="width:400px" -->
+
+
+## Tableau de comparaison des méthodes de recherche
+
+Algorithme | Complétude | Complexité en temps | Cas d'usage
+--|---|---|--
+Backtracking simple | Oui | Exponentielle $O(b^d)$ | Problèmes de satisfaction de contraintes avec un nombre faible de variables
+Backtracking + AC-3 | Oui | Fortement optimisée mais exponentielle dans le pire des cas | Problèmes de satisfaction de contraintes avec un nombre modéré de variables
+Min-conflicts (recherche locale) | Non (Stochastique) | Généralement rapide pour les grands problèmes | Problèmes de satisfaction de contraintes à grande échelle
+Tree decomposition | Oui | Linéaire | Graphe à faible densité (Routage spatial, planification de tâches...)
+<!-- .element style="font-size:70%" -->
+
+
+## Étude de Cas : Résolution par CSP
+### SEND + MORE = MONEY
+
+<div style="font-size:60%">
+
+* Triplet $(V, D, C$)
+  * Variables ($V$) : $\{S, E, N, D, M, O, R, Y\}$ + les retenues $\{r_1, r_2, r_3\}$.
+  * Domaines ($D$) : 
+    * Pour les lettres : $\{0, 1, ..., 9\}$.
+    * Contrainte spéciale : $S \in \{1, ..., 9\}$ et $M \in \{1, ..., 9\}$ (un nombre ne commence pas par zéro). 
+    * Pour les retenues : $\{0, 1\}$.
+  * Contraintes ($C$) :
+    * $\{S, E, N, D, M, O, R, Y\}$ doivent tous avoir des valeurs distinctes. (Alldifferent)
+    * Équations par colonne (de droite à gauche) :
+      * $D + E = Y + 10 \cdot r_1$
+      * $r_1 + N + R = E + 10 \cdot r_2$
+      * $r_2 + E + O = N + 10 \cdot r_3$
+      * $r_3 + S + M = O + 10 \cdot M$ (puisque $M$ est aussi la retenue finale).
+</div>
+
+
+## Stratégie de résolution : l'inférence avant le backtracking
+
+* On utilise la propagation de contraintes pour réduire les domaines :
+  1. Analyse de la colonne de gauche : $r_3 + S + M = 10 \cdot M + O$.
+    * Comme $M$ ne peut être que $1$ (la somme de deux chiffres plus une retenue ne dépasse jamais 19), on fixe immédiatement $M = 1$.
+  2. Déduction en cascade :
+     * Si $M = 1$, alors pour que $r_3 + S + 1 \ge 10$, $S$ doit être $8$ ou $9$.
+     * En observant la colonne des milliers, on s'aperçoit vite que $O$ doit être $0$ (car si $M=1$, $O$ ne peut pas être $1$ à cause de la contrainte Alldifferent).
+
+
+## Algorithme de backtracking avec Heuristiques
+
+* On procède ainsi :
+  * Choix de la variable : on choisit celle avec le plus petit domaine (souvent les retenues ou $S$).
+  * Propagation (Forward Checking) : dès qu'une lettre est fixée (ex: $D=7$), on retire $7$ du domaine de toutes les autres lettres.
+  * Backtrack : si on arrive à une contradiction (ex: on doit assigner $1$ à $E$ alors que $M$ l'a déjà), on remonte au choix précédent.
+
+
+## La solution finale
+* En appliquant cette stratégie, on trouve la solution :
+$$S = 9, E = 5, N = 6, D = 7, M = 1, O = 0, R = 8, Y = 2$$
+* Vérification :
+$$9567 + 1085 = 10652$$ 
+
+
+## Le programme Python
+```
+% pip install python-constraint
+```
+```python
+from constraint import Problem, AllDifferentConstraint
+
+def solve_with_carries():
+    problem = Problem()
+
+    # 1. Variables : Lettres (0-9) et Retenues (0-1)
+    letters = "SENDMORY"
+    problem.addVariables(letters, range(10))
+    
+    carries = ["c1", "c2", "c3"]
+    problem.addVariables(carries, [0, 1])
+
+    # 2. Contraintes de base
+    problem.addConstraint(AllDifferentConstraint(), letters)
+    problem.addVariables("SM", range(1, 10)) # S et M != 0
+
+    # 3. Contraintes par colonne (Unités -> Milliers)
+    
+    # Col 1: D + E = Y + 10*c1
+    problem.addConstraint(lambda d, e, y, c1: d + e == y + 10*c1, ("D", "E", "Y", "c1"))
+    
+    # Col 2: c1 + N + R = E + 10*c2
+    problem.addConstraint(lambda c1, n, r, e, c2: c1 + n + r == e + 10*c2, ("c1", "N", "R", "E", "c2"))
+    
+    # Col 3: c2 + E + O = N + 10*c3
+    problem.addConstraint(lambda c2, e, o, n, c3: c2 + e + o == n + 10*c3, ("c2", "E", "O", "N", "c3"))
+    
+    # Col 4: c3 + S + M = O + 10*M  (M est ici la retenue finale c4)
+    problem.addConstraint(lambda c3, s, m, o: c3 + s + m == o + 10*m, ("c3", "S", "M", "O"))
+
+    # 4. Résolution
+    solution = problem.getSolution()
+    print("Solution trouvée :")
+    for k in sorted(solution.keys()):
+        if k in letters: print(f"{k}: {solution[k]}")
+
+solve_with_carries()
+
           </textarea>
         </section>
       </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -984,6 +1240,9 @@ FIN
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
         slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -996,12 +1255,26 @@ FIN
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"_":["ResolutionPB.md"],"separator":"\\n\\n\\n\\n","vertical-separator":"\\n\\n\\n","verticalSeparator":"\\n\\n\\n","theme":"theme/myblack.css","static":"site"}, queryOptions);
+      var options = extend(defaultOptions, {"_":["ResolutionPB.md"],"watch":true,"w":true,"separator":"\\n\\n\\n\\n","vertical-separator":"\\n\\n\\n","verticalSeparator":"\\n\\n\\n","theme":"theme/myblack.css","static":"siteHTML","static-dirs":"images","staticDirs":"images"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>
